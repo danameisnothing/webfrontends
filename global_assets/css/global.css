@@ -1,0 +1,41 @@
+.shell_user {
+    color: #1abc9c
+}
+
+.shell_path {
+    color: #3daee9
+}
+
+.shell_command {
+    color: #11d116
+}
+
+.shell_string {
+    color: #f1c40f
+}
+
+.util_centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.util_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #232627git pu
+    
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code {
+    color: #ffffff
+}

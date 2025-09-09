@@ -1,0 +1,20 @@
+/* https://stackoverflow.com/a/8014032 */
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+td {
+    padding-right: 15px;
+    border: 1px solid black;
+    /* debug */
+}
+
+/* https://medium.com/coding-beauty/html-line-break-no-br-326732938a74 */
+/* make this opt-in, because any newline, even as a prefix to align the node better, gets rendered too */
+.auto_newline {
+    white-space: pre-wrap;
+}

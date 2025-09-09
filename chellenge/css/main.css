@@ -1,0 +1,12 @@
+#content {
+    max-width: 800px;
+    border-radius: 3px;
+    /*box-shadow: 10px 10px 10px 5px rgb(36, 31, 49, 0.5);*/
+    border: 1px solid #fcfcfc;
+    /*margin: 25px;*/
+    padding: 8px;
+}
+
+img {
+    max-width: 100%;
+}

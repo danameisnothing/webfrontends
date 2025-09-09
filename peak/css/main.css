@@ -1,0 +1,6 @@
+.infobox_game,
+td {
+    border: 1px solid black;
+    max-width: 800px;
+    position: sticky;
+}
