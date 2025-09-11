@@ -8,11 +8,11 @@ a:link {
 }
 
 pre {
-    margin-bottom: 0;
+    margin: 0;
 }
 
 /* https://medium.com/coding-beauty/html-line-break-no-br-326732938a74 */
 /* make this opt-in, because any newline, even as a prefix to align the node better, gets rendered too */
-.preserve_whitespaces {
+.pre_dowrap {
     white-space: pre-wrap;
 }
