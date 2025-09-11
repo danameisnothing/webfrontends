@@ -1,0 +1,7 @@
+/* Copied straight from chellenge */
+#content {
+    max-width: 800px;
+    border-radius: 3px;
+    border: 1px solid #fcfcfc;
+    padding: 8px;
+}
