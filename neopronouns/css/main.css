@@ -1,4 +1,12 @@
 /* Copied straight from chellenge */
+a,
+a:visited,
+a:hover,
+a:active,
+a:link {
+    color: inherit;
+}
+
 #content {
     max-width: 800px;
     border-radius: 3px;

@@ -11,6 +11,10 @@ pre {
     margin: 0;
 }
 
+#windows_10_ascii_color {
+    color: #56b6c2;
+}
+
 /* https://medium.com/coding-beauty/html-line-break-no-br-326732938a74 */
 /* make this opt-in, because any newline, even as a prefix to align the node better, gets rendered too */
 .pre_dowrap {
