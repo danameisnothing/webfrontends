@@ -40,6 +40,9 @@ h4,
 h5,
 h6,
 code,
-samp {
+samp,
+th,
+td,
+tr {
     color: #ffffff
 }
