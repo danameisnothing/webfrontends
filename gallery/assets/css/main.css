@@ -1,0 +1,45 @@
+/* https://stackoverflow.com/a/3245187 */
+@font-face {
+    font-family: "OpenDyslexic3 Regular";
+    src: url("../fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OpenDyslexic3 Bold";
+    src: url("../fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
+}
+
+h1, h2, h3 {
+    font-family: "OpenDyslexic3 Bold", sans-serif;
+}
+
+/* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
+/*#pre_card > * {
+    margin: 0;
+}*/
+
+/* FIXME: only for testing! */
+/* Hunt for https://static.wikia.nocookie.net/cult-of-the-lamb/images/0/08/Site-background-dark/revision/latest?cb=20250112140801, but a lossless source! */
+/* TODO: put a fadeout on the edges */
+#pre-card {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/img_temp/woolhaven-bg-poster.png");
+    background-size: cover;
+
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+samp,
+th,
+td,
+tr {
+    color: #f1edd9
+}
