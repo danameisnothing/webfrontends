@@ -1,0 +1,12 @@
+/* https://stackoverflow.com/a/8014032 */
+a,
+a:visited,
+a:hover,
+a:active,
+a:link {
+    color: inherit;
+}
+
+.font_jbmono {
+    font-family: "JetBrainsMono Regular", monospace;
+}

@@ -2,8 +2,8 @@
 const W10_EOL_DATE = new Date(2025, 9, 14);
 const PRIDE_MONTH = 6 - 1;
 
-let win10EOLEl = document.querySelector("#windows_10_eol_time");
-let prideStatEl = document.querySelector("#pride_stat");
+const win10EOLEl = document.querySelector("#windows_10_eol_time");
+const prideStatEl = document.querySelector("#pride_stat");
 
 function jankDeltaData(delta) {
     // yikes
@@ -78,7 +78,7 @@ function getPrideStatus() {
         let isOver = new Date().getMonth() > PRIDE_MONTH; // last is now
 
         // last
-        let dec = (isUnder) ? new Date(new Date().getFullYear()-1, PRIDE_MONTH, 1) : new Date(new Date().getFullYear(), PRIDE_MONTH, 1);
+        let dec = (isUnder) ? new Date(new Date().getFullYear() - 1, PRIDE_MONTH, 1) : new Date(new Date().getFullYear(), PRIDE_MONTH, 1);
         let deltaLast = Date.now() - dec.getTime();
         let last = jankDeltaFormat(jankDeltaData(deltaLast));
         builder = `It has been ${last} since Pride Month ended, and NULL until next one?`;

@@ -186,7 +186,7 @@ func main() {
 	for k, v := range spl {
 		// quick hack
 		if k == 0 {
-			finalBuf.WriteString(`<pre class="pre_dowrap"><samp>`)
+			finalBuf.WriteString(`<pre class="pre_dowrap"><samp class="font_jbmono">`)
 			continue
 		} else if k == len(spl)-1 {
 			finalBuf.WriteString("</samp></pre>\n")
