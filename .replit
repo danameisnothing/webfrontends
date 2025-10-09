@@ -3,7 +3,15 @@ modules = ["web"]
 
 [nix]
 channel = "stable-24_11"
-packages = ["static-web-server", "fastfetch", "gh", "tree", "killall", "go", "libwebp"]
+packages = [
+    "static-web-server",
+    "fastfetch",
+    "gh",
+    "tree",
+    "killall",
+    "go",
+    "git-lfs",
+]
 
 [deployment]
 publicDir = "/"

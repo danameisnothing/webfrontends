@@ -12,10 +12,11 @@
 </head>
 
 <body>
+    <!-- the JetBrainsMono Regular font isn't applying to the children if we apply the class to the div for some reason? It only works if we apply it to <samp> or <code> directly, not pre? -->
     <div>
         <!-- This is based on Termux's MOTD lol -->
         <!-- samp tag because this isn't really code. still use code for anything that isn't a mock program output. pre only if we care about whitespace -->
-        <pre class="pre_dowrap"><samp>Welcome, to my dumpster fire!
+        <pre class="pre_dowrap"><samp class="font_jbmono">Welcome, to my dumpster fire!
 no favicon.ico for this webpage (yet)
 
 Additional statistics :
@@ -25,17 +26,29 @@ Windows 10 <span id="windows_10_eol_time">NULL</span>
 
 PS: You can click the top-level "directory listings" to navigate to them
 regardless, enjoy your stay
+
+TODO: setup Git LFS on Replit for the images and fonts!
+TODO: credit for JetBrainsMono and OpenDyslexic
+
+
+JetBrainsMono Regular self-test font : => == := |=> <= >= <> !=
 This file is part of /etc/motd</samp></pre>
     </div>
     <div>
-        <code><span class="shell_user">guest@web</span>:<span class="shell_path">/</span>$ <span class="shell_command">tree</span></code>
+        <code
+            class="font_jbmono"><span class="shell_user">guest@web</span>:<span class="shell_path">/</span>$ <span class="shell_command">tree</span></code>
     </div>
     <div>
-        <!-- ├ │ ─ └ these are the chars -->
-        <pre class="pre_dowrap"><samp><span class="shell_path">.</span>
+        <pre class="pre_dowrap"><samp class="font_jbmono"><span class="shell_path">.</span>
 ├── <a href="./2025/"><span class="shell_path">2025</span></a>
 │    ├── index.html
 │    └── style.css
+├── 404.html
+├── build.go
+├── <a href="./cardandflexboxtest/"><span class="shell_path">cardandflexboxtest</span></a>
+│    ├── <span class="shell_path">css</span>
+│    │    └── main.css
+│    └── index.html
 ├── <a href="./chellenge/"><span class="shell_path">chellenge</span></a>
 │    ├── <span class="shell_path">css</span>
 │    │    └── main.css
@@ -45,6 +58,33 @@ This file is part of /etc/motd</samp></pre>
 ├── <a href="./cotl/"><span class="shell_path">cotl</span></a>
 │    ├── index.html
 │    └── README.md
+├── <a href="./gallery/"><span class="shell_path">gallery</span></a>
+│    ├── <span class="shell_path">assets</span>
+│    │    ├── <span class="shell_path">css</span>
+│    │    │    └── main.css
+│    │    ├── <span class="shell_path">fonts</span>
+│    │    │    └── <span class="shell_path">OpenDyslexic3</span>
+│    │    │         ├── OpenDyslexic3-Bold.ttf
+│    │    │         └── OpenDyslexic3-Regular.ttf
+│    │    └── <span class="shell_path">img</span>
+│    │         ├── <span class="shell_path">avif</span>
+│    │         ├── <span class="shell_path">img_temp</span>
+│    │         │    ├── keyart-bg-1080x30-poster.webp
+│    │         │    ├── README.txt
+│    │         │    └── woolhaven-bg-poster.png
+│    │         ├── <span class="shell_path">jpeg</span>
+│    │         ├── <span class="shell_path">jxl</span>
+│    │         ├── <span class="shell_path">png</span>
+│    │         └── <span class="shell_path">webp</span>
+│    └── index.html
+├── <a href="./global_assets/"><span class="shell_path">global_assets</span></a>
+│    ├── <span class="shell_path">css</span>
+│    │    └── global.css
+│    └── <span class="shell_path">fonts</span>
+│         └── <span class="shell_path">JetBrainsMono</span>
+├── index.css
+├── index.html
+├── index.js
 ├── <a href="./neopronouns/"><span class="shell_path">neopronouns</span></a>
 │    ├── <span class="shell_path">css</span>
 │    │    └── main.css
@@ -53,28 +93,11 @@ This file is part of /etc/motd</samp></pre>
 │    ├── <span class="shell_path">css</span>
 │    │    └── main.css
 │    └── index.html
-├── <a href="./tabletest/"><span class="shell_path">tabletest</span></a>
-</div></samp></pre>
-        <!--
-    <span id="windows_10_ascii_color">                                ..,
-        ....,,:;+ccllll
-    ...,,+:;  cllllllllllllllllll
-    ,cclllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll</span>
-                        Windows 10 will reach EOL in <span>NULL</span>, assuming no ESU
-    <span id="windows_10_ascii_color">llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    llllllllllllll  lllllllllllllllllll
-    `'ccllllllllll  lllllllllllllllllll
-    `' \*::  :ccllllllllllllllll
-           ````''*::cll
-                     ``</span> -->
+└── <a href="./tabletest/"><span class="shell_path">tabletest</span></a>
+     ├── <span class="shell_path">css</span>
+     │    └── main.css
+     └── index.html</samp></pre>
+    </div>
 </body>
 
 </html>
