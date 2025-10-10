@@ -11,6 +11,13 @@ packages = [
     "killall",
     "go",
     "git-lfs",
+    "ffmpeg",
+    "file",
+    "libwebp",
+    "exiftool",
+    "jpeginfo",
+    "imagemagick",
+    "libjxl",
 ]
 
 [deployment]
