@@ -40,8 +40,9 @@ h3 {
     left: 0;*/
 }
 
-div,
-#pre_card * {
+/* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
+#pre_card *,
+body {
     margin: inherit;
     padding: inherit;
     box-sizing: inherit;
