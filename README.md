@@ -9,6 +9,15 @@ git lfs migrate import --include="*.ttf,*.woff2,*.png,*.jpg,*.jpeg,*.jxl,*.webp,
 
 Replit's Git GUI doesn't work with Git LFS...
 
+temp to push to Git with LFS
+```
+git lfs migrate import --include="*.ttf,*.woff2,*.png,*.jpg,*.jpeg,*.jxl,*.webp,*.avif" --everything
+```
+and
+```
+git push --force
+```
+
 Images are lossily transcoded with these commands :
 AVIF :
 ```
