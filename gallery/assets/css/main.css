@@ -41,7 +41,8 @@ h3 {
 }
 
 /* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
-#pre_card *,
+h1,
+h2,
 body {
     margin: inherit;
     padding: inherit;
