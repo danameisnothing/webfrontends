@@ -18,6 +18,8 @@ packages = [
     "jpeginfo",
     "imagemagick",
     "libjxl",
+    "libavif",
+    "libwebp",
 ]
 
 [deployment]

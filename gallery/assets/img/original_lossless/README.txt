@@ -1,5 +1,7 @@
 TODO: create a script that encodes the images later!
-we shall transcode the images in a lossless manner, except for JPEG 1
+we shall transcode the images in a lossy manner
+
+This folder contains the original images, fresh from the source. We are going to be lossily encoding the images, so here's the original.
 
 
 Sources :
