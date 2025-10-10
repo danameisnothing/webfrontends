@@ -12,7 +12,14 @@
 h1,
 h2,
 h3 {
-    font-family: "OpenDyslexic3 Bold", sans-serif;
+    font-family: "OpenDyslexic3 Regular", sans-serif;
+}
+
+/* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
+body {
+    margin: inherit;
+    padding: inherit;
+    box-sizing: inherit;
 }
 
 /* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
@@ -35,18 +42,18 @@ h3 {
     background-position: bottom center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    /*position: fixed;
-    top: 0;
-    left: 0;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
-h1,
-h2,
-body {
-    margin: inherit;
-    padding: inherit;
-    box-sizing: inherit;
+#trans_card_1 {
+    flex-direction: row;
+    display: block;
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 1) 100%);
 }
 
 h1,
