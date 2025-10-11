@@ -17,14 +17,18 @@
 
     <!-- TODO: favicon.ico -->
     <!-- TODO: make navigation possible with just tab (skip to main content, cards are selectable, etc) -->
-    <div class="util_centered">
+    <div class="util_centered" id="pre_card_parent">
         <div id="pre_card">
             <!-- we have a slightly darker background here -->
             <h1>test</h1>
             <h2>description here. this is blablabla</h2>
         </div>
         <!-- half transition to card -->
-        <div id="trans_card_1"></div>
+        <!-- TODO: replace this with our video -->
+        <video controls id="trans_card_1">
+            <source src="./assets/vid/vp9/fiery_gradient_divider_up_1600x400_alpha_trimmed.webm" type="video/webm" />
+            <source src="./assets/vid/vp8/fiery_gradient_divider_up_1600x400_alpha_trimmed.webm" type="video/webm" />
+        </video>
     </div>
     <div>
         <h2>pick a card or something</h2>

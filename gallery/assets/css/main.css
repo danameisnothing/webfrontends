@@ -41,7 +41,10 @@ body {
     width: 100%;
     /* FALLBACK, will look wrong on mobile! */
     height: 100vh;
-    height: 100svh;
+
+    @supports (height: 100svh) {
+        height: 100svh;
+    }
 
     /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
@@ -59,23 +62,38 @@ body {
     align-items: center;
 }
 
-/* https://stackoverflow.com/a/31002364 */
+/* Not sure why we need to set height twice, but i'm too lazy to think ever again */
+/* https://css-tricks.com/a-complete-guide-to-calc-in-css/ */
+#pre_card_parent {
+    overflow: hidden;
+    /* FALLBACK, will look wrong on mobile! */
+    /* HACKHACK: we do this to let the video transition element go below slightly */
+    height: calc(100vh + 50px);
+
+    @supports (height: calc(100svh + 50px)) {
+        height: calc(100svh + 50px);
+    }
+}
+
+/* https://stackoverflow.com/a/31002364, https://stackoverflow.com/a/75360648 */
 #trans_card_1 {
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
-    height: 25vh;
+    height: 200px;
+    object-fit: fill;
+    /*height: 25svh;*/
     /* TODO: change it to be less abrupt lol */
     /*background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);*/
     /*background: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(255, 255, 255, 0) 100%);*/
-    background: linear-gradient(0deg, rgba(59, 59, 59, 1) 0%, rgba(115, 115, 115, 0.75) 25%, rgba(255, 255, 255, 0) 100%);
+    /*background: linear-gradient(0deg, rgba(59, 59, 59, 1) 0%, rgba(115, 115, 115, 0.75) 25%, rgba(255, 255, 255, 0) 100%);*/
 }
 
 #trans_card_2 {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 25vh;
+    height: 25svh;
     /* TODO: change it to be less abrupt lol */
     /*background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);*/
     /*background: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(255, 255, 255, 0) 100%);*/
