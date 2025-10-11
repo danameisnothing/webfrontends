@@ -64,7 +64,7 @@ body {
 
 /* Not sure why we need to set height twice, but i'm too lazy to think ever again */
 /* https://css-tricks.com/a-complete-guide-to-calc-in-css/ */
-#pre_card_parent {
+#pre_card_section_full {
     overflow: hidden;
     /* FALLBACK, will look wrong on mobile! */
     /* HACKHACK: we do this to let the video transition element go below slightly */
@@ -79,25 +79,29 @@ body {
 #trans_card_1 {
     position: sticky;
     bottom: 0;
-    width: 100%;
-    height: 200px;
-    object-fit: fill;
-    /*height: 25svh;*/
-    /* TODO: change it to be less abrupt lol */
-    /*background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);*/
-    /*background: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(255, 255, 255, 0) 100%);*/
-    /*background: linear-gradient(0deg, rgba(59, 59, 59, 1) 0%, rgba(115, 115, 115, 0.75) 25%, rgba(255, 255, 255, 0) 100%);*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+    /*object-fit: fill;*/
+}
+
+#card_section_full {
+    /* color directly from https://www.cultofthelamb.com/ */
+    background-color: #fb273a; /* This color looks nearly-identical in Firefox, but not in Edge, WTF?! */
+}
+
+#card_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #trans_card_2 {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 25svh;
-    /* TODO: change it to be less abrupt lol */
-    /*background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 100%);*/
-    /*background: linear-gradient(0deg, rgba(30, 30, 30, 1) 0%, rgba(255, 255, 255, 0) 100%);*/
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(115, 115, 115, 0.75) 75%, rgba(59, 59, 59, 1) 100%);
+    height: 200px;
+    transform: scaleY(-1.0);
+    object-fit: fill;
 }
 
 h1,

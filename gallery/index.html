@@ -17,7 +17,7 @@
 
     <!-- TODO: favicon.ico -->
     <!-- TODO: make navigation possible with just tab (skip to main content, cards are selectable, etc) -->
-    <div class="util_centered" id="pre_card_parent">
+    <div class="util_centered" id="pre_card_section_full">
         <div id="pre_card">
             <!-- we have a slightly darker background here -->
             <h1>test</h1>
@@ -25,18 +25,70 @@
         </div>
         <!-- half transition to card -->
         <!-- TODO: replace this with our video -->
-        <video controls id="trans_card_1">
-            <source src="./assets/vid/vp9/fiery_gradient_divider_up_1600x400_alpha_trimmed.webm" type="video/webm" />
-            <source src="./assets/vid/vp8/fiery_gradient_divider_up_1600x400_alpha_trimmed.webm" type="video/webm" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video#loop -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex -->
+        <!-- https://stackoverflow.com/a/46528203 -->
+        <!-- TODO: determine if we need the poster attribute? -->
+        <!-- TODO: media queries, we will have multiple videos for different screen sizes (e.g. 1600x200, 2400x200, we pick the best one, and only fetch the suitable one) -->
+        <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+            tabindex="-1" id="trans_card_1">
+            <source src="./assets/vid/vp8/test.webm" type="video/webm" />
+            <source src="./assets/vid/vp8/fiery_gradient_divider_1920x200_alpha_vp8.webm" type="video/webm" />
         </video>
     </div>
-    <div>
-        <h2>pick a card or something</h2>
-        <div class="card">
+    <div id="card_section_full">
+        <div id="card_section">
+            <h2>pick a card or something</h2>
+            <!-- TODO: TEST -->
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_640x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_800x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1024x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1280x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1360x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1366x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1440x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1536x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/fiery_gradient_divider_1600x200_alpha_vp8.webm" type="video/webm" />
+            </video>
+            <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+                tabindex="-1">
+                <source src="./assets/vid/vp8/test.webm" type="video/webm" />
+            </video>
+            <div class="card">
+            </div>
         </div>
-        <!-- half transition to card -->
-        <div id="trans_card_2"></div>
     </div>
+    <!-- half transition to card -->
+    <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline tabindex="-1"
+        id="trans_card_2">
+        <source src="./assets/vid/vp8/fiery_gradient_divider_1920x200_alpha_vp8.webm" type="video/webm" />
+    </video>
     <div>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
