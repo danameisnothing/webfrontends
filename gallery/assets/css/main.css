@@ -1,12 +1,13 @@
 /* https://stackoverflow.com/a/3245187 */
 @font-face {
     font-family: "OpenDyslexic3 Regular";
-    src: url("../fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
+    /*src: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");*/
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "OpenDyslexic3 Bold";
-    src: url("../fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
 }
 
 h1,
@@ -48,8 +49,8 @@ body {
 
     /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
-    @supports (background-image: url("../img/avif/woolhaven-bg-poster.avif")) {
-        background-image: url("../img/avif/woolhaven-bg-poster.avif")
+    @supports (background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/avif/woolhaven-bg-poster.avif")) {
+        background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/avif/woolhaven-bg-poster.avif")
     }
 
     background-size: cover;
@@ -79,20 +80,31 @@ body {
 #trans_card_1 {
     position: sticky;
     bottom: 0;
-    /*width: 100%;*/
-    /*height: 200px;*/
-    /*object-fit: fill;*/
+    width: 100%;
+    height: 200px;
+    background: url("../vid/fiery_gradient_divider_1920x200_final.webm");
+    background-repeat: repeat;
+    object-fit: fill;
 }
 
-#card_section_full {
-    /* color directly from https://www.cultofthelamb.com/ */
-    background-color: #fb273a; /* This color looks nearly-identical in Firefox, but not in Edge, WTF?! */
-}
-
+/* Firefox matches this color almost perfectly, but Chromium-based ones do not. */
+/* I count this as Chromium's fault, as the video looked exactly like Firefox's output. */
+/* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
+/* why chrome? */
 #card_section {
+    /* color arbitrarily picked from screenshot of render */
+    background-color: #f23636;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* https://css-tricks.com/snippets/css/css-hacks-targeting-firefox/ */
+@-moz-document url-prefix() {
+    #card_section {
+        /* color directly from https://www.cultofthelamb.com/ */
+        background-color: #fb273a;
+    }
 }
 
 #trans_card_2 {

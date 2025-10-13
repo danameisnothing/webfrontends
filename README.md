@@ -78,62 +78,9 @@ if (trailerSection) {
 capture in VP8 :
 WARNING: Based on GenAI-generated code (Claude Sonnet 4.5)!
 ```js
-var width = "1600";
-var height = "200";
-var canvas = document.querySelector(`canvas[width="${width}"][height="${height}"]`);
-var stream = canvas.captureStream(120);
-
-var mimeTypes = [
-    'video/webm;codecs=vp8' // for lightweightness
-];
-
-var supportedMimeType = mimeTypes.find(type => MediaRecorder.isTypeSupported(type));
-console.log('Using codec:', supportedMimeType);
-
-var recorder = new MediaRecorder(stream, {
-    mimeType: supportedMimeType,
-    videoBitsPerSecond: 30000000
-});
-
-var chunks = [];
-recorder.ondataavailable = (e) => chunks.push(e.data);
-
-recorder.onstop = () => {
-    var blob = new Blob(chunks, { type: supportedMimeType });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement('a');
-    a.href = url;
-    a.download = `fiery_gradient_divider_${width}x${height}_original.webm`;
-    a.click();
-};
-
-recorder.start();
-setTimeout(() => {
-    console.log("Stopping recording...");
-    recorder.stop();
-}, 1*60*1000);
-```
-
-Processing the video :
-(we don't need these to be high-quality, nor particularly efficient)
-VP8 -> VP8:
-```
-ffmpeg -hide_banner -i "fiery_gradient_divider_800x200_original.webm" -vf "colorkey=black:0.02:0.15,format=yuva420p" -c:v libvpx -cpu-used 12 -crf 12 -qmin 0 -qmax 12 -b:v 10M -pix_fmt yuva420p -metadata:s:v:0 alpha_mode="1" -auto-alt-ref 0 "processed/fiery_gradient_divider_800x200_alpha_vp8.webm"
-```
-VP8 -> VP9:
-```
-ffmpeg -hide_banner -i "fiery_gradient_divider_800x200_original.webm" -vf "colorkey=black:0.02:0.15,format=yuva420p" -c:v libvpx-vp9 -cpu-used 8 -crf 12 -qmin 0 -qmax 12 -b:v 10M -pix_fmt yuva420p -row-mt 1 "processed/fiery_gradient_divider_800x200_alpha_vp9.webm"
-```
-https://jakearchibald.com/2024/video-with-transparency/
-AV1 doesn't seem worth the hassle...
-
-
-New script :
-WARNING: Based on GenAI-generated code (Claude Sonnet 4.5)!
-```js
 // taken from Wikipedia en.wikipedia.org/wiki/Display_resolution#Common_display_resolutions
 
-function recordCanvas(width, height, lengthec) {
+function recordCanvas(width, height, lengthSec) {
     console.log(`Setting up recording for ${width}x${height}...`);
 
     // Find the canvas
@@ -199,6 +146,26 @@ function recordCanvas(width, height, lengthec) {
     }, lengthSec * 1000);
 }
 ```
+
+Processing the video :
+(we don't need these to be high-quality, nor particularly efficient)
+VP8 -> VP8 (PowerShell syntax) : // https://www.webmproject.org/docs/encoder-parameters/,https://trac.ffmpeg.org/wiki/Encode/VP8
+```powershell
+$WIDTH="1920"
+$INP="fiery_gradient_divider_$($WIDTH)x200_raw.webm"
+$OUTP="fiery_gradient_divider_$($WIDTH)x200_final.webm"
+ffmpeg -hide_banner -i "$($INP)" -vf "colorkey=black:0.02:0.15,format=yuva420p,select='not(eq(n\,0))'" -c:v libvpx -deadline best -crf 25 -qmin 0 -qmax 42 -b:v 7M -pix_fmt yuva420p -metadata:s:v:0 alpha_mode="1" -auto-alt-ref 0 -lag-in-frames 12 -pass 1 -f null NUL && ffmpeg -hide_banner -i "$($INP)" -vf "colorkey=black:0.02:0.15,format=yuva420p,select='not(eq(n\,0))'" -c:v libvpx -deadline best -crf 25 -qmin 0 -qmax 42 -b:v 7M -pix_fmt yuva420p -metadata:s:v:0 alpha_mode="1" -auto-alt-ref 0 -lag-in-frames 12 -pass 2 "$($OUTP)" && rm ffmpeg2pass-0.log
+```
+VP8 -> VP9 (PowerShell syntax) : // https://trac.ffmpeg.org/wiki/Encode/VP9, https://www.reddit.com/r/AV1/comments/k7colv/encoder_tuning_part_1_tuning_libvpxvp9_be_more/
+```powershell
+$WIDTH="1280"
+$INP="fiery_gradient_divider_$($WIDTH)x200_raw.webm"
+$OUTP="fiery_gradient_divider_$($WIDTH)x200_final.webm"
+ffmpeg -hide_banner -i "$($INP)" -vf "select='not(eq(n\,0))'" -c:v libvpx-vp9 -deadline best -crf 20 -b:v 0 -metadata:s:v:0 alpha_mode="1" -auto-alt-ref 0 -lag-in-frames 12 -row-mt 1 -pass 1 -f null NUL && ffmpeg -hide_banner -i "$($INP)" -vf "select='not(eq(n\,0))'" -c:v libvpx-vp9 -deadline best -crf 20 -b:v 0 -metadata:s:v:0 alpha_mode="1" -auto-alt-ref 0 -lag-in-frames 12 -row-mt 1 -pass 2 "$($OUTP)" && rm ffmpeg2pass-0.log
+```
+https://jakearchibald.com/2024/video-with-transparency/
+AV1 doesn't seem worth the hassle...
+
 Conversion script:
 WARNING: GenAI-generated code (Claude Sonnet 4.5)!
 ```powershell
