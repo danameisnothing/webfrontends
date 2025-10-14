@@ -257,3 +257,15 @@ Write-Host "VP9 files: processed\VP9\" -ForegroundColor Cyan
 // recordCanvas(3200, 200);
 // etc.
 ```
+
+// https://www.reddit.com/r/ffmpeg/comments/1lgj7cc/png_sequence_to_webm_preserving_transparency/
+// https://stackoverflow.com/a/78094269
+```
+ffmpeg -hide_banner -i "fiery_gradient_divider_769x200_raw.webm" -t 15 -loop 0 -vf "colorkey=black:0.02:0.15,fps=24,scale=769:200,format=yuva420p" -pix_fmt yuva420p -lossless 0 -compression_level 6 -quality 70 -preset picture "fiery_gradient_divider_769x200_q70_24fps_15s.webp"
+```
+WARNING: Based on GenAI-generated command (claude-4.5-sonnet and gemini-2.5-pro)!
+```
+ffmpeg -hide_banner -i "fiery_gradient_divider_769x200_raw.webm" `
+-filter_complex "[0]trim=end_frame=1,setpts=PTS-STARTPTS[first_frame];[0][first_frame]xfade=fade:duration=1:offset=14" `
+-loop 0 -pix_fmt yuva420p -lossless 0 -compression_level 6 -quality 70 -preset picture "fiery_gradient_divider_769x200_q70_24fps_15s_seamless.webp"
+```

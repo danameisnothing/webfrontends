@@ -1,5 +1,5 @@
 // The Temporal API is still widely unsupported
-const W10_EOL_DATE = new Date(2025, 9, 14);
+const W10_EOL_DATE = new Date(2025, 9, 15);
 const PRIDE_MONTH = 6 - 1;
 
 const win10EOLEl = document.querySelector("#windows_10_eol_time");

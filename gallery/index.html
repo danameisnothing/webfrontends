@@ -27,24 +27,37 @@
         <!-- TODO: determine if we need the poster attribute? -->
         <!-- TODO: media queries, we will have multiple videos for different screen sizes (e.g. 1600x200, 2400x200, we pick the best one, and only fetch the suitable one) -->
         <!-- TODO: investigate Animated AVIF and WebP for the ability to "repeat" the visuals, despite authored at a size that may be smaller than the user's screen -->
-        <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+        <!-- <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
             tabindex="-1" id="trans_card_1">
             <source src="./assets/vid/fiery_gradient_divider_1920x200_final.webm" type="video/webm" />
-        </video>
+        </video> -->
+        <div id="trans_card_1"></div>
     </div>
     <div id="card_section_full">
         <div id="card_section">
-            <h2>pick a card or something</h2>
-            <div class="card">
+            <h3>pick a card or something</h3>
+            <div class="card_full">
+                <!-- TODO: find actual picture later! -->
+                <img class="card_img" src="https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/avif/woolhaven-bg-poster.avif"></img>
+                <div class="card_text">
+                    <p>test</p>
+                </div>
             </div>
         </div>
         <!-- TODO: TEST -->
-        <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
+        <!-- <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
             tabindex="-1" id="trans_card_2">
             <source src="./assets/vid/fiery_gradient_divider_1920x200_final.webm" type="video/webm" />
-        </video>
+        </video> -->
     </div>
-    <div>
+    <!--TODO: fix an issue where the text are no longer centered when zooming in, or when the screen can't fit -->
+    <div id="credits_section_full">
+        <div id="credits_section">
+            <h6>Overall webpage design <s>stolen</s> heavily inspired by <i><a href="https://www.cultofthelamb.com/"><span class="shell_path">Cult of the Lamb</span></a></i></h6>
+            <h6>Webpage footer inspired by <i><a href="https://www.unpackinggame.com/"><span class="shell_path">@unpackinggame</span></a></i></h6>
+            <h6>Favicon design inspired by <i><a href="https://github.com/osoclos/cultivis"><span class="shell_path">cultivis</span></a></i></h6>
+            <h6>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster Games</h6>
+        </div>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
         <!-- inspirations taken from : -->

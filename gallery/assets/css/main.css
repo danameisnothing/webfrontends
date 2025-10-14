@@ -1,7 +1,6 @@
 /* https://stackoverflow.com/a/3245187 */
 @font-face {
     font-family: "OpenDyslexic3 Regular";
-    /*src: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");*/
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
 }
 
@@ -12,7 +11,11 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6,
+p {
     font-family: "OpenDyslexic3 Regular", sans-serif;
 }
 
@@ -21,6 +24,15 @@ body {
     margin: inherit;
     padding: inherit;
     box-sizing: inherit;
+}
+
+/* Copied straight from chellenge */
+a,
+a:visited,
+a:hover,
+a:active,
+a:link {
+    color: inherit;
 }
 
 /* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
@@ -69,11 +81,22 @@ body {
     overflow: hidden;
     /* FALLBACK, will look wrong on mobile! */
     /* HACKHACK: we do this to let the video transition element go below slightly */
+    /* a reminder that vh is an unreliable unit on mobile browsers */
     height: calc(100vh + 50px);
 
     @supports (height: calc(100svh + 50px)) {
         height: calc(100svh + 50px);
     }
+}
+
+#credits_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#credits_section>* {
+    margin: 0;
 }
 
 /* https://stackoverflow.com/a/31002364, https://stackoverflow.com/a/75360648 */
@@ -82,13 +105,11 @@ body {
     bottom: 0;
     width: 100%;
     height: 200px;
-    background: url("../vid/fiery_gradient_divider_1920x200_final.webm");
+    background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/webp/fiery_gradient_divider_1920x200_q85_30fps.webp");
     background-repeat: repeat;
-    object-fit: fill;
 }
 
 /* Firefox matches this color almost perfectly, but Chromium-based ones do not. */
-/* I count this as Chromium's fault, as the video looked exactly like Firefox's output. */
 /* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
 /* why chrome? */
 #card_section {
@@ -113,7 +134,24 @@ body {
     width: 100%;
     height: 200px;
     transform: scaleY(-1.0);
-    object-fit: fill;
+}
+
+/* TODO: tweak later! */
+.card_full {
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_img {
+    max-width: 120px;
+    max-height: 240px;
 }
 
 h1,
