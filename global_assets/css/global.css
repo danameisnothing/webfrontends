@@ -124,6 +124,8 @@ code,
 samp,
 th,
 td,
-tr {
+tr,
+a,
+span {
     color: #ffffff
 }

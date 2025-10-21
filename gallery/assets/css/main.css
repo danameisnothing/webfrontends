@@ -15,7 +15,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span,
+a {
     font-family: "OpenDyslexic3 Regular", sans-serif;
 }
 
@@ -61,8 +63,8 @@ a:link {
 
     /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
-    @supports (background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/avif/woolhaven-bg-poster.avif")) {
-        background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/avif/woolhaven-bg-poster.avif")
+    @supports (background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif")) {
+        background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif")
     }
 
     background-size: cover;
@@ -105,7 +107,7 @@ a:link {
     bottom: 0;
     width: 100%;
     height: 200px;
-    background-image: url("https://github.com/danameisnothing/webfrontends_assets/raw/refs/heads/master/gallery/assets/img/webp/fiery_gradient_divider_1920x200_q85_30fps.webp");
+    background-image: url("http://127.0.0.1:8001/gallery/assets/video/webp/fiery_gradient_divider_769x200_q70_24fps_15s_temp.webp");
     background-repeat: repeat;
 }
 
@@ -120,12 +122,44 @@ a:link {
     align-items: center;
 }
 
+.card_entry {
+    display: none;
+}
+
+.card_entry:target {
+    display: flex;
+}
+
+/* wot : https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator */
+.card_entry:target ~ #card_notice_sacrificial_lamb {
+    display: none;
+}
+
+#card_section_pre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* color arbitrarily picked from screenshot of render */
+    background-color: #f23636;
+}
+
 /* https://css-tricks.com/snippets/css/css-hacks-targeting-firefox/ */
 @-moz-document url-prefix() {
     #card_section {
         /* color directly from https://www.cultofthelamb.com/ */
         background-color: #fb273a;
     }
+    #card_section_pre {
+        /* color directly from https://www.cultofthelamb.com/ */
+        background-color: #fb273a;
+    }
+}
+
+#card_type_selector {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #trans_card_2 {
