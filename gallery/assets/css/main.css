@@ -107,7 +107,8 @@ a:link {
     bottom: 0;
     width: 100%;
     height: 200px;
-    background-image: url("http://127.0.0.1:8001/gallery/assets/video/webp/fiery_gradient_divider_769x200_q70_24fps_15s_temp.webp");
+    /* This image is almost 4 MiB. We absolutely need the CDN for this one */
+    background-image: url("http://127.0.0.1:8001/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
     background-repeat: repeat;
 }
 
@@ -115,8 +116,8 @@ a:link {
 /* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
 /* why chrome? */
 #card_section {
-    /* color arbitrarily picked from screenshot of render */
-    background-color: #f23636;
+    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-repeat: repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,29 +131,22 @@ a:link {
     display: flex;
 }
 
-/* wot : https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator */
-.card_entry:target ~ #card_notice_sacrificial_lamb {
+/* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
+body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     display: none;
+}
+
+#card_type_selector_bg {
+    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-repeat: repeat;
 }
 
 #card_section_pre {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* color arbitrarily picked from screenshot of render */
-    background-color: #f23636;
-}
-
-/* https://css-tricks.com/snippets/css/css-hacks-targeting-firefox/ */
-@-moz-document url-prefix() {
-    #card_section {
-        /* color directly from https://www.cultofthelamb.com/ */
-        background-color: #fb273a;
-    }
-    #card_section_pre {
-        /* color directly from https://www.cultofthelamb.com/ */
-        background-color: #fb273a;
-    }
+    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-repeat: repeat;
 }
 
 #card_type_selector {

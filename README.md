@@ -260,8 +260,28 @@ Write-Host "VP9 files: processed\VP9\" -ForegroundColor Cyan
 
 // https://www.reddit.com/r/ffmpeg/comments/1lgj7cc/png_sequence_to_webm_preserving_transparency/
 // https://stackoverflow.com/a/78094269
+// either photo, picture, or default.
+// claude.ai's landing video is ~8 secs
 ```
-ffmpeg -hide_banner -i "fiery_gradient_divider_769x200_raw.webm" -t 15 -loop 0 -vf "colorkey=black:0.02:0.15,fps=24,scale=769:200,format=yuva420p" -pix_fmt yuva420p -lossless 0 -compression_level 6 -quality 70 -preset picture "fiery_gradient_divider_769x200_q70_24fps_15s_temp.webp"
+ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -c:v libwebpw_anim -t 8 -loop 0 -vf "colorkey=black:0.02:0.15,fps=24,scale=1920:200,format=yuva420p" -pix_fmt yuva420p -preset photo -lossless 0 -compression_level 6 -quality 82 "fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp"
+```
+
+// https://superuser.com/a/1765767
+WARNING: Based on GenAI-generated command (claude-4.5-sonnet)!
+getting the 1px image lmao :
+apparently WebP (or libwebp) can't encode on resolution smaller than 2x2
+3836 and 396 is from 3840x400 (the apparently actual resolution of the recorded video) - 4
+100 is from the LLM lol idk
+we have to use WebP here too, otherwise the colors look a bit different
+```
+ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -c:v libaom-av1 -still-picture 1 -vf "select=eq(n\,100),crop=2:2:3836:396,colorkey=black:0.02:0.15,format=yuva420p" -frames:v 1 -pix_fmt yuva420p "card_bg_2x2.avif"
+```
+```
+ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -c:v libwebp -vf "select=eq(n\,100),crop=2:2:3836:396,colorkey=black:0.02:0.15,format=yuva420p" -frames:v 1 -pix_fmt yuva420p -preset photo -lossless 0 -compression_level 6 -quality 82 "card_bg_2x2.webp"
+```
+
+
+
 ```
 WARNING: Based on GenAI-generated command (claude-4.5-sonnet and gemini-2.5-pro)!
 NON-FUNCTIONAL!
