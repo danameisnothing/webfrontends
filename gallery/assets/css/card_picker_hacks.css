@@ -1,0 +1,19 @@
+/* HACK: there is no way (in my knowledge) to "read" an element's ID and select an element based on the ID, so we just cover every possible bases */
+/* approach inspired from : https://www.digitalocean.com/community/tutorials/css-css-only-click-handler and https://tobiasahlin.com/blog/hiding-an-element-if-its-empty/ */
+body:has(#cardentry_all:target) #cardentry_all_link {
+    /* FIXME: add this asset to the assets repo! */
+    background-image: url("https://www.cultofthelamb.com/images/sidebar/button.png");
+    background-size: 100% 100%;
+}
+
+body:has(#cardentry_playablechars:target) #cardentry_playablechars_link {
+    /* FIXME: add this asset to the assets repo! */
+    background-image: url("https://www.cultofthelamb.com/images/sidebar/button.png");
+    background-size: 100% 100%;
+}
+
+body:has(#cardentry_cultists:target) #cardentry_cultists_link {
+    /* FIXME: add this asset to the assets repo! */
+    background-image: url("https://www.cultofthelamb.com/images/sidebar/button.png");
+    background-size: 100% 100%;
+}

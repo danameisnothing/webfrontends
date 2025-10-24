@@ -1,3 +1,6 @@
+/* TODO: split this into multiple stylesheets! */
+/* good candidate would be the hack at the bottom of this file */
+
 /* https://stackoverflow.com/a/3245187 */
 @font-face {
     font-family: "OpenDyslexic3 Regular";
@@ -37,6 +40,22 @@ a:link {
     color: inherit;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+samp,
+th,
+td,
+tr {
+    color: #f1edd9
+}
+
+
 /* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
 /*#pre_card > * {
     margin: 0;
@@ -63,6 +82,7 @@ a:link {
 
     /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
+    /* we only bother for AVIF! we assume WebP as the minimum supported image format */
     @supports (background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif")) {
         background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif")
     }
@@ -82,7 +102,7 @@ a:link {
 #pre_card_section_full {
     overflow: hidden;
     /* FALLBACK, will look wrong on mobile! */
-    /* HACKHACK: we do this to let the video transition element go below slightly */
+    /* HACK: we do this to let the video transition element go below slightly */
     /* a reminder that vh is an unreliable unit on mobile browsers */
     height: calc(100vh + 50px);
 
@@ -97,7 +117,7 @@ a:link {
     align-items: center;
 }
 
-#credits_section>* {
+#credits_section > * {
     margin: 0;
 }
 
@@ -108,7 +128,7 @@ a:link {
     width: 100%;
     height: 200px;
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
-    background-image: url("http://127.0.0.1:8001/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
     background-repeat: repeat;
 }
 
@@ -116,7 +136,7 @@ a:link {
 /* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
 /* why chrome? */
 #card_section {
-    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
@@ -137,7 +157,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 #card_type_selector_bg {
-    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
     background-repeat: repeat;
 }
 
@@ -145,15 +165,48 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("http://127.0.0.1:8001/gallery/assets/img/webp/card_bg_2x2.webp");
+    background-image: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
     background-repeat: repeat;
 }
 
 #card_type_selector {
-    max-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* https://stackoverflow.com/a/20327676 */
+#card_type_selector > a {
+    /* background-color: white; */
+    padding: 15px 50px;
+    margin: -15px -50px;
+}
+
+/* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* 775px is from trial and error */
+/* 100% as smaller because we are already vertical, might as well make the most of it */
+@media screen and (min-width: 775px) {
+    #card_type_selector {
+        flex-direction: row;
+        max-width: 80%;
+    }
+
+    /* https://stackoverflow.com/a/20327676 */
+    #card_type_selector > a {
+        margin: -15px -50px;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    #card_type_selector {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    /* https://stackoverflow.com/a/20327676 */
+    #card_type_selector > a {
+        margin: -15px 0px;
+    }
 }
 
 #trans_card_2 {
@@ -180,18 +233,4 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 .card_img {
     max-width: 120px;
     max-height: 240px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-code,
-samp,
-th,
-td,
-tr {
-    color: #f1edd9
 }

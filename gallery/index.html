@@ -8,6 +8,7 @@
     <title>testing 1 2 3</title>
     <link rel="stylesheet" href="/global_assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/card_picker_hacks.css">
 </head>
 
 <body>
@@ -42,19 +43,30 @@
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
             <div class="util_centered" id="card_type_selector">
-                <a href="#test_hid_1">test1</a>
-                <a href="#test_hid_2">test2</a>
-                <a href="#test_hid_3">test3</a>
-                <a href="#test_hid_4">test4</a>
+                <!-- in this one, we indeed DO want it's "click area" to extend to the sixe of a button -->
+                <a href="#cardentry_all" id="cardentry_all_link"><h3>All</h3></a>
+                <a href="#cardentry_playablechars" id="cardentry_playablechars_link"><h3>Playable Characters</h3></a>
+                <a href="#cardentry_cultists" id="cardentry_cultists_link"><h3>Cultists Variations</h3></a>
+                <a href="#test_hid_4"><h3>test4</h3></a>
             </div>
         </div>
         <div id="card_section">
             <!-- lol -->
             <!-- TODO: figure out how can we activate the first entry, but on subsequent targetting, unhide that -->
             <p id="card_notice_sacrificial_lamb">pick a card to get started or something</p>
-            <p class="card_entry" id="test_hid_1">hello</p>
-            <p class="card_entry" id="test_hid_2">world</p>
-            <p class="card_entry" id="test_hid_3">test</p>
+
+            <div class="card_entry" id="cardentry_all">
+                <p>why</p>
+            </div>
+
+            <div class="card_entry" id="cardentry_playablechars">
+                <p>hey i'm lamb</p>
+            </div>
+
+            <div class="card_entry" id="cardentry_cultists">
+                <p>i culted all over the place</p>
+            </div>
+
             <p class="card_entry" id="test_hid_4">ok now we're done</p>
 
             <div class="card_full">
