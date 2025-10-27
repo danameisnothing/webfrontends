@@ -1,23 +1,3 @@
-Some files are tracked via Git LFS!
-
-```
-git lfs track "*.png,*.jpg,*.jpeg,*.jxl,*.webp,*.avif,*.webm"
-```
-```
-git lfs migrate import --include="*.png,*.jpg,*.jpeg,*.jxl,*.webp,*.avif,*.webm" --everything
-```
-
-Replit's Git GUI doesn't work with Git LFS...
-
-temp to push to Git with LFS
-```
-git lfs migrate import --include="*.ttf,*.woff2,*.png,*.jpg,*.jpeg,*.jxl,*.webp,*.avif" --everything
-```
-and
-```
-git push --force
-```
-
 Images are lossily transcoded with these commands :
 AVIF :
 ```

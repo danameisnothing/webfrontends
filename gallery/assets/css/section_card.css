@@ -2,10 +2,14 @@
 /* TODO: is it necessary to ise @supoorts for this one? */
 :root {
 	--img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
-	/* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
-	--img_button_active_png: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/button.png");
+	/* TODO: we re-encode in AVIF later! */
+	--img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Grey.webp");
 	/* This image is almost 4 MiB. We absolutely need the CDN for this one */
 	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+	--button_transition_time: 0.075s;
+	--img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/CardBack_Trinket.webp");
+	--card_backside_vis: 0%;
+	--card_frontside_vis: 0%;
 	/* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
 	scroll-behavior: smooth;
 }
@@ -19,6 +23,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* to make room for expanding cards' transition */
+    padding-bottom: 35px;
 }
 
 .card_entry {
@@ -31,6 +37,9 @@ a message, via content: maybe? */
 
 .card_entry:target {
     display: flex;
+    animation-name: anim_flip_reveal;
+    animation-duration: 1.25s;
+    
 }
 
 /* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
@@ -64,13 +73,12 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     padding: 15px 50px;
     text-decoration: none;
     background-image: none;
-    background-image: var(--img_button_active_png);
+    /* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
+    background-image: var(--img_button_grey_webp);
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-size 0.1s;
+    transition: background-size var(--button_transition_time);
     background-size: 0% 100%;
-    /* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
-    /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), var(--img_button_active_png); */
 }
 
 #card_type_selector > a:hover {
@@ -79,7 +87,6 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
 /* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
 /* 775px is from trial and error */
-/* 100% as smaller because we are already vertical, might as well make the most of it */
 @media screen and (min-width: 775px) {
     #card_type_selector {
         flex-direction: row;
@@ -92,6 +99,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     }
 }
 
+/* 100% as smaller because we are already vertical, might as well make the most of it */
 @media screen and (max-width: 774px) {
     #card_type_selector {
         flex-direction: column;
@@ -109,19 +117,52 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     transform: rotate(180deg);
 }
 
+@keyframes anim_flip_reveal {
+	0% {
+		--card_backside_vis: 100%;
+		--card_frontside_vis: 0%;
+	}
+	35% {
+		transform: scale(1.25);
+	}
+	52.5% {
+		--card_backside_vis: 0%;
+		--card_frontside_vis: 100%;
+	}
+	70% {
+		transform: rotateY(180deg) scale(1.25);
+	}
+	100% {
+		transform: scale(1) rotateY(180deg);
+	}
+}
+
 /* TODO: tweak later! */
 /* FIXME: make this card scale well, with this ratio */
 .card_full {
-    background-color: #FFF8E9;
-    border: 2px solid #000000;
-    border-radius: 6px;
-    /* max-width:  */
-    width: 180px;
-    height: 280px;
+    border-radius: 3px;
+    /* width: 180px;
+    height: 280px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.card_entry_backside {
+	width: 180px;
+	height: 280px;
+	background-image: var(--img_cardback_trinket);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	opacity: var(--card_backside_vis);
+}
+
+.card_entry_frontside {
+	width: 180px;
+    height: 280px;
+	opacity: var(--card_frontside_vis)
 }
 
 .card_img {
