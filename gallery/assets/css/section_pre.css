@@ -1,0 +1,70 @@
+:root {
+	--img_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif");
+	/* This image is almost 4 MiB. We absolutely need the CDN for this one */
+	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+}
+
+/* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
+/*#pre_card > * {
+    margin: 0;
+}*/
+
+/* FIXME: only for testing! */
+/* Hunt for https://static.wikia.nocookie.net/cult-of-the-lamb/images/0/08/Site-background-dark/revision/latest?cb=20250112140801, but a lossless source! */
+/* TODO: put a fadeout on the edges */
+/* TODO: make the image flush to the edges */
+/* https://stackoverflow.com/a/46898484, https://stackoverflow.com/a/18588879 */
+/* vh is apparently inaccurate on mobile browsers, from https://ilxanlar.medium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487, through https://readmedium.com/you-shouldnt-rely-on-css-100vh-and-here-s-why-1b4721e74487 */
+/* https://stackoverflow.com/a/72245072, https://caniuse.com/?search=dvh */
+/* https://stackoverflow.com/questions/57359223/how-to-detect-if-webp-images-are-supported-via-css */
+#pre_card {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* FALLBACK, will look wrong on mobile! */
+    height: 100vh;
+
+    @supports (height: 100svh) {
+        height: 100svh;
+    }
+
+    /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
+    /* FIXME: NOT FINISHED! */
+    /* we only bother for AVIF! we assume WebP as the minimum supported image format */
+    @supports (background-image: var(--img_bg)) {
+        background-image: var(--img_bg);
+    }
+
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Not sure why we need to set height twice, but i'm too lazy to think ever again */
+/* https://css-tricks.com/a-complete-guide-to-calc-in-css/ */
+#pre_card_section_full {
+    overflow: hidden;
+    /* FALLBACK, will look wrong on mobile! */
+    /* HACK: we do this to let the video transition element go below slightly */
+    /* a reminder that vh is an unreliable unit on mobile browsers */
+    height: calc(100vh + 50px);
+
+    @supports (height: calc(100svh + 50px)) {
+        height: calc(100svh + 50px);
+    }
+}
+
+/* https://stackoverflow.com/a/31002364, https://stackoverflow.com/a/75360648 */
+#trans_card_1 {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-image: var(--awebp_fiery_gradient);
+    background-repeat: repeat;
+}

@@ -4,6 +4,10 @@
 	--img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
 	/* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
 	--img_button_active_png: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/button.png");
+	/* This image is almost 4 MiB. We absolutely need the CDN for this one */
+	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+	/* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
+	scroll-behavior: smooth;
 }
 
 /* Firefox matches this color almost perfectly, but Chromium-based ones do not. */
@@ -20,6 +24,10 @@
 .card_entry {
     display: none;
 }
+
+/* TODO: maybe make a warning about a certain CSS keyword not being
+supported via @supports? by setting the content of an element to
+a message, via content: maybe? */
 
 .card_entry:target {
     display: flex;
@@ -59,8 +67,8 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     background-image: var(--img_button_active_png);
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-size 0.5s;
-    background-size: 0% 0%;
+    transition: background-size 0.1s;
+    background-size: 0% 100%;
     /* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
     /* background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), var(--img_button_active_png); */
 }
@@ -96,16 +104,20 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     top: 0;
     width: 100%;
     height: 200px;
-    transform: scaleY(-1.0);
+    background-image: var(--awebp_fiery_gradient);
+    background-repeat: repeat;
+    transform: rotate(180deg);
 }
 
 /* TODO: tweak later! */
+/* FIXME: make this card scale well, with this ratio */
 .card_full {
-    background-color: #FFFFFF;
+    background-color: #FFF8E9;
     border: 2px solid #000000;
-    border-radius: 5px;
-    width: 150px;
-    height: 200px;
+    border-radius: 6px;
+    /* max-width:  */
+    width: 180px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +125,6 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 .card_img {
-    max-width: 120px;
+    max-width: 150px;
     max-height: 240px;
 }
