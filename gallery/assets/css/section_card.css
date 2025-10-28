@@ -8,8 +8,9 @@
 	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
 	--button_transition_time: 0.075s;
 	--img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/CardBack_Trinket.webp");
-	--card_backside_vis: 0%;
-	--card_frontside_vis: 0%;
+	--img_cardfront_bg_TEMP: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/Ambrosia.webp");
+	--card_reveal_full_time: 1.25s;
+	--card_reveal_delay: 0.3s;
 	/* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
 	scroll-behavior: smooth;
 }
@@ -38,8 +39,8 @@ a message, via content: maybe? */
 .card_entry:target {
     display: flex;
     animation-name: anim_flip_reveal;
-    animation-duration: 1.25s;
-    
+    animation-duration: var(--card_reveal_full_time);
+    animation-delay: var(--card_reveal_delay);
 }
 
 /* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
@@ -118,22 +119,41 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 @keyframes anim_flip_reveal {
-	0% {
-		--card_backside_vis: 100%;
-		--card_frontside_vis: 0%;
-	}
 	35% {
 		transform: scale(1.25);
 	}
 	52.5% {
-		--card_backside_vis: 0%;
-		--card_frontside_vis: 100%;
+		transform: rotateY(90deg) scale(1.25);
 	}
 	70% {
-		transform: rotateY(180deg) scale(1.25);
+		transform: rotateY(0deg) scale(1.25);
 	}
 	100% {
-		transform: scale(1) rotateY(180deg);
+		transform: scale(1);
+	}
+}
+
+/* this display: none nonsense doesn't work on Firefox, see below */
+@keyframes anim_backface {
+	0% {
+		display: flex;
+		visibility: visible;
+	}
+	52.5%, 100% {
+		display: none; 
+		visibility: hidden;
+	}
+}
+
+/* at t=0, this is not visible, then next timestep it is visible? anyway, this works */
+@keyframes anim_frontface {
+	0%, 52.5% {
+		display: none;
+		visibility: hidden;
+	}
+	100% {
+		display: flex;
+		visibility: visible;
 	}
 }
 
@@ -141,8 +161,10 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 /* FIXME: make this card scale well, with this ratio */
 .card_full {
     border-radius: 3px;
-    /* width: 180px;
-    height: 280px; */
+    width: 180px;
+    height: 280px;
+    /* part of a hack made for Firefox */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,13 +178,32 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-	opacity: var(--card_backside_vis);
+	animation-name: anim_backface;
+	animation-duration: var(--card_reveal_full_time);
+	animation-fill-mode: forwards;
+	animation-delay: var(--card_reveal_delay);
+	/* starting styles, so the styles wouldn't look off while the animation was delaying */
+	visibility: visible;
 }
 
 .card_entry_frontside {
+	position: absolute;
+	/* top: 0;
+	right: 0; */
 	width: 180px;
     height: 280px;
-	opacity: var(--card_frontside_vis)
+    background-image: var(--img_cardfront_bg_TEMP);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	animation-name: anim_frontface;
+	animation-duration: var(--card_reveal_full_time);
+	animation-fill-mode: forwards;
+	animation-delay: var(--card_reveal_delay);
+	justify-content: center;
+	align-items: center;
+	/* starting styles, so the styles wouldn't look off while the animation was delaying */
+	visibility: hidden;
 }
 
 .card_img {
