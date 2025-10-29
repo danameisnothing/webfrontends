@@ -8,7 +8,7 @@
 	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
 	--button_transition_time: 0.075s;
 	--img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/CardBack_Trinket.webp");
-	--img_cardfront_bg_TEMP: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/Ambrosia.webp");
+	--img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/replacement_card.png");
 	--card_reveal_full_time: 1.25s;
 	--card_reveal_delay: 0.3s;
 	/* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
@@ -25,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     /* to make room for expanding cards' transition */
+    padding-top: 35px;
     padding-bottom: 35px;
 }
 
@@ -37,10 +38,12 @@ supported via @supports? by setting the content of an element to
 a message, via content: maybe? */
 
 .card_entry:target {
-    display: flex;
-    animation-name: anim_flip_reveal;
-    animation-duration: var(--card_reveal_full_time);
-    animation-delay: var(--card_reveal_delay);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 600px 600px;
+    transform-origin: center;
+    /* debug only */
+    border-color: green;
 }
 
 /* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
@@ -120,6 +123,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
 @keyframes anim_flip_reveal {
 	35% {
+		pointer-events: none;
 		transform: scale(1.25);
 	}
 	52.5% {
@@ -128,8 +132,12 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 	70% {
 		transform: rotateY(0deg) scale(1.25);
 	}
-	100% {
+	/* if we just put this at 100%, then for some reason transforms on hover wouldn't work, so we do this instesd */
+	99.999% {
 		transform: scale(1);
+	}
+	100% {
+		pointer-events: auto;
 	}
 }
 
@@ -169,6 +177,16 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation-name: anim_flip_reveal;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    pointer-events: none;
+}
+
+.card_full:hover {
+	transform: scale(5);
 }
 
 .card_entry_backside {
@@ -188,11 +206,9 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
 .card_entry_frontside {
 	position: absolute;
-	/* top: 0;
-	right: 0; */
 	width: 180px;
     height: 280px;
-    background-image: var(--img_cardfront_bg_TEMP);
+    background-image: var(--img_cardfront_bg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -203,10 +219,12 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 	justify-content: center;
 	align-items: center;
 	/* starting styles, so the styles wouldn't look off while the animation was delaying */
+	/* forgot that Firefox can't switch display during animation */
+	display: flex;
 	visibility: hidden;
 }
 
 .card_img {
-    max-width: 150px;
-    max-height: 240px;
+	margin-left: auto;
+	margin-right: auto;
 }
