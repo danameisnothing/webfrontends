@@ -1,18 +1,24 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
 /* TODO: is it necessary to ise @supoorts for this one? */
 :root {
-	--img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
-	/* TODO: we re-encode in AVIF later! */
-	--img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Grey.webp");
-	/* This image is almost 4 MiB. We absolutely need the CDN for this one */
-	--awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
-	--button_transition_time: 0.075s;
-	--img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/CardBack_Trinket.webp");
-	--img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/replacement_card.png");
-	--card_reveal_full_time: 1.25s;
-	--card_reveal_delay: 0.3s;
-	/* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
-	scroll-behavior: smooth;
+    /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
+    AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
+    --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp");
+    /* TODO: we re-encode in AVIF later! */
+    --img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Grey.webp");
+    /* This image is almost 4 MiB. We absolutely need the CDN for this one */
+    /* TODO: REALLY consider an animated AVIF, as it apparently supports inter-frame compression */
+    --awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --button_transition_time: 0.075s;
+    --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/CardBack_Trinket.webp");
+    --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/replacement_card.png");
+    --card_width: 180px;
+    --card_height: 280px;
+    --card_reveal_full_time: 1.25s;
+    --card_reveal_delay: 0.3s;
+    --card_hover_scale: 1.2;
+    /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
+    scroll-behavior: smooth;
 }
 
 /* Firefox matches this color almost perfectly, but Chromium-based ones do not. */
@@ -25,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     /* to make room for expanding cards' transition */
+    /* TODO: move to variables! */
     padding-top: 35px;
     padding-bottom: 35px;
 }
@@ -40,10 +47,7 @@ a message, via content: maybe? */
 .card_entry:target {
     display: grid;
     justify-items: center;
-    /* grid-template-columns: 600px 600px; */
     transform-origin: center;
-    /* debug only */
-    border-color: green;
 }
 
 /* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
@@ -52,7 +56,8 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 #card_type_selector_bg {
-    background-image: var(--img_2x2);/* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp"); */
+    background-image: var(--img_2x2);
+    /* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp"); */
     background-repeat: repeat;
 }
 
@@ -60,7 +65,8 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: var(--img_2x2);/* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp"); */
+    background-image: var(--img_2x2);
+    /* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/card_bg_2x2.webp"); */
     background-repeat: repeat;
 }
 
@@ -72,8 +78,9 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
 /* https://stackoverflow.com/a/20327676, https://stackoverflow.com/a/27505936 */
 /* FIXME: original background-image on previously-selected button will persist for 0.5 seconds before fading out like normal */
-#card_type_selector > a {
+#card_type_selector>a {
     /* background-color: white; */
+    /* TODO: move to variables! */
     padding: 15px 50px;
     text-decoration: none;
     background-image: none;
@@ -85,42 +92,50 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     background-size: 0% 100%;
 }
 
-#card_type_selector > a:hover {
-	background-size: 100% 100%;
+#card_type_selector>a:hover {
+    background-size: 100% 100%;
 }
 
 /* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
 /* 775px is from trial and error */
+/* TODO: move to variables! */
 @media screen and (min-width: 775px) {
     #card_type_selector {
         flex-direction: row;
+        /* TODO: move to variables! */
         max-width: 80%;
     }
 
     /* https://stackoverflow.com/a/20327676 */
-    #card_type_selector > a {
+    #card_type_selector>a {
+        /* TODO: move to variables! */
         margin: -15px 0px;
     }
 
     .card_entry:target {
-    	grid-template-columns: 600px 600px;
+        /* TODO: move to variables! */
+        grid-template-columns: 600px 600px;
     }
 }
 
 /* 100% as smaller because we are already vertical, might as well make the most of it */
+/* TODO: move to variables! */
 @media screen and (max-width: 774px) {
     #card_type_selector {
         flex-direction: column;
+        /* TODO: move to variables! */
         max-width: 100%;
     }
 
     .card_entry:target {
-    	grid-template-columns: 600px;
+        /* TODO: move to variables! */
+        grid-template-columns: 600px;
     }
 }
 
 #trans_card_2 {
     position: sticky;
+    /* TODO: move to variables! */
     top: 0;
     width: 100%;
     height: 200px;
@@ -129,63 +144,99 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     transform: rotate(180deg);
 }
 
+/* TODO: move to variables??? */
+/* no way to specify animation percentages with variables? */
 @keyframes anim_flip_reveal {
-	35% {
-		pointer-events: none;
-		transform: scale(1.25);
-	}
-	52.5% {
-		transform: rotateY(90deg) scale(1.25);
-	}
-	70% {
-		transform: rotateY(0deg) scale(1.25);
-	}
-	/* if we just put this at 100%, then for some reason transforms on hover wouldn't work, so we do this instesd */
-	99.999% {
-		transform: scale(1);
-	}
-	100% {
-		pointer-events: auto;
-	}
+    35% {
+        pointer-events: none;
+        transform: scale(1.25);
+    }
+
+    52.5% {
+        transform: rotateY(90deg) scale(1.25);
+    }
+
+    70% {
+        transform: rotateY(0deg) scale(1.25);
+    }
+
+    /* if we just put this at 100%, then for some reason transforms on hover wouldn't work, so we do this absolutely-terrifying hack instead */
+    99.999% {
+        transform: scale(1);
+    }
+
+    100% {
+        pointer-events: auto;
+    }
 }
 
 /* this display: none nonsense doesn't work on Firefox, see below */
 @keyframes anim_backface {
-	0% {
-		display: flex;
-		visibility: visible;
-	}
-	52.5%, 100% {
-		display: none; 
-		visibility: hidden;
-	}
+    0% {
+        display: flex;
+        visibility: visible;
+    }
+
+    52.5%,
+    100% {
+        display: none;
+        visibility: hidden;
+    }
 }
 
 /* at t=0, this is not visible, then next timestep it is visible? anyway, this works */
 @keyframes anim_frontface {
-	0%, 52.5% {
-		display: none;
-		visibility: hidden;
-	}
-	100% {
-		display: flex;
-		visibility: visible;
-	}
+
+    0%,
+    52.5% {
+        display: none;
+        visibility: hidden;
+    }
+
+    100% {
+        display: flex;
+        visibility: visible;
+    }
+}
+
+/* why do we still need this 99.999% nonsense? */
+@keyframes anim_activate_pointer {
+
+    0%,
+    99.999% {
+        pointer-events: none;
+    }
+
+    100% {
+        pointer-events: auto;
+
+    }
 }
 
 /* TODO: tweak later! */
 /* FIXME: make this card scale well, with this ratio */
 .card_full {
+    /* TODO: move to variables! */
     border-radius: 3px;
-    width: 180px;
-    height: 280px;
+    width: var(--card_width);
+    height: var(--card_height);
+    animation-name: anim_flip_reveal;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+}
+
+/* apparently, even with .card_full:hover > .card_entry_frontside, with pointer-events still apparently set to none, it still fires when the mouse hovers over it */
+.card_zoomer {
     /* part of a hack made for Firefox */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation-name: anim_flip_reveal;
+    /* TODO: move to variables! */
+    transition: transform 0.15s;
+    animation-name: anim_activate_pointer;
     animation-duration: var(--card_reveal_full_time);
     animation-fill-mode: forwards;
     animation-delay: var(--card_reveal_delay);
@@ -193,51 +244,53 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     pointer-events: none;
 }
 
-.card_full:hover {
-	transform: scale(5);
+.card_zoomer:hover {
+    /* TODO: move to variables! */
+    transform: scale(var(--card_hover_scale));
+    /* TODO: still an experiment */
+    /* margin-right: calc((var(--card_width) * (var(--card_hover_scale) - 1.0) )); */
 }
 
 .card_entry_backside {
-	width: 180px;
-	height: 280px;
-	background-image: var(--img_cardback_trinket);
+    width: var(--card_width);
+    height: var(--card_height);
+    background-image: var(--img_cardback_trinket);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-	animation-name: anim_backface;
-	animation-duration: var(--card_reveal_full_time);
-	animation-fill-mode: forwards;
-	animation-delay: var(--card_reveal_delay);
-	/* starting styles, so the styles wouldn't look off while the animation was delaying */
-	visibility: visible;
+    animation-name: anim_backface;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    visibility: visible;
 }
 
 .card_entry_frontside {
-	position: absolute;
-	width: 180px;
-    height: 280px;
+    position: absolute;
+    width: var(--card_width);
+    height: var(--card_height);
     background-image: var(--img_cardfront_bg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-	animation-name: anim_frontface;
-	animation-duration: var(--card_reveal_full_time);
-	animation-fill-mode: forwards;
-	animation-delay: var(--card_reveal_delay);
-	justify-content: center;
-	align-items: center;
-	/* starting styles, so the styles wouldn't look off while the animation was delaying */
-	/* forgot that Firefox can't switch display during animation */
-	display: flex;
-	visibility: hidden;
+    animation-name: anim_frontface;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    justify-content: center;
+    align-items: center;
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    /* forgot that Firefox can't switch display during animation */
+    display: flex;
+    visibility: hidden;
 }
 
 .card_img {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card_set {
-	/* FIXME: doesn't work yet! */
-	display: inline;
+    display: inline-flex;
 }

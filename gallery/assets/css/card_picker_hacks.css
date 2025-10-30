@@ -1,21 +1,22 @@
 :root {
-	/* TODO: we re-encode in AVIF later! */
-	--img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Red.webp");
+    /* TODO: we re-encode in AVIF later! */
+    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Red.webp");
+    --const_img_bg_size: 100% 100%;
 }
 
 /* HACK: there is no way (in my knowledge) to "read" an element's ID and select an element based on the ID, so we just cover every possible bases */
 /* approach inspired from : https://www.digitalocean.com/community/tutorials/css-css-only-click-handler and https://tobiasahlin.com/blog/hiding-an-element-if-its-empty/ */
 body:has(#cardentry_all:target) #cardentry_all_link {
     background-image: var(--img_button_active_webp);
-    background-size: 100% 100%;
+    background-size: var(--const_img_bg_size);
 }
 
 body:has(#cardentry_playablechars:target) #cardentry_playablechars_link {
     background-image: var(--img_button_active_webp);
-    background-size: 100% 100%;
+    background-size: var(--const_img_bg_size);
 }
 
 body:has(#cardentry_cultists:target) #cardentry_cultists_link {
     background-image: var(--img_button_active_webp);
-    background-size: 100% 100%;
+    background-size: var(--const_img_bg_size);
 }
