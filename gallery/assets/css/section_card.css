@@ -40,7 +40,7 @@ a message, via content: maybe? */
 .card_entry:target {
     display: grid;
     justify-items: center;
-    grid-template-columns: 600px 600px;
+    /* grid-template-columns: 600px 600px; */
     transform-origin: center;
     /* debug only */
     border-color: green;
@@ -101,6 +101,10 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     #card_type_selector > a {
         margin: -15px 0px;
     }
+
+    .card_entry:target {
+    	grid-template-columns: 600px 600px;
+    }
 }
 
 /* 100% as smaller because we are already vertical, might as well make the most of it */
@@ -108,6 +112,10 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     #card_type_selector {
         flex-direction: column;
         max-width: 100%;
+    }
+
+    .card_entry:target {
+    	grid-template-columns: 600px;
     }
 }
 
@@ -227,4 +235,9 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 .card_img {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.card_set {
+	/* FIXME: doesn't work yet! */
+	display: inline;
 }

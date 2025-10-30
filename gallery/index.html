@@ -23,18 +23,7 @@
             <h1>the game lel</h1>
             <h2>This is NOT the official wiki of course. description here. this is blablabla</h2>
         </div>
-        <!-- half transition to card -->
-        <!-- TODO: replace this with our video -->
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video#loop -->
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex -->
-        <!-- https://stackoverflow.com/a/46528203 -->
-        <!-- TODO: determine if we need the poster attribute? -->
-        <!-- TODO: media queries, we will have multiple videos for different screen sizes (e.g. 1600x200, 2400x200, we pick the best one, and only fetch the suitable one) -->
         <!-- TODO: investigate Animated AVIF and WebP for the ability to "repeat" the visuals, despite authored at a size that may be smaller than the user's screen -->
-        <!-- <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
-            tabindex="-1" id="trans_card_1">
-            <source src="./assets/vid/fiery_gradient_divider_1920x200_final.webm" type="video/webm" />
-        </video> -->
         <div id="trans_card_1"></div>
     </div>
     <div id="card_section_full">
@@ -63,22 +52,20 @@
 
             <div class="card_entry" id="cardentry_playablechars">
                 <!-- this doesn't actually serve any purpose other than for the card's back side background -->
-               	<div class="card_full">
-   	            	<!-- this doesn't actually serve any purpose other than for the card's back side background -->
-   			       	<div class="card_entry_backside"></div>
-   			       	<div class="card_entry_frontside">
-   			       		<!-- TODO: find actual picture later! -->
-   			       		<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/original_source/Lamb-red.gif"></img>
-   			       	</div>
-   	            </div>
-   	            <div class="card_full">
-		           	<!-- this doesn't actually serve any purpose other than for the card's back side background -->
-			       	<div class="card_entry_backside"></div>
-			       	<div class="card_entry_frontside">
-			       		<!-- TODO: find actual picture later! -->
-			       		<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/original_source/Lamb-red.gif"></img>
-			       	</div>
-			    </div>
+               	<div class="card_set">
+               		<div class="card_full">
+	   	            	<!-- this doesn't actually serve any purpose other than for the card's back side background -->
+	   			       	<div class="card_entry_backside"></div>
+	   			       	<div class="card_entry_frontside">
+	   			       		<!-- TODO: find actual picture later! -->
+	   			       		<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/original_source/Lamb-red.gif"></img>
+	   			       	</div>
+	   	            </div>
+	   	            <div class="card_property">
+	   	            	<p class="card_prop_title">The Lamb</p>
+	   	            	<p class="card_prop_description">the main protagonist lol</p>
+	   	            </div>
+               	</div>
             </div>
 
             <div class="card_entry" id="cardentry_cultists">
@@ -87,11 +74,6 @@
 
             <p class="card_entry" id="test_hid_4">ok now we're done</p>
         </div>
-        <!-- TODO: TEST -->
-        <!-- <video muted autoplay controlslist="nofullscreen noremoteplayback" disablepictureinpicture loop playsinline
-            tabindex="-1" id="trans_card_2">
-            <source src="./assets/vid/fiery_gradient_divider_1920x200_final.webm" type="video/webm" />
-        </video> -->
         <div id="trans_card_2"></div>
     </div>
     <!--TODO: fix an issue where the text are no longer centered when zooming in, or when the screen can't fit -->
@@ -103,6 +85,8 @@
             <h6>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster Games</h6>
         </div>
         <p>TODO: fix inconsistent indentation across all text files!</p>
+        <p>TODO: a button to toggle between normal fonts and OpenDyslexic fonts</p>
+        <p>TODO: what font does the game even use?</p>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
         <!-- inspirations taken from : -->
