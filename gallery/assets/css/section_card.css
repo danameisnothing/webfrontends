@@ -14,9 +14,14 @@
     --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/replacement_card.png");
     --card_width: 180px;
     --card_height: 280px;
+    --card_border_radius: 3px;
     --card_reveal_full_time: 1.25s;
     --card_reveal_delay: 0.3s;
     --card_hover_scale: 1.2;
+    --card_hover_time: 0.15s;
+    --card_props_leftpad: 20px;
+    /* width should be the same, unlike height on mobile, so no need for smallest or largest unit */
+    --cardentry_grid_basesize: 100vw;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -114,7 +119,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
     .card_entry:target {
         /* TODO: move to variables! */
-        grid-template-columns: 600px 600px;
+        grid-template-columns: calc(var(--cardentry_grid_basesize) / 2) calc(var(--cardentry_grid_basesize) / 2);
     }
 }
 
@@ -129,7 +134,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 
     .card_entry:target {
         /* TODO: move to variables! */
-        grid-template-columns: 600px;
+        grid-template-columns: calc(var(--cardentry_grid_basesize));
     }
 }
 
@@ -216,14 +221,14 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 /* TODO: tweak later! */
 /* FIXME: make this card scale well, with this ratio */
 .card_full {
-    /* TODO: move to variables! */
-    border-radius: 3px;
     width: var(--card_width);
     height: var(--card_height);
     animation-name: anim_flip_reveal;
     animation-duration: var(--card_reveal_full_time);
     animation-fill-mode: forwards;
     animation-delay: var(--card_reveal_delay);
+    /* for card_properties to be below card_full */
+    z-index: 1;
 }
 
 /* apparently, even with .card_full:hover > .card_entry_frontside, with pointer-events still apparently set to none, it still fires when the mouse hovers over it */
@@ -234,8 +239,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* TODO: move to variables! */
-    transition: transform 0.15s;
+    transition: transform var(--card_hover_time);
     animation-name: anim_activate_pointer;
     animation-duration: var(--card_reveal_full_time);
     animation-fill-mode: forwards;
@@ -244,14 +248,35 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     pointer-events: none;
 }
 
+.card_property {
+	margin-left: var(--card_props_leftpad);
+	transition: margin-left var(--card_hover_time);
+	position: relative;
+	left: -50%;
+	transition: transform var(--card_hover_time);
+	transform: scaleX(0);
+}
+
+.card_zoomer {
+	width: var(--card_width);
+	height: var(--card_height);
+}
+
 .card_zoomer:hover {
-    /* TODO: move to variables! */
     transform: scale(var(--card_hover_scale));
-    /* TODO: still an experiment */
-    /* margin-right: calc((var(--card_width) * (var(--card_hover_scale) - 1.0) )); */
+}
+
+body:has(.card_zoomer:hover) .card_property {
+	transform: scaleX(1);
+	left: 0%;
+}
+
+body:has(.card_zoomer:hover) .card_property {
+	margin-left: calc(var(--card_props_leftpad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2 );
 }
 
 .card_entry_backside {
+    border-radius: var(--card_border_radius);
     width: var(--card_width);
     height: var(--card_height);
     background-image: var(--img_cardback_trinket);
@@ -267,6 +292,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 .card_entry_frontside {
+    border-radius: var(--card_border_radius);
     position: absolute;
     width: var(--card_width);
     height: var(--card_height);
