@@ -34,6 +34,7 @@
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
             <div class="util_centered" id="card_type_selector">
+                <!-- TODO: change these to radio inputs, because we absolutely need the fragment identifier for the navigation bar scroll (url.tdlwhatever/#idhere) -->
                 <!-- in this one, we indeed DO want it's "click area" to extend to the sixe of a button -->
                 <a href="#cardentry_all" id="cardentry_all_link">
                     <h3>All</h3>
@@ -44,9 +45,12 @@
                 <a href="#cardentry_cultists" id="cardentry_cultists_link">
                     <h3>Cultists Variations</h3>
                 </a>
-                <a href="#test_hid_4">
-                    <h3>test4</h3>
-                </a>
+                <!-- https://www.w3schools.com/tags/att_input_type_radio.asp, https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#try_it -->
+                <!-- you don't need to put these into a <form>, neat -->
+                <!-- We can do this, AS LONG AS the label mapping to the current checked checkbox
+                are ALWAYS right next to the radio input element, so make sure that is the case! -->
+                <input type="radio" id="test_hid_4" name="card_type_selector_radios">
+                <label for="test_hid_4"><h3>test radio</h3></label>
             </div>
         </div>
         <div id="card_section">
@@ -109,6 +113,8 @@
         <p>TODO: what font does the game even use?</p>
         <p>TODO: tell the user that some site elements may not look right with a dark mode extension (e.g. Dark Reader
             on Firefox)</p>
+        <p>TODO: put a GenAI content warning</p>
+        <p>TODO: give credit to FFmpeg, Canva, Firefox and Chrome, for making this project possible</p>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
         <!-- inspirations taken from : -->

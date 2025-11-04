@@ -20,3 +20,5 @@ body:has(#cardentry_cultists:target) #cardentry_cultists_link {
     background-image: var(--img_button_active_webp);
     background-size: var(--const_img_bg_size);
 }
+
+/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */

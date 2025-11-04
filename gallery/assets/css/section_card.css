@@ -19,11 +19,15 @@
     --card_reveal_delay: 0.3s;
     --card_hover_scale: 1.2;
     --card_hover_time: 0.15s;
-    --card_props_leftpad: 0px;
+    --card_props_pad: 0px;
     /* width should be the same, unlike height on mobile, so no need for smallest or largest unit */
     --cardentry_grid_basesize: 100vw;
     /* TODO: we re-encode in WebP and AVIF later! */
     --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/playlist-bg.png");
+    /* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
+    /* TODO: we re-encode in AVIF later! */
+    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Red.webp");
+    --const_img_bg_size: 100% 100%;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -84,9 +88,18 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     align-items: center;
 }
 
+/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
+/* We can do this, AS LONG AS the label mapping to the current checked checkbox
+are ALWAYS right next to the radio input element, so make sure that is the case! */
+#card_type_selector > input[type="radio"]:checked + label {
+    background-image: var(--img_button_active_webp);
+    background-size: var(--const_img_bg_size);
+}
+
 /* https://stackoverflow.com/a/20327676, https://stackoverflow.com/a/27505936 */
 /* FIXME: original background-image on previously-selected button will persist for 0.5 seconds before fading out like normal */
-#card_type_selector>a {
+/* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
+#card_type_selector > a, #card_type_selector > label {
     /* background-color: white; */
     /* TODO: move to variables! */
     padding: 15px 50px;
@@ -100,7 +113,13 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     background-size: 0% 100%;
 }
 
-#card_type_selector>a:hover {
+/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
+#card_type_selector > input[type="radio"] {
+    display: none;
+}
+
+/* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
+#card_type_selector > a:hover, #card_type_selector > label:hover{
     background-size: 100% 100%;
 }
 
@@ -115,7 +134,8 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     }
 
     /* https://stackoverflow.com/a/20327676 */
-    #card_type_selector>a {
+    /* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
+    #card_type_selector > a, #card_type_selector > label {
         /* TODO: move to variables! */
         margin: -15px 0px;
     }
@@ -257,7 +277,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     /* TODO: move to variables??? */
     /* to stretch to fit */
     background-size: 100% 100%;
-	margin-left: var(--card_props_leftpad);
+	margin-left: var(--card_props_pad);
 	position: relative;
     display: flex;
     justify-content: center;
@@ -275,7 +295,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 	height: var(--card_height);
 }
 
-/* allow card to stay in hovered state when mousing over card_property, maybe a bit of a yikes */
+/* allow card to stay in hovered state when mousing over card_property, big yikes here */
 .card_zoomer:hover, .card_set:has(.card_property:hover) .card_zoomer {
     transform: scale(var(--card_hover_scale));
 }
@@ -286,7 +306,7 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 .card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
-	margin-left: calc(var(--card_props_leftpad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2 );
+	margin-left: calc(var(--card_props_pad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2 );
 }
 
 .card_entry_backside {
