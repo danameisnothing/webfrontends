@@ -20,7 +20,8 @@ h5,
 h6,
 p,
 span,
-a {
+a,
+small {
     font-family: "OpenDyslexic3 Regular", sans-serif;
 }
 

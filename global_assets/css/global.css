@@ -126,6 +126,7 @@ th,
 td,
 tr,
 a,
-span {
+span,
+small {
     color: #ffffff
 }

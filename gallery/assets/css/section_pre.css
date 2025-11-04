@@ -32,6 +32,7 @@
     /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
     /* we only bother for AVIF! we assume WebP as the minimum supported image format */
+    /* FIXME: --img_bg is a URL containing the best supported image format, checked in :root */
     @supports (background-image: var(--img_bg)) {
         background-image: var(--img_bg);
     }

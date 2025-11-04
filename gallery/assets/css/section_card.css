@@ -19,9 +19,11 @@
     --card_reveal_delay: 0.3s;
     --card_hover_scale: 1.2;
     --card_hover_time: 0.15s;
-    --card_props_leftpad: 20px;
+    --card_props_leftpad: 0px;
     /* width should be the same, unlike height on mobile, so no need for smallest or largest unit */
     --cardentry_grid_basesize: 100vw;
+    /* TODO: we re-encode in WebP and AVIF later! */
+    --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/original_source/playlist-bg.png");
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -53,6 +55,7 @@ a message, via content: maybe? */
     display: grid;
     justify-items: center;
     transform-origin: center;
+    align-items: center;
 }
 
 /* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
@@ -249,12 +252,22 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 }
 
 .card_property {
+    background-image: var(--img_playlist_bg);
+    background-repeat: no-repeat;
+    /* TODO: move to variables??? */
+    /* to stretch to fit */
+    background-size: 100% 100%;
 	margin-left: var(--card_props_leftpad);
-	transition: margin-left var(--card_hover_time);
 	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	left: -50%;
-	transition: transform var(--card_hover_time);
+	transition: transform var(--card_hover_time), left var(--card_hover_time), margin-left var(--card_hover_time);
 	transform: scaleX(0);
+    /* TODO: move to variables! */
+    width: 100vw;
+    max-width: 296px;
 }
 
 .card_zoomer {
@@ -262,16 +275,17 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
 	height: var(--card_height);
 }
 
-.card_zoomer:hover {
+/* allow card to stay in hovered state when mousing over card_property, maybe a bit of a yikes */
+.card_zoomer:hover, .card_set:has(.card_property:hover) .card_zoomer {
     transform: scale(var(--card_hover_scale));
 }
 
-body:has(.card_zoomer:hover) .card_property {
+.card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
 	transform: scaleX(1);
 	left: 0%;
 }
 
-body:has(.card_zoomer:hover) .card_property {
+.card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
 	margin-left: calc(var(--card_props_leftpad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2 );
 }
 
@@ -312,6 +326,12 @@ body:has(.card_zoomer:hover) .card_property {
     visibility: hidden;
 }
 
+/* TODO: move to variables! */
+.card_prop_container {
+    width: 88%;
+    height: 88%;
+}
+
 .card_img {
     margin-left: auto;
     margin-right: auto;
@@ -319,4 +339,19 @@ body:has(.card_zoomer:hover) .card_property {
 
 .card_set {
     display: inline-flex;
+}
+
+.card_prop_title {
+    text-align: center;
+}
+
+/* https://stackoverflow.com/questions/13205402/pesky-lil-small-element-not-working-with-text-align-needs-to-be-blocked */
+.card_prop_description {
+    display: block;
+    text-align: center;
+}
+
+/* TODO: make the description text on it's center */
+.card_prop_desc_container {
+
 }
