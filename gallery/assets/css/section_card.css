@@ -49,23 +49,15 @@
 
 .card_entry {
     display: none;
-}
-
-/* TODO: maybe make a warning about a certain CSS keyword not being
-supported via @supports? by setting the content of an element to
-a message, via content: maybe? */
-
-.card_entry:target {
-    display: grid;
+    /* for preparation of display:grid */
     justify-items: center;
     transform-origin: center;
     align-items: center;
 }
 
-/* https://vibrantwebs.medium.com/css-hover-to-affect-other-element-even-if-other-element-is-not-a-child-4f9ccf54bb5c */
-body:has(.card_entry:target) #card_notice_sacrificial_lamb {
-    display: none;
-}
+/* TODO: maybe make a warning about a certain CSS keyword not being
+supported via @supports? by setting the content of an element to
+a message, via content: maybe? */
 
 #card_type_selector_bg {
     background-image: var(--img_2x2);
@@ -88,7 +80,6 @@ body:has(.card_entry:target) #card_notice_sacrificial_lamb {
     align-items: center;
 }
 
-/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
 /* We can do this, AS LONG AS the label mapping to the current checked checkbox
 are ALWAYS right next to the radio input element, so make sure that is the case! */
 #card_type_selector > input[type="radio"]:checked + label {
@@ -98,8 +89,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 
 /* https://stackoverflow.com/a/20327676, https://stackoverflow.com/a/27505936 */
 /* FIXME: original background-image on previously-selected button will persist for 0.5 seconds before fading out like normal */
-/* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
-#card_type_selector > a, #card_type_selector > label {
+#card_type_selector > label {
     /* background-color: white; */
     /* TODO: move to variables! */
     padding: 15px 50px;
@@ -113,13 +103,11 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     background-size: 0% 100%;
 }
 
-/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
 #card_type_selector > input[type="radio"] {
     display: none;
 }
 
-/* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
-#card_type_selector > a:hover, #card_type_selector > label:hover{
+#card_type_selector > label:hover {
     background-size: 100% 100%;
 }
 
@@ -134,14 +122,14 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     }
 
     /* https://stackoverflow.com/a/20327676 */
-    /* TODO: multiples of these are only for experimenting for radios as replacements for our fragment identifier abuse */
-    #card_type_selector > a, #card_type_selector > label {
+    #card_type_selector > label {
         /* TODO: move to variables! */
         margin: -15px 0px;
     }
 
-    .card_entry:target {
+    .card_entry {
         /* TODO: move to variables! */
+        /* for preparation of display:grid */
         grid-template-columns: calc(var(--cardentry_grid_basesize) / 2) calc(var(--cardentry_grid_basesize) / 2);
     }
 }
@@ -155,8 +143,9 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
         max-width: 100%;
     }
 
-    .card_entry:target {
+    .card_entry {
         /* TODO: move to variables! */
+        /* for preparation of display:grid */
         grid-template-columns: calc(var(--cardentry_grid_basesize));
     }
 }
@@ -350,6 +339,10 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 .card_prop_container {
     width: 88%;
     height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card_img {
@@ -361,17 +354,18 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     display: inline-flex;
 }
 
-.card_prop_title {
-    text-align: center;
-}
-
 /* https://stackoverflow.com/questions/13205402/pesky-lil-small-element-not-working-with-text-align-needs-to-be-blocked */
-.card_prop_description {
+.card_prop_title .card_prop_description {
     display: block;
     text-align: center;
 }
 
-/* TODO: make the description text on it's center */
+/* https://stackoverflow.com/a/41736230 */
 .card_prop_desc_container {
-
+    /* height: 100%;
+    position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }

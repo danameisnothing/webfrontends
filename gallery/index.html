@@ -34,35 +34,28 @@
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
             <div class="util_centered" id="card_type_selector">
-                <!-- TODO: change these to radio inputs, because we absolutely need the fragment identifier for the navigation bar scroll (url.tdlwhatever/#idhere) -->
                 <!-- in this one, we indeed DO want it's "click area" to extend to the sixe of a button -->
-                <a href="#cardentry_all" id="cardentry_all_link">
-                    <h3>All</h3>
-                </a>
-                <a href="#cardentry_playablechars" id="cardentry_playablechars_link">
-                    <h3>Playable Characters</h3>
-                </a>
-                <a href="#cardentry_cultists" id="cardentry_cultists_link">
-                    <h3>Cultists Variations</h3>
-                </a>
-                <!-- https://www.w3schools.com/tags/att_input_type_radio.asp, https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#try_it -->
+                <!-- https://www.w3schools.com/tags/att_input_type_radio.asp, https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#try_it, https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked -->
                 <!-- you don't need to put these into a <form>, neat -->
                 <!-- We can do this, AS LONG AS the label mapping to the current checked checkbox
                 are ALWAYS right next to the radio input element, so make sure that is the case! -->
-                <input type="radio" id="test_hid_4" name="card_type_selector_radios">
-                <label for="test_hid_4"><h3>test radio</h3></label>
+                <!-- we get the ability to set the default value for free :) -->
+                <input type="radio" id="cardradio_all" name="card_type_selector_radios" checked>
+                <label for="cardradio_all"><h3>All</h3></label>
+                <input type="radio" id="cardradio_playables" name="card_type_selector_radios">
+                <label for="cardradio_playables"><h3>Playable Characters</h3></label>
+                <input type="radio" id="cardradio_cultists" name="card_type_selector_radios">
+                <label for="cardradio_cultists"><h3>Cultists</h3></label>
+                <input type="radio" id="cardradio_test4" name="card_type_selector_radios">
+                <label for="cardradio_test4"><h3>test radio</h3></label>
             </div>
         </div>
         <div id="card_section">
-            <!-- lol -->
-            <!-- TODO: figure out how can we activate the first entry, but on subsequent targetting, unhide that -->
-            <p id="card_notice_sacrificial_lamb">pick a card to get started or something</p>
-
             <div class="card_entry" id="cardentry_all">
                 <p>placeholder text for all section</p>
             </div>
 
-            <div class="card_entry" id="cardentry_playablechars">
+            <div class="card_entry" id="cardentry_playables">
                 <!-- this doesn't actually serve any purpose other than for the card's back side background -->
                 <div class="card_set">
                     <div class="card_full">
@@ -92,7 +85,7 @@
                 <p>placeholder text for cultists section</p>
             </div>
 
-            <p class="card_entry" id="test_hid_4">placeholder text for not yet finished section</p>
+            <p class="card_entry" id="cardentry_test4">placeholder text for not yet finished section</p>
         </div>
         <div id="trans_card_2"></div>
     </div>
@@ -109,6 +102,7 @@
             <h6>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster
                 Games</h6>
         </div>
+        <p>TODO: spice up the card flip animation to be more like the game</p>
         <p>TODO: a button to toggle between normal fonts and OpenDyslexic fonts</p>
         <p>TODO: what font does the game even use?</p>
         <p>TODO: tell the user that some site elements may not look right with a dark mode extension (e.g. Dark Reader
