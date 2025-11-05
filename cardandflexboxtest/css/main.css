@@ -3,7 +3,8 @@
     height: 200px;
     background-color: #f90000;
     border-radius: 5px;
-    box-shadow: #7a2d0e 10px 10px 5px; /* TODO: */
+    box-shadow: #7a2d0e 10px 10px 5px;
+    /* TODO: */
     transition: transform 0.4s linear;
 }
 
@@ -31,5 +32,4 @@
     filter: opacity(1.0);
 }
 
-.card:hover {
-}
+.card:hover {}

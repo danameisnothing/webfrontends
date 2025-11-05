@@ -88,14 +88,14 @@ a message, via content: maybe? */
 
 /* We can do this, AS LONG AS the label mapping to the current checked checkbox
 are ALWAYS right next to the radio input element, so make sure that is the case! */
-#card_type_selector > input[type="radio"]:checked + label {
+#card_type_selector>input[type="radio"]:checked+label {
     background-image: var(--img_button_active_webp);
     background-size: var(--const_img_bg_size);
 }
 
 /* https://stackoverflow.com/a/20327676, https://stackoverflow.com/a/27505936 */
 /* FIXME: original background-image on previously-selected button will persist for 0.5 seconds before fading out like normal */
-#card_type_selector > label {
+#card_type_selector>label {
     /* background-color: white; */
     /* TODO: move to variables! */
     padding: 15px 50px;
@@ -109,11 +109,11 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     background-size: 0% 100%;
 }
 
-#card_type_selector > input[type="radio"] {
+#card_type_selector>input[type="radio"] {
     display: none;
 }
 
-#card_type_selector > label:hover {
+#card_type_selector>label:hover {
     background-size: 100% 100%;
 }
 
@@ -128,7 +128,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     }
 
     /* https://stackoverflow.com/a/20327676 */
-    #card_type_selector > label {
+    #card_type_selector>label {
         /* TODO: move to variables! */
         margin: -15px 0px;
     }
@@ -272,36 +272,39 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     /* TODO: move to variables??? */
     /* to stretch to fit */
     background-size: 100% 100%;
-	margin-left: var(--card_props_pad);
-	position: relative;
+    margin-left: var(--card_props_pad);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-	left: var(--card_prop_offs);
-	transition: transform var(--card_hover_time), left var(--card_hover_time), margin-left var(--card_hover_time);
-	transform: scaleX(0);
+    left: var(--card_prop_offs);
+    transition: transform var(--card_hover_time), left var(--card_hover_time), margin-left var(--card_hover_time);
+    transform: scaleX(0);
     /* TODO: move to variables! */
     width: 100vw;
     max-width: 296px;
 }
 
 .card_zoomer {
-	width: var(--card_width);
-	height: var(--card_height);
+    width: var(--card_width);
+    height: var(--card_height);
 }
 
 /* allow card to stay in hovered state when mousing over card_property, big yikes here */
-.card_zoomer:hover, .card_set:has(.card_property:hover) .card_zoomer {
+.card_zoomer:hover,
+.card_set:has(.card_property:hover) .card_zoomer {
     transform: scale(var(--card_hover_scale));
 }
 
-.card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
-	transform: scaleX(1);
-	left: var(--card_prop_offs_hovered);
+.card_set:has(.card_zoomer:hover) .card_property,
+.card_property:hover {
+    transform: scaleX(1);
+    left: var(--card_prop_offs_hovered);
 }
 
-.card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
-	margin-left: calc(var(--card_props_pad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2 );
+.card_set:has(.card_zoomer:hover) .card_property,
+.card_property:hover {
+    margin-left: calc(var(--card_props_pad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2);
 }
 
 .card_entry_backside {
@@ -379,29 +382,29 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 /* https://stackoverflow.com/a/13371219 */
 /* TODO: make this semi-transparent */
 #navigation_bar {
-	position: fixed;
-	display: flex;
-	justify-content: space-between;
-	/* gap: var(--navbar_gap); */
-	top: 0;
-	width: 100%;
-	/* causes no space on the very top */
-	height: var(--navbar_height);
-	/* FIXME: */
-	background-color: rgba(0, 0, 0, 0.7);
-	/* anything higher causes the links' color to
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* gap: var(--navbar_gap); */
+    top: 0;
+    width: 100%;
+    /* causes no space on the very top */
+    height: var(--navbar_height);
+    /* FIXME: */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* anything higher causes the links' color to
 	become black on Firefox Mobile */
-	z-index: 65536;
+    z-index: 65536;
 }
 
 #navbar_content {
-	display: flex;
-	align-items: center;
-	/* TODO: move to variables! */
-	width: 80%;
-	height: 100%
+    display: flex;
+    align-items: center;
+    /* TODO: move to variables! */
+    width: 80%;
+    height: 100%
 }
 
-#navbar_content > a {
-	text-decoration: none;
+#navbar_content>a {
+    text-decoration: none;
 }
