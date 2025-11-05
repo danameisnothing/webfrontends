@@ -30,7 +30,7 @@
     --const_img_bg_size: 100% 100%;
     --card_prop_offs: -50%;
     --card_prop_offs_hovered: -5%;
-    --navbar_height: 80px;
+    --navbar_height: 60px;
     --navbar_gap: 15px;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
@@ -84,6 +84,7 @@ a message, via content: maybe? */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: scroll;
 }
 
 /* We can do this, AS LONG AS the label mapping to the current checked checkbox
@@ -107,6 +108,8 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     background-position: center;
     transition: background-size var(--button_transition_time);
     background-size: 0% 100%;
+    /* prevent ugly newlines not making height even */
+    white-space: nowrap;
 }
 
 #card_type_selector>input[type="radio"] {
@@ -129,8 +132,8 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 
     /* https://stackoverflow.com/a/20327676 */
     #card_type_selector>label {
-        /* TODO: move to variables! */
-        margin: -15px 0px;
+        /* FIXME: what the hell was this for? this breaks overflow-y! */
+        /*margin: -15px 0px;*/
     }
 
     .card_entry {
@@ -382,10 +385,10 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 /* https://stackoverflow.com/a/13371219 */
 /* TODO: make this semi-transparent */
 #navigation_bar {
-    position: fixed;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    /* gap: var(--navbar_gap); */
+    justify-content: center;
+    align-items: center;
     top: 0;
     width: 100%;
     /* causes no space on the very top */
@@ -397,14 +400,27 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     z-index: 65536;
 }
 
-#navbar_content {
+#navbar_content_container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     /* TODO: move to variables! */
     width: 80%;
     height: 100%
 }
 
+#navbar_content {
+    display: flex;
+    align-items: center;
+    gap: var(--navbar_gap);
+}
+
 #navbar_content>a {
     text-decoration: none;
+}
+
+/* this works lmao? */
+#navbar_content>a>* {
+    margin-top: 0;
+    margin-bottom: 0;
 }

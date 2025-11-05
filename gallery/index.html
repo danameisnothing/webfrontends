@@ -16,19 +16,20 @@
 <body>
     <!-- TODO: favicon.ico -->
     <!-- TODO: make navigation possible with just tab (skip to main content, cards are selectable, etc) -->
-    <!-- TODO: navbar! -->
     <!-- FIXME: change to nav element? -->
     <div id="navigation_bar">
-        <div id="navbar_content">
-            <a href="#pre_card_section_full">
-                <h3>Home</h3>
-            </a>
-            <a href="#card_section_full">
-                <h3>Cards</h3>
-            </a>
-            <a href="#credits_section">
-                <h3>Credits</h3>
-            </a>
+        <div id="navbar_content_container">
+            <div id="navbar_content">
+                <a href="#pre_card_section_full">
+                    <h3>Home</h3>
+                </a>
+                <a href="#card_section_full">
+                    <h3>Cards</h3>
+                </a>
+                <a href="#credits_section">
+                    <h3>Credits</h3>
+                </a>
+            </div>
         </div>
     </div>
     <div class="util_centered" id="pre_card_section_full">
@@ -43,6 +44,7 @@
     <div id="card_section_full">
         <div id="card_section_pre">
             <small>Choose between the categories, and hover over the cards to reveal more details</small>
+            <small>Scroll with the arrow keys</small>
         </div>
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
@@ -132,12 +134,15 @@
                         href="https://www.cultofthelamb.com/"><span class="shell_path">Cult of the Lamb</span></a></i>
             </h6>
             <h6>Webpage footer inspired by <i><a href="https://www.unpackinggame.com/"><span
-                            class="shell_path">@unpackinggame</span></a></i></h6>
+                            class="shell_path">Unpacking</span></a></i></h6>
+            <h6>Navigation bar design choices inspired by <i><a href="https://www.celestegame.com/"><span class="shell_path">Celeste</span></a></i>
+            </h6>
             <h6>Favicon design inspired by <i><a href="https://github.com/osoclos/cultivis"><span
                             class="shell_path">cultivis</span></a></i></h6>
             <h6>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster
                 Games</h6>
         </div>
+        <p>TODO: checkbox to toggle OpenDyslexic font</p>
         <p>TODO: spice up the card flip animation to be more like the game</p>
         <p>TODO: a button to toggle between normal fonts and OpenDyslexic fonts</p>
         <p>TODO: what font does the game even use?</p>
