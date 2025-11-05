@@ -28,6 +28,10 @@
     /* TODO: we re-encode in AVIF later! */
     --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Red.webp");
     --const_img_bg_size: 100% 100%;
+    --card_prop_offs: -50%;
+    --card_prop_offs_hovered: -5%;
+    --navbar_height: 80px;
+    --navbar_gap: 15px;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -41,6 +45,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* to hide my questionable scaling styles */
+    overflow: hidden;
     /* to make room for expanding cards' transition */
     /* TODO: move to variables! */
     padding-top: 35px;
@@ -271,7 +277,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     display: flex;
     justify-content: center;
     align-items: center;
-	left: -50%;
+	left: var(--card_prop_offs);
 	transition: transform var(--card_hover_time), left var(--card_hover_time), margin-left var(--card_hover_time);
 	transform: scaleX(0);
     /* TODO: move to variables! */
@@ -291,7 +297,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 
 .card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
 	transform: scaleX(1);
-	left: 0%;
+	left: var(--card_prop_offs_hovered);
 }
 
 .card_set:has(.card_zoomer:hover) .card_property, .card_property:hover {
@@ -368,4 +374,23 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+}
+
+/* https://stackoverflow.com/a/13371219 */
+/* TODO: make this semi-transparent */
+#navigation_bar {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--navbar_gap);
+	top: 0;
+	width: 100%;
+	/* causes no space on the very top */
+	height: var(--navbar_height);
+	/* FIXME: */
+	background-color: coral;
+	/* anything higher causes the links' color to
+	become black on Firefox Mobile */
+	z-index: 65536;
 }
