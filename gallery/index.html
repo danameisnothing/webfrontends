@@ -19,8 +19,17 @@
     <!-- TODO: navbar! -->
     <!-- FIXME: change to nav element? -->
     <div id="navigation_bar">
-    	<a href="#pre_card_section_full">home</a>
-    	<a href="#card_section_full">card</a>
+    	<div id="navbar_content">
+    		<a href="#pre_card_section_full">
+    			<h3>Home</h3>
+    		</a>
+    		<a href="#card_section_full">
+    			<h3>Cards</h3>
+    		</a>
+    		<a href="#credits_section">
+    		    <h3>Credits</h3>
+    		</a>
+    	</div>
     </div>
     <div class="util_centered" id="pre_card_section_full">
         <div id="pre_card">
@@ -33,8 +42,7 @@
     </div>
     <div id="card_section_full">
         <div id="card_section_pre">
-            <h3>pick a card or something</h3>
-            <p>choose between : All characters, playable characters, companion?, etc?</p>
+            <small>Choose between the categories, and hover over the cards to reveal more details</small>
         </div>
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
@@ -45,14 +53,37 @@
                 <!-- We can do this, AS LONG AS the label mapping to the current checked checkbox
                 are ALWAYS right next to the radio input element, so make sure that is the case! -->
                 <!-- we get the ability to set the default value for free :) -->
+                <!-- categories yoinked from https://cult-of-the-lamb.fandom.com/wiki/Characters -->
+                <!-- TODO: wire the missing ones! -->
                 <input type="radio" id="cardradio_all" name="card_type_selector_radios" checked>
-                <label for="cardradio_all"><h3>All</h3></label>
-                <input type="radio" id="cardradio_playables" name="card_type_selector_radios">
-                <label for="cardradio_playables"><h3>Playable Characters</h3></label>
+                <label for="cardradio_all">
+                    <h3>All</h3>
+                </label>
+
+                <input type="radio" id="cardradio_mains" name="card_type_selector_radios">
+                <label for="cardradio_mains">
+                    <h3>Main Characters</h3>
+                </label>
+
+                <input type="radio" id="cardradio_bosses" name="card_type_selector_radios">
+                <label for="cardradio_bosses">
+                    <h3>Bosses</h3>
+                </label>
+
+				<input type="radio" id="cardradio_minibosses" name="card_type_selector_radios">
+				<label for="cardradio_minibosses">
+				    <h3>Minibosses</h3>
+				</label>
+
                 <input type="radio" id="cardradio_cultists" name="card_type_selector_radios">
-                <label for="cardradio_cultists"><h3>Cultists</h3></label>
-                <input type="radio" id="cardradio_test4" name="card_type_selector_radios">
-                <label for="cardradio_test4"><h3>test radio</h3></label>
+                <label for="cardradio_cultists">
+                    <h3>Cultists</h3>
+                </label>
+
+                <input type="radio" id="cardradio_others" name="card_type_selector_radios">
+                <label for="cardradio_others">
+                    <h3>Other Characters</h3>
+                </label>
             </div>
         </div>
         <div id="card_section">
@@ -60,7 +91,7 @@
                 <p>placeholder text for all section</p>
             </div>
 
-            <div class="card_entry" id="cardentry_playables">
+            <div class="card_entry" id="cardentry_mains">
                 <!-- this doesn't actually serve any purpose other than for the card's back side background -->
                 <div class="card_set">
                     <div class="card_full">

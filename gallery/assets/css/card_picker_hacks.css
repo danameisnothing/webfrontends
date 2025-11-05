@@ -4,29 +4,12 @@
     --const_img_bg_size: 100% 100%;
 }
 
-/* there is no way (in my knowledge) to "read" an element's ID and select an element based on the ID, so we just cover every possible bases */
-/* approach inspired from : https://www.digitalocean.com/community/tutorials/css-css-only-click-handler and https://tobiasahlin.com/blog/hiding-an-element-if-its-empty/ */
-body:has(#cardentry_all:target) #cardentry_all_link {
-    background-image: var(--img_button_active_webp);
-    background-size: var(--const_img_bg_size);
-}
-
-body:has(#cardentry_playablechars:target) #cardentry_playablechars_link {
-    background-image: var(--img_button_active_webp);
-    background-size: var(--const_img_bg_size);
-}
-
-body:has(#cardentry_cultists:target) #cardentry_cultists_link {
-    background-image: var(--img_button_active_webp);
-    background-size: var(--const_img_bg_size);
-}
-
 /* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
 body:has(#cardradio_all:checked) #cardentry_all {
     display: grid;
 }
 
-body:has(#cardradio_playables:checked) #cardentry_playables {
+body:has(#cardradio_mains:checked) #cardentry_mains {
     display: grid;
 }
 
