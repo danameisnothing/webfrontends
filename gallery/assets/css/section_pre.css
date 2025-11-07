@@ -2,6 +2,7 @@
     --img_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/avif/woolhaven-bg-poster.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
     --awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --trans_card_1_height: 200px;
 }
 
 /* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
@@ -65,10 +66,9 @@
 /* https://stackoverflow.com/a/31002364, https://stackoverflow.com/a/75360648 */
 #trans_card_1 {
     position: sticky;
-    /* TODO: move to variables! */
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: var(--trans_card_1_height);
     background-image: var(--awebp_fiery_gradient);
     background-repeat: repeat;
 }
