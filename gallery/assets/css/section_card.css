@@ -30,8 +30,6 @@
     --const_img_bg_size: 100% 100%;
     --card_prop_offs: -50%;
     --card_prop_offs_hovered: -5%;
-    --navbar_height: 60px;
-    --navbar_gap: 15px;
     /* to make room for expanding cards' transition */
     --card_section_pad_trans_top: 35px;
     --card_section_pad_trans_bottom: 35px;
@@ -381,47 +379,4 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-}
-
-/* https://stackoverflow.com/a/13371219 */
-/* TODO: make this semi-transparent */
-#navigation_bar {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    width: 100%;
-    /* causes no space on the very top */
-    height: var(--navbar_height);
-    /* FIXME: */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* anything higher causes the links' color to
-	become black on Firefox Mobile */
-    z-index: 65536;
-}
-
-#navbar_content_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* TODO: move to variables! */
-    width: 80%;
-    height: 100%
-}
-
-.navbar_content {
-    display: flex;
-    align-items: center;
-    gap: var(--navbar_gap);
-}
-
-.navbar_content>a {
-    text-decoration: none;
-}
-
-/* this works lmao? */
-.navbar_content>a>* {
-    margin-top: 0;
-    margin-bottom: 0;
 }
