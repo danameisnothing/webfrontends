@@ -1,6 +1,6 @@
 :root {
     /* TODO: we re-encode in AVIF later! */
-    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/img/webp/Button_Red.webp");
+    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/Button_Red.webp");
     --const_img_bg_size: 100% 100%;
 }
 

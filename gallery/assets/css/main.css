@@ -4,12 +4,12 @@
 /* https://stackoverflow.com/a/3245187 */
 @font-face {
     font-family: "OpenDyslexic3 Regular";
-    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "OpenDyslexic3 Bold";
-    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@master/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
 }
 
 h1,

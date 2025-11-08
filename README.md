@@ -260,13 +260,7 @@ ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -c:v libaom-av
 ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -c:v libwebp -vf "select=eq(n\,100),crop=2:2:3836:396,colorkey=black:0.02:0.15,format=yuva420p" -frames:v 1 -pix_fmt yuva420p -preset photo -lossless 0 -compression_level 6 -quality 82 "card_bg_2x2.webp"
 ```
 
-
-
+Making the favicon.ico
 ```
-WARNING: Based on GenAI-generated command (claude-4.5-sonnet and gemini-2.5-pro)!
-NON-FUNCTIONAL!
-```
-ffmpeg -hide_banner -i "fiery_gradient_divider_769x200_raw.webm" `
--filter_complex "[0]trim=end_frame=1,setpts=PTS-STARTPTS[first_frame];[0][first_frame]xfade=fade:duration=1:offset=14" `
--loop 0 -pix_fmt yuva420p -lossless 0 -compression_level 6 -quality 70 -preset picture "fiery_gradient_divider_769x200_q70_24fps_15s_seamless.webp"
+ffmpeg -hide_banner -i "favicon.png" -c:v webp -vf "colorkey=white:0.02:0.0,format=yuva420p" -pix_fmt yuva420p -preset photo -lossless 1 -compression_level 6 favicon.webp
 ```

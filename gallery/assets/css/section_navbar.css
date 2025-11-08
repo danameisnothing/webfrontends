@@ -1,7 +1,7 @@
 :root {
     --navbar_height: 60px;
     --navbar_gap: 15px;
-    --navbar_content_width: 90%;
+    --navbar_content_width: 95%;
     --navbar_alpha: 0.7;
     /* because the width will adjust itself, percentage units alone doesn't work, so this is just based off of the CotL webpage */
     --icons_height: 1.6rem;
