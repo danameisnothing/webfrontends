@@ -9,6 +9,7 @@
     --icons_col_regular: #F1EDD9;
     --icons_col_hover: #F40017;
     --icons_trans_duration: 0.2s;
+    --navbar_logo_width: 90px;
 }
 
 /* https://stackoverflow.com/a/13371219 */
@@ -59,6 +60,10 @@
     transition: fill var(--icons_trans_duration);
 }
 
+.navbar_content>a>* {
+    transition: color var(--icons_trans_duration)
+}
+
 .navbar_icon_link {
     /* for some reason, just having display: flex causes the SVG to be center now */
     display: flex;
@@ -66,4 +71,12 @@
 
 .navbar_icon_link:hover > .navbar_icon_svg {
     fill: var(--icons_col_hover);
+}
+
+.navbar_content>a>*:hover {
+    color: var(--icons_col_hover);
+}
+
+#navbar_logo {
+    width: var(--navbar_logo_width);
 }

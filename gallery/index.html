@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing 1 2 3</title>
+    <title>Cult of the Lamb Gallery | Fan-made</title>
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="/global_assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/section_pre.css">
     <link rel="stylesheet" href="./assets/css/section_card.css">
     <link rel="stylesheet" href="./assets/css/card_picker_hacks.css">
+    <link rel="stylesheet" href="./assets/css/card_credit.css">
 </head>
 
 <body>
@@ -21,15 +22,24 @@
     <div id="navigation_bar">
         <div id="navbar_content_container">
             <div class="navbar_content">
+                <!-- the ID must be in the img element itself, otherwise it will render way larger, and <picture>'s bounding box is the one that's small -->
+                <picture>
+                    <!-- TODO: AVIF -->
+                    <img id="navbar_logo" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/COTL_Logo_Red.webp" alt="Cult of the Lamb logo">
+                </picture>
                 <a href="#pre_card_section_full">
-                    <h3>Home</h3>
+                    <p>Home</p>
                 </a>
                 <a href="#card_section_full">
-                    <h3>Cards</h3>
+                    <p>Cards</p>
                 </a>
                 <a href="#credits_section">
-                    <h3>Credits</h3>
+                    <p>Credits</p>
                 </a>
+            </div>
+            <div class="navbar_content">
+                <input type="checkbox" id="navbar_opendyslexic">
+                <label for="navbar_opendyslexic">Use OpenDyslexic fonts</label>
             </div>
             <div class="navbar_content">
                 <!-- these inline SVGs are almost copied straight from the CotL webpage -->
@@ -62,8 +72,8 @@
     </div>
     <div id="card_section_full">
         <div id="card_section_pre">
-            <small>Choose between the categories, and hover over the cards to reveal more details</small>
-            <small>Scroll with the arrow keys</small>
+            <h2>Choose between the categories, and hover over the cards to reveal more details</h2>
+            <h2>Scroll with the arrow keys</h2>
         </div>
         <!-- only for full bg lol -->
         <div id="card_type_selector_bg">
@@ -129,9 +139,9 @@
                     </div>
                     <div class="card_property">
                         <div class="card_prop_container">
-                            <p class="card_prop_title">The Lamb</p>
+                            <h3 class="card_prop_title">The Lamb</h3>
                             <div class="card_prop_desc_container">
-                                <small class="card_prop_description">the main protagonist lol</small>
+                                <i class="card_prop_description">the main protagonist lol</i>
                             </div>
                         </div>
                     </div>

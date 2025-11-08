@@ -1,0 +1,9 @@
+#credits_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#credits_section>* {
+    margin: 0;
+}

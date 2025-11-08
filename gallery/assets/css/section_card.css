@@ -86,6 +86,10 @@ a message, via content: maybe? */
     background-repeat: repeat;
 }
 
+#card_section_pre > * {
+    font-family: "LaptureDisplay Bold", sans-serif;
+}
+
 #card_type_selector {
     display: flex;
     justify-content: space-between;
@@ -114,6 +118,10 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     background-size: 0% 100%;
     /* prevent ugly newlines not making height even */
     white-space: nowrap;
+}
+
+#card_type_selector>label>* {
+    font-family: "LaptureDisplay Bold", sans-serif;
 }
 
 #card_type_selector>input[type="radio"] {
@@ -365,8 +373,16 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     display: inline-flex;
 }
 
+.card_prop_title {
+    font-family: "LaptureDisplay Bold", sans-serif;
+}
+
+.card_prop_description {
+    font-family: "FiraSans Italic", sans-serif;
+}
+
 /* https://stackoverflow.com/questions/13205402/pesky-lil-small-element-not-working-with-text-align-needs-to-be-blocked */
-.card_prop_title .card_prop_description {
+.card_prop_title, .card_prop_description {
     display: block;
     text-align: center;
 }
