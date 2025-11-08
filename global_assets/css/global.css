@@ -99,6 +99,10 @@
     color: #63686d
 }
 
+.shell_filename {
+    text-decoration: underline;
+}
+
 .util_centered {
     margin: 0 auto;
     text-align: center;

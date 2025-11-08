@@ -1,0 +1,11 @@
+/* These are copied from index.css */
+
+.font_jbmono {
+    font-family: "JetBrainsMono Regular", monospace;
+}
+
+/* https://medium.com/coding-beauty/html-line-break-no-br-326732938a74 */
+/* make this opt-in, because any newline, even as a prefix to align the node better, gets rendered too */
+.pre_dowrap {
+    white-space: pre-wrap;
+}

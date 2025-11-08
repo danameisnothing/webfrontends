@@ -129,6 +129,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 }
 
 #card_type_selector>label:hover {
+    cursor: pointer;
     background-size: 100% 100%;
 }
 

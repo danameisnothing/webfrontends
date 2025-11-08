@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cult of the Lamb Gallery | Fan-made</title>
+    <!-- TODO: AVIF -->
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="/global_assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/section_navbar.css">
-    <link rel="stylesheet" href="./assets/css/section_pre.css">
-    <link rel="stylesheet" href="./assets/css/section_card.css">
-    <link rel="stylesheet" href="./assets/css/card_picker_hacks.css">
-    <link rel="stylesheet" href="./assets/css/card_credit.css">
+    <link rel="stylesheet" href="./assets/index/css/main.css">
+    <link rel="stylesheet" href="./assets/index/css/section_navbar.css">
+    <link rel="stylesheet" href="./assets/index/css/section_pre.css">
+    <link rel="stylesheet" href="./assets/index/css/section_card.css">
+    <link rel="stylesheet" href="./assets/index/css/card_picker_hacks.css">
+    <link rel="stylesheet" href="./assets/index/css/section_credit.css">
 </head>
 
 <body>
@@ -28,18 +29,18 @@
                     <img id="navbar_logo" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/COTL_Logo_Red.webp" alt="Cult of the Lamb logo">
                 </picture>
                 <a href="#pre_card_section_full">
-                    <p>Home</p>
+                    <h3>Home</h3>
                 </a>
                 <a href="#card_section_full">
-                    <p>Cards</p>
+                    <h3>Cards</h3>
                 </a>
                 <a href="#credits_section">
-                    <p>Credits</p>
+                    <h3>Credits</h3>
                 </a>
             </div>
-            <div class="navbar_content">
-                <input type="checkbox" id="navbar_opendyslexic">
-                <label for="navbar_opendyslexic">Use OpenDyslexic fonts</label>
+            <div class="navbar_content" id="opendyslexic_container">
+                <input type="checkbox" id="opendyslexic_checkbox">
+                <label for="opendyslexic_checkbox" id="opendyslexic_label">Use OpenDyslexic fonts</label>
             </div>
             <div class="navbar_content">
                 <!-- these inline SVGs are almost copied straight from the CotL webpage -->
@@ -159,28 +160,14 @@
     <!--TODO: fix an issue where the text are no longer centered when zooming in, or when the screen can't fit -->
     <div id="credits_section_full">
         <div id="credits_section">
-            <h6>Overall webpage design <s>stolen</s> heavily inspired by <i><a
-                        href="https://www.cultofthelamb.com/"><span class="shell_path">Cult of the Lamb</span></a></i>
-            </h6>
-            <h6>Webpage footer inspired by <i><a href="https://www.unpackinggame.com/"><span
-                            class="shell_path">Unpacking</span></a></i></h6>
-            <h6>Navigation bar design choices inspired by <i><a href="https://www.celestegame.com/"><span class="shell_path">Celeste</span></a></i>
-            </h6>
-            <h6>Navigation bar design choices, and footer inspired by <i><a href="https://www.counter-strike.net/"><span class="shell_path">Counter-Strike</span></a></i></h6>
-            <h6>Favicon design inspired by <i><a href="https://github.com/osoclos/cultivis"><span
-                            class="shell_path">cultivis</span></a></i></h6>
-            <h6>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster
-                Games</h6>
-            <small>For credits and tools that's used to make this webpage, see</small>
+            <small>TODO: main background and fiery thingamajig are, as usual, copyrighted 2025-ish maybe Massive Monster
+                Games</small>
+            <small>Acknowledgements for tools used <i><a href="./credits.html"><span class="shell_path">here</span></a></i></small>
         </div>
-        <p>TODO: checkbox to toggle OpenDyslexic font</p>
         <p>TODO: spice up the card flip animation to be more like the game</p>
-        <p>TODO: a button to toggle between normal fonts and OpenDyslexic fonts</p>
-        <p>TODO: what font does the game even use?</p>
         <p>TODO: tell the user that some site elements may not look right with a dark mode extension (e.g. Dark Reader
             on Firefox)</p>
-        <p>TODO: put a GenAI content warning</p>
-        <p>TODO: give credit to FFmpeg, Canva, Firefox and Chrome, for making this project possible</p>
+        <p>TODO: red highlight card on hover?</p>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
         <!-- inspirations taken from : -->

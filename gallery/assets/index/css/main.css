@@ -113,30 +113,30 @@
 }
 
 /* wtf */
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) p,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) span,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) a,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) small,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) label,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) i {
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) p,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) span,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) a,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) small,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) label,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) i {
     font-family: "OpenDyslexic3 Regular", sans-serif;
 }
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h1,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h2,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h3,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h4,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h5,
-body:has(#navbar_opendyslexic[type="checkbox"]:checked) h6 {
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h1,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h2,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h3,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h4,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h5,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h6 {
     font-family: "OpenDyslexic3 Bold", sans-serif;
 }
 
 /* Absolute default in case we didn't specify any font */
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     font-family: "FiraSans Bold", sans-serif;
 }
 p, span, a, small, label, i {
     font-family: "FiraSans", sans-serif;
-}
+}*/
 
 /* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
 body {
