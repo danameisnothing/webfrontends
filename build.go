@@ -169,7 +169,7 @@ func main() {
 	// .href=".+" to remove all hrefs WITHOUT DotNL!
 	// \t[├└]── <a to get the place to add new inserts in
 
-	matchBodyRgx := regexp.MustCompile(`(?s)<p>.+<a href="/\./">.+<br><br><p>`)
+	matchBodyRgx := regexp.MustCompile(`(?s)<p>.+<a href="\./">.+<br><br><p>`)
 
 	body := matchBodyRgx.FindString(string(buf))
 	if body == "" {

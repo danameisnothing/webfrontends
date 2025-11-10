@@ -4,14 +4,13 @@
     /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
     AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
     --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/card_bg_2x2.webp");
-    /* TODO: we re-encode in AVIF later! */
-    --img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/Button_Grey.webp");
+    --img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
     /* TODO: REALLY consider an animated AVIF, as it apparently supports inter-frame compression */
     --awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
     --button_transition_time: 0.075s;
-    --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/CardBack_Trinket.webp");
-    --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/original_source/replacement_card.png");
+    --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/CardBack_Trinket.avif");
+    --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/replacement_card.avif");
     --card_width: 180px;
     --card_height: 280px;
     --card_border_radius: 3px;
@@ -22,14 +21,12 @@
     --card_props_pad: 0px;
     /* width should be the same, unlike height on mobile, so no need for smallest or largest unit */
     --cardentry_grid_basesize: 100vw;
-    /* TODO: we re-encode in WebP and AVIF later! */
-    --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/original_source/playlist-bg.png");
-    /* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
-    /* TODO: we re-encode in AVIF later! */
-    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/Button_Red.webp");
+    /* TODO: we re-encode in WebP later! */
+    --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/playlist-bg.avif");
+    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
     --const_img_bg_size: 100% 100%;
     --card_prop_offs: -50%;
-    --card_prop_offs_hovered: -5%;
+    --card_prop_offs_hovered: -2.5%;
     /* to make room for expanding cards' transition */
     --card_section_pad_trans_top: 35px;
     --card_section_pad_trans_bottom: 35px;
@@ -73,7 +70,6 @@ a message, via content: maybe? */
 
 #card_type_selector_bg {
     background-image: var(--img_2x2);
-    /* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/card_bg_2x2.webp"); */
     background-repeat: repeat;
 }
 
@@ -82,7 +78,6 @@ a message, via content: maybe? */
     flex-direction: column;
     align-items: center;
     background-image: var(--img_2x2);
-    /* url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/card_bg_2x2.webp"); */
     background-repeat: repeat;
 }
 
@@ -133,6 +128,10 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     background-size: 100% 100%;
 }
 
+.card_element_only_desktop {
+    display: none;
+}
+
 /* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
 /* 775px is from trial and error */
 /* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
@@ -146,6 +145,10 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     #card_type_selector>label {
         /* FIXME: what the hell was this for? this breaks overflow-y! */
         /*margin: -15px 0px;*/
+    }
+
+    .card_element_only_desktop {
+        display: flex;
     }
 
     .card_entry {

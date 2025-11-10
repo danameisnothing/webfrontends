@@ -1,6 +1,5 @@
 :root {
-    /* TODO: we re-encode in AVIF later! */
-    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/Button_Red.webp");
+    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
     --const_img_bg_size: 100% 100%;
 }
 
@@ -10,10 +9,6 @@ body:has(#cardradio_all:checked) #cardentry_all {
 }
 
 body:has(#cardradio_mains:checked) #cardentry_mains {
-    display: grid;
-}
-
-body:has(#cardradio_cultists:checked) #cardentry_cultists {
     display: grid;
 }
 
