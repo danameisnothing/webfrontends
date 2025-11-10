@@ -5,17 +5,34 @@
     --esrb_container_height: 58px;
     --esrb_text_container_color: #FFFFFF;
     --esrb_text_container_margin: 2.5px;
+    --esrb_text_font: "Arial";
+    --esrb_text_container_border_color: #000000;
+    --esrb_text_color: #000000;
+    --esrb_border_thickness: 2px;
+    /* from the CotL webpage */
+    --esrb_text_size: 10px;
+    --navbar_row_gap: 15px;
+    --navbar_game_icon_height: 75px;
+    --navbar_vertical_gap: 10px;
 }
 
 #credits_section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--navbar_vertical_gap);
 }
 
 #credits_section>* {
     font-family: "LaptureDisplay Bold", sans-serif;
     margin: 0;
+}
+
+.credits_section_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--navbar_row_gap);
 }
 
 #esrb_container {
@@ -39,17 +56,27 @@
     margin: var(--esrb_text_container_margin) calc(var(--esrb_text_container_margin)/2) var(--esrb_text_container_margin) 0;
     /* copied from the CotL webpage */
     /* https://www.geeksforgeeks.org/css/how-to-add-border-on-only-one-side-in-shorter-way-in-css/ */
-    --border_style: 2px solid #000000;
+    --border_style: var(--esrb_border_thickness) solid var(--esrb_text_container_border_color);
     border-top: var(--border_style);
     border-bottom: var(--border_style);
     border-right: var(--border_style);
     position: relative;
     /* for the border to "attach" to the ESRB logo */
-    /* not sure why this needs to be divided by 4 */
     left: calc(-1 * var(--esrb_text_container_margin)/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #esrb_text > * {
     margin: 0;
+    /* TODO: move to variables! */
     padding: 0px 5px;
+    font-family: var(--esrb_text_font), sans-serif;
+    color: var(--esrb_text_color);
+    font-size: var(--esrb_text_size);
+}
+
+.navbar_game_icon {
+    height: var(--navbar_game_icon_height);
 }
