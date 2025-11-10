@@ -1,3 +1,12 @@
+:root {
+    --esrb_t_logo: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/svg/t.svg");
+    /* taken from the CotL webpage */
+    --esrb_width: 39px;
+    --esrb_container_height: 58px;
+    --esrb_text_container_color: #FFFFFF;
+    --esrb_text_container_margin: 2.5px;
+}
+
 #credits_section {
     display: flex;
     flex-direction: column;
@@ -7,4 +16,40 @@
 #credits_section>* {
     font-family: "LaptureDisplay Bold", sans-serif;
     margin: 0;
+}
+
+#esrb_container {
+    height: var(--esrb_container_height);
+    display: flex;
+    align-items: center;
+    background-color: var(--esrb_text_container_color);
+    margin-right: calc(-1 * var(--esrb_text_container_margin)/2);
+}
+
+#esrb_t_logo {
+    background-image: var(--esrb_t_logo);
+    width: var(--esrb_width);
+    height: var(--esrb_container_height);
+}
+
+#esrb_text {
+    flex-grow: 1;
+    height: calc(var(--esrb_container_height) - (var(--esrb_text_container_margin)*2));
+    background-color: var(--esrb_text_container_color);
+    margin: var(--esrb_text_container_margin) calc(var(--esrb_text_container_margin)/2) var(--esrb_text_container_margin) 0;
+    /* copied from the CotL webpage */
+    /* https://www.geeksforgeeks.org/css/how-to-add-border-on-only-one-side-in-shorter-way-in-css/ */
+    --border_style: 2px solid #000000;
+    border-top: var(--border_style);
+    border-bottom: var(--border_style);
+    border-right: var(--border_style);
+    position: relative;
+    /* for the border to "attach" to the ESRB logo */
+    /* not sure why this needs to be divided by 4 */
+    left: calc(-1 * var(--esrb_text_container_margin)/2);
+}
+
+#esrb_text > * {
+    margin: 0;
+    padding: 0px 5px;
 }
