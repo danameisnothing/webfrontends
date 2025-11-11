@@ -3,11 +3,10 @@
 :root {
     /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
     AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
-    --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/card_bg_2x2.webp");
+    --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/card_bg_2x2.avif");
     --img_button_grey: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
-    /* TODO: REALLY consider an animated AVIF, as it apparently supports inter-frame compression */
-    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c50_24fps_8s.avif");
     --button_transition_time: 0.075s;
     --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/CardBack_Trinket.avif");
     --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/replacement_card.avif");

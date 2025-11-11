@@ -1,7 +1,7 @@
 :root {
     --img_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/woolhaven-bg-poster.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
-    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c50_24fps_8s.avif");
     --trans_card_1_height: 200px;
 }
 
