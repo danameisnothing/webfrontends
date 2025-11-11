@@ -37,6 +37,7 @@
     --card_property_bg_size: 100% 100%;
     --card_property_width: 100vw;
     --card_property_max_width: 296px;
+    --card_entry_row_gap: 40px;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -62,6 +63,7 @@
     justify-items: center;
     transform-origin: center;
     align-items: center;
+    row-gap: var(--card_entry_row_gap);
 }
 
 /* TODO: maybe make a warning about a certain CSS keyword not being

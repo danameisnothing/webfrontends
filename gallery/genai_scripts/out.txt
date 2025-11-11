@@ -8,7 +8,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif">
 	</div>
 	</div>
 	</div>
@@ -27,7 +27,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif">
 	</div>
 	</div>
 	</div>
@@ -50,7 +50,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif">
+	<img width="145" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif">
 	</div>
 	</div>
 	</div>
@@ -69,7 +69,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif">
 	</div>
 	</div>
 	</div>
@@ -88,7 +88,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif">
+	<img width="130" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif">
 	</div>
 	</div>
 	</div>
@@ -107,7 +107,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif">
+	<img width="130" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif">
 	</div>
 	</div>
 	</div>
@@ -126,7 +126,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif">
+	<img width="145" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif">
 	</div>
 	</div>
 	</div>
@@ -149,7 +149,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif">
 	</div>
 	</div>
 	</div>
@@ -168,7 +168,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif">
 	</div>
 	</div>
 	</div>
@@ -187,7 +187,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif">
 	</div>
 	</div>
 	</div>
@@ -206,7 +206,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif">
 	</div>
 	</div>
 	</div>
@@ -225,7 +225,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif">
 	</div>
 	</div>
 	</div>
@@ -244,7 +244,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif">
 	</div>
 	</div>
 	</div>
@@ -263,7 +263,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif">
 	</div>
 	</div>
 	</div>
@@ -282,13 +282,13 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Habornym.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Haborym.avif">
 	</div>
 	</div>
 	</div>
 	<div class="card_property">
 	<div class="card_prop_container">
-	<h3 class="card_prop_title">Habornym</h3>
+	<h3 class="card_prop_title">Haborym</h3>
 	<div class="card_prop_desc_container">
 	<i class="card_prop_description">Second miniboss encountered in Anchordeep.</i>
 	</div>
@@ -301,7 +301,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif">
 	</div>
 	</div>
 	</div>
@@ -320,7 +320,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif">
 	</div>
 	</div>
 	</div>
@@ -339,7 +339,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif">
 	</div>
 	</div>
 	</div>
@@ -358,7 +358,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif">
 	</div>
 	</div>
 	</div>
@@ -377,7 +377,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif">
 	</div>
 	</div>
 	</div>
@@ -396,7 +396,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif">
 	</div>
 	</div>
 	</div>
@@ -419,7 +419,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif">
 	</div>
 	</div>
 	</div>
@@ -438,7 +438,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif">
 	</div>
 	</div>
 	</div>
@@ -457,7 +457,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif">
 	</div>
 	</div>
 	</div>
@@ -476,7 +476,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif">
 	</div>
 	</div>
 	</div>
@@ -495,7 +495,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif">
 	</div>
 	</div>
 	</div>
@@ -514,7 +514,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif">
 	</div>
 	</div>
 	</div>
@@ -533,7 +533,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif">
 	</div>
 	</div>
 	</div>
@@ -552,7 +552,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif">
 	</div>
 	</div>
 	</div>
@@ -571,7 +571,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif">
 	</div>
 	</div>
 	</div>
@@ -590,7 +590,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif">
 	</div>
 	</div>
 	</div>
@@ -609,7 +609,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif">
 	</div>
 	</div>
 	</div>
@@ -628,7 +628,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif">
 	</div>
 	</div>
 	</div>
@@ -647,7 +647,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif">
 	</div>
 	</div>
 	</div>
@@ -666,7 +666,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif">
 	</div>
 	</div>
 	</div>
@@ -685,7 +685,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif">
+	<img width="110" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif">
 	</div>
 	</div>
 	</div>
@@ -704,7 +704,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_%28Silk_Cradle%29.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_%28Silk_Cradle%29.avif">
 	</div>
 	</div>
 	</div>
@@ -723,7 +723,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif">
 	</div>
 	</div>
 	</div>
@@ -742,7 +742,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif">
 	</div>
 	</div>
 	</div>
@@ -761,7 +761,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif">
 	</div>
 	</div>
 	</div>
@@ -780,7 +780,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif">
 	</div>
 	</div>
 	</div>
@@ -799,7 +799,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif">
+	<img width="180" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif">
 	</div>
 	</div>
 	</div>
@@ -818,7 +818,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif">
 	</div>
 	</div>
 	</div>
@@ -841,7 +841,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif">
 	</div>
 	</div>
 	</div>
@@ -860,7 +860,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif">
 	</div>
 	</div>
 	</div>
@@ -879,7 +879,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif">
 	</div>
 	</div>
 	</div>
@@ -898,7 +898,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif">
 	</div>
 	</div>
 	</div>
@@ -917,7 +917,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif">
+	<img width="130" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif">
 	</div>
 	</div>
 	</div>
@@ -936,7 +936,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif">
+	<img width="130" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif">
 	</div>
 	</div>
 	</div>
@@ -955,7 +955,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif">
+	<img width="145" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif">
 	</div>
 	</div>
 	</div>
@@ -974,7 +974,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif">
 	</div>
 	</div>
 	</div>
@@ -993,7 +993,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif">
 	</div>
 	</div>
 	</div>
@@ -1012,7 +1012,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif">
 	</div>
 	</div>
 	</div>
@@ -1031,7 +1031,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif">
 	</div>
 	</div>
 	</div>
@@ -1050,7 +1050,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif">
 	</div>
 	</div>
 	</div>
@@ -1069,7 +1069,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif">
 	</div>
 	</div>
 	</div>
@@ -1088,7 +1088,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif">
 	</div>
 	</div>
 	</div>
@@ -1107,13 +1107,13 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Habornym.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Haborym.avif">
 	</div>
 	</div>
 	</div>
 	<div class="card_property">
 	<div class="card_prop_container">
-	<h3 class="card_prop_title">Habornym</h3>
+	<h3 class="card_prop_title">Haborym</h3>
 	<div class="card_prop_desc_container">
 	<i class="card_prop_description">Second miniboss encountered in Anchordeep.</i>
 	</div>
@@ -1126,7 +1126,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif">
 	</div>
 	</div>
 	</div>
@@ -1145,7 +1145,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif">
 	</div>
 	</div>
 	</div>
@@ -1164,7 +1164,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif">
 	</div>
 	</div>
 	</div>
@@ -1183,7 +1183,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif">
 	</div>
 	</div>
 	</div>
@@ -1202,7 +1202,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif">
 	</div>
 	</div>
 	</div>
@@ -1221,7 +1221,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif">
 	</div>
 	</div>
 	</div>
@@ -1240,7 +1240,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif">
 	</div>
 	</div>
 	</div>
@@ -1259,7 +1259,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif">
 	</div>
 	</div>
 	</div>
@@ -1278,7 +1278,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif">
 	</div>
 	</div>
 	</div>
@@ -1297,7 +1297,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif">
 	</div>
 	</div>
 	</div>
@@ -1316,7 +1316,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif">
 	</div>
 	</div>
 	</div>
@@ -1335,7 +1335,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif">
 	</div>
 	</div>
 	</div>
@@ -1354,7 +1354,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif">
 	</div>
 	</div>
 	</div>
@@ -1373,7 +1373,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif">
 	</div>
 	</div>
 	</div>
@@ -1392,7 +1392,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif">
 	</div>
 	</div>
 	</div>
@@ -1411,7 +1411,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif">
 	</div>
 	</div>
 	</div>
@@ -1430,7 +1430,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif">
 	</div>
 	</div>
 	</div>
@@ -1449,7 +1449,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif">
 	</div>
 	</div>
 	</div>
@@ -1468,7 +1468,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif">
 	</div>
 	</div>
 	</div>
@@ -1487,7 +1487,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif">
 	</div>
 	</div>
 	</div>
@@ -1506,7 +1506,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif">
+	<img width="110" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif">
 	</div>
 	</div>
 	</div>
@@ -1525,7 +1525,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_%28Silk_Cradle%29.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_%28Silk_Cradle%29.avif">
 	</div>
 	</div>
 	</div>
@@ -1544,7 +1544,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif">
 	</div>
 	</div>
 	</div>
@@ -1563,7 +1563,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif">
 	</div>
 	</div>
 	</div>
@@ -1582,7 +1582,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif">
 	</div>
 	</div>
 	</div>
@@ -1601,7 +1601,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif">
 	</div>
 	</div>
 	</div>
@@ -1620,7 +1620,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif">
+	<img width="180" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif">
 	</div>
 	</div>
 	</div>
@@ -1639,7 +1639,7 @@
 	<div class="card_zoomer">
 	<div class="card_entry_backside"></div>
 	<div class="card_entry_frontside">
-	<img width="150" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif">
+	<img width="140" class="card_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif">
 	</div>
 	</div>
 	</div>

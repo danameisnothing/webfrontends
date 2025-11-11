@@ -10,6 +10,14 @@ body:has(#cardradio_mains:checked) #cardentry_mains {
     display: grid;
 }
 
-body:has(#cardradio_test4:checked) #cardentry_test4 {
+body:has(#cardradio_bosses:checked) #cardentry_bosses {
+    display: grid;
+}
+
+body:has(#cardradio_minibosses:checked) #cardentry_minibosses {
+    display: grid;
+}
+
+body:has(#cardradio_others:checked) #cardentry_others {
     display: grid;
 }
