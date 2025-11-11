@@ -37,7 +37,7 @@
     --card_property_bg_size: 100% 100%;
     --card_property_width: 100vw;
     --card_property_max_width: 296px;
-    --card_entry_row_gap: 40px;
+    --card_entry_row_gap: 69px;
     /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
     scroll-behavior: smooth;
 }
@@ -190,15 +190,15 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 @keyframes anim_flip_reveal {
     35% {
         pointer-events: none;
-        transform: scale(1.25);
+        transform: scale(1.2);
     }
 
     52.5% {
-        transform: rotateY(90deg) scale(1.25);
+        transform: rotateY(90deg) scale(1.2);
     }
 
     70% {
-        transform: rotateY(0deg) scale(1.25);
+        transform: rotateY(0deg) scale(1.2);
     }
 
     /* if we just put this at 100%, then for some reason transforms on hover wouldn't work, so we do this absolutely-terrifying hack instead */
