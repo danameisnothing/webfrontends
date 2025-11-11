@@ -271,5 +271,5 @@ ffmpeg -hide_banner -i "fiery_gradient_divider_1920x200_raw.webm" -r 24 -t 8 -vf
 ```
 WARNING: Based on GenAI-generated command (Perplexity) :
 ```
-ffmpeg -hide_banner -framerate 24 -i "out/frame_%05d.png" -filter_complex "[0:v]alphaextract[a]" -map 0:v -map "[a]" -c:v libaom-av1 -crf 50 -crf:1 50 -usage realtime -cpu-used 8 "fiery_gradient_divider_1920x200_c50_24fps_8s.avif"
+ffmpeg -hide_banner -framerate 24 -i "out/frame_%05d.png" -filter_complex "[0:v]alphaextract[a]" -map 0:v -map "[a]" -c:v libaom-av1 -crf 37 -crf:1 63 -row-mt 1 -cpu-used 8 "fiery_gradient_divider_1920x200_c37_24fps_8s.avif"
 ```

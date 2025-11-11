@@ -6,7 +6,7 @@
     --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/card_bg_2x2.avif");
     --img_button_grey: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
-    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c50_24fps_8s.avif");
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c37_24fps_8s.avif");
     --button_transition_time: 0.075s;
     --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/CardBack_Trinket.avif");
     --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/replacement_card.avif");
