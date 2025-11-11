@@ -4,10 +4,10 @@
     /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
     AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
     --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/webp/card_bg_2x2.webp");
-    --img_button_grey_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
+    --img_button_grey: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
     /* TODO: REALLY consider an animated AVIF, as it apparently supports inter-frame compression */
-    --awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
     --button_transition_time: 0.075s;
     --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/CardBack_Trinket.avif");
     --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/replacement_card.avif");
@@ -23,7 +23,7 @@
     --cardentry_grid_basesize: 100vw;
     /* TODO: we re-encode in WebP later! */
     --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/playlist-bg.avif");
-    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
+    --img_button_active: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
     --const_img_bg_size: 100% 100%;
     --card_prop_offs: -50%;
     --card_prop_offs_hovered: -2.5%;
@@ -95,7 +95,7 @@ a message, via content: maybe? */
 /* We can do this, AS LONG AS the label mapping to the current checked checkbox
 are ALWAYS right next to the radio input element, so make sure that is the case! */
 #card_type_selector>input[type="radio"]:checked+label {
-    background-image: var(--img_button_active_webp);
+    background-image: var(--img_button_active);
     background-size: var(--const_img_bg_size);
 }
 
@@ -106,7 +106,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     text-decoration: none;
     background-image: none;
     /* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
-    background-image: var(--img_button_grey_webp);
+    background-image: var(--img_button_grey);
     background-repeat: no-repeat;
     background-position: center;
     transition: background-size var(--button_transition_time);
@@ -178,7 +178,7 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
     top: 0;
     width: 100%;
     height: var(--trans_card_2_height);
-    background-image: var(--awebp_fiery_gradient);
+    background-image: var(--fiery_gradient);
     background-repeat: repeat;
     transform: rotate(180deg);
 }

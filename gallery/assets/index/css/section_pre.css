@@ -1,7 +1,7 @@
 :root {
     --img_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/woolhaven-bg-poster.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
-    --awebp_fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/webp/fiery_gradient_divider_1920x200_q82_24fps_8s_p_photo_temp.webp");
     --trans_card_1_height: 200px;
 }
 
@@ -30,7 +30,6 @@
         height: 100svh;
     }
 
-    /* background-image: url("../img/original_lossless/woolhaven-bg-poster.png"); */
     /* FIXME: NOT FINISHED! */
     /* we only bother for AVIF! we assume WebP as the minimum supported image format */
     /* FIXME: --img_bg is a URL containing the best supported image format, checked in :root */
@@ -69,6 +68,6 @@
     bottom: 0;
     width: 100%;
     height: var(--trans_card_1_height);
-    background-image: var(--awebp_fiery_gradient);
+    background-image: var(--fiery_gradient);
     background-repeat: repeat;
 }

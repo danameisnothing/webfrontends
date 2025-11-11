@@ -1,9 +1,7 @@
 :root {
-    --img_button_active_webp: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
     --const_img_bg_size: 100% 100%;
 }
 
-/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */
 body:has(#cardradio_all:checked) #cardentry_all {
     display: grid;
 }
@@ -15,5 +13,3 @@ body:has(#cardradio_mains:checked) #cardentry_mains {
 body:has(#cardradio_test4:checked) #cardentry_test4 {
     display: grid;
 }
-
-/* TODO: this is only for experimenting for radios as replacements for our fragment identifier abuse */

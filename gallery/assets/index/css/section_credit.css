@@ -28,11 +28,27 @@
     margin: 0;
 }
 
-.credits_section_row {
+/* adjusted depending on the screen size */
+.credits_section_row_platform {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: var(--navbar_row_gap);
+}
+
+/* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* 775px is from trial and error */
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (min-width: 775px) {
+    .credits_section_row_platform {
+        flex-direction: row;
+    }
+}
+
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (max-width: 774px) {
+    .credits_section_row_platform {
+        flex-direction: column;
+    }
 }
 
 #esrb_container {
