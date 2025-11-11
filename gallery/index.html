@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fan-made gallery page containing characters from Cult of the Lamb.">
     <title>Cult of the Lamb Gallery | Fan-made</title>
     <!-- I failed to encode the AVIF with alpha channel! -->
     <link rel="icon"
@@ -22,7 +23,7 @@
 <body>
     <!-- TODO: make navigation possible with just tab (skip to main content, cards are selectable, etc) -->
     <!-- FIXME: change to nav element? -->
-    <div id="navigation_bar">
+    <nav id="navigation_bar">
         <div id="navbar_content_container">
             <div class="navbar_content">
                 <!-- the ID must be in the img element itself, otherwise it will render way larger, and <picture>'s bounding box is the one that's small -->
@@ -143,17 +144,16 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div class="util_centered" id="pre_card_section_full">
+    </nav>
+    <header class="util_centered" id="pre_card_section_full">
         <div id="pre_card">
             <!-- we have a slightly darker background here -->
-            <h1>the game lel</h1>
-            <h2>This is NOT the official wiki of course. description here. this is blablabla</h2>
+            <img id="header_img" src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f0221d8240362623fd4-library_logo_transparent.avif">
         </div>
         <!-- TODO: investigate Animated AVIF and WebP for the ability to "repeat" the visuals, despite authored at a size that may be smaller than the user's screen -->
         <div id="trans_card_1"></div>
-    </div>
-    <div id="card_section_full">
+    </header>
+    <main id="card_section_full">
         <div id="card_section_pre">
             <h2>Choose between the categories, and hover over the cards to reveal more details</h2>
             <h2 class="card_element_only_desktop">Scroll with the arrow keys</h2>
@@ -1987,9 +1987,9 @@
         </div>
 
         <div id="trans_card_2"></div>
-    </div>
+    </main>
     <!--TODO: fix an issue where the text are no longer centered when zooming in, or when the screen can't fit -->
-    <div id="credits_section_full">
+    <footer id="credits_section_full">
         <div id="credits_section">
             <div class="credits_section_row_platform">
                 <div id="esrb_container">
@@ -2007,7 +2007,7 @@
                 <img class="navbar_game_icon"
                     src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/COTL_Logo_Red.avif">
                 <img class="navbar_game_icon"
-                    src="http://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f1916abbb5ebe7b6a7a-logo_horizontal_background_big.avif">
+                    src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f1916abbb5ebe7b6a7a-logo_horizontal_background_big.avif">
                 <svg class="navbar_game_icon" viewBox="0 0 188 85">
                     <g fill="none" fill-rule="evenodd">
                         <path fill="#FFF" fill-rule="nonzero"
@@ -2022,16 +2022,11 @@
                     </g>
                 </svg>
             </div>
-            <p>TODO: what are the separators? is an and valid?</p>
             <small><i>Background image, logos, and other assets are © 2025 Massive Monster Games and Devolver Digital
                     Inc.</i></small>
-            <small>Acknowledgements for tools used <i><a href="./credits.html"><span
-                            class="shell_path">here</span></a></i></small>
+            <small>To see what tools were used to make this webpage, see the <i><a href="./credits.html"><span
+                            class="shell_path">acknowledgements page</span></a></i></small>
         </div>
-        <p>TODO: spice up the card flip animation to be more like the game</p>
-        <p>TODO: tell the user that some site elements may not look right with a dark mode extension (e.g. Dark Reader
-            on Firefox)</p>
-        <p>TODO: red highlight card on hover?</p>
         <p>TODO: change the CotL image to be the white version</p>
         <!-- mandatory this image is not mine, blablabla -->
         <!-- courtsey of Massive Monster -->
@@ -2040,7 +2035,7 @@
         <!-- https://www.unpackinggame.com/ -->
         <!-- https://github.com/osoclos/cultivis -->
         <!-- https://cult-of-the-lamb.fandom.com/wiki/Cult_of_the_Lamb_Wiki -->
-    </div>
+    </footer>
 </body>
 
 </html>

@@ -3,6 +3,8 @@
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
     --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c37_24fps_8s.avif");
     --trans_card_1_height: 200px;
+    /* from the CotL webpage */
+    --header_img_width: 25rem;
 }
 
 /* dev.to/mnishiguchi/css-adding-margin-to-all-children-929 */
@@ -70,4 +72,8 @@
     height: var(--trans_card_1_height);
     background-image: var(--fiery_gradient);
     background-repeat: repeat;
+}
+
+#header_img {
+    width: var(--header_img_width);
 }
