@@ -29,7 +29,7 @@ func addSpanDir(inp string) string {
 	for k, v := range hrefWhere {
 		var content string
 		if k == len(hrefWhere)-1 {
-			content = inp[v[1]:len(inp)]
+			content = inp[v[1]:]
 		} else {
 			content = inp[v[1]:hrefWhere[k+1][0]]
 		}
@@ -53,7 +53,7 @@ func removeHrefs(inp string) string {
 	for k, v := range locs {
 		var content string
 		if k == len(locs)-1 {
-			content = inp[v[1]:len(inp)]
+			content = inp[v[1]:]
 		} else {
 			content = inp[v[1]:locs[k+1][0]]
 		}
@@ -76,7 +76,7 @@ func restoreHrefs(inp string) string {
 	for k, v := range locs {
 		var content string
 		if k == len(locs)-1 {
-			content = inp[v[1]:len(inp)]
+			content = inp[v[1]:]
 		} else {
 			content = inp[v[1]:locs[k+1][0]]
 		}
@@ -105,7 +105,7 @@ func removeA(inp string) string {
 	for k, v := range locs {
 		var content string
 		if k == len(locs)-1 {
-			content = inp[v[1]:len(inp)]
+			content = inp[v[1]:]
 		} else {
 			content = inp[v[1]:locs[k+1][0]]
 		}

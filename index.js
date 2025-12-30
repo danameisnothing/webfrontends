@@ -7,13 +7,13 @@ const prideStatEl = document.querySelector("#pride_stat");
 
 function jankDeltaData(delta) {
     // yikes
-    let seconds = delta / 1000;
-    let minutes = seconds / 60;
-    let hours = minutes / 60;
-    let days = hours / 24;
-    let weeks = days / 7;
-    let months = weeks / 4;
-    let years = months / 12;
+    const seconds = delta / 1000;
+    const minutes = seconds / 60;
+    const hours = minutes / 60;
+    const days = hours / 24;
+    const weeks = days / 7;
+    const months = weeks / 4;
+    const years = months / 12;
 
     return {
         "seconds_raw": seconds,
@@ -33,6 +33,7 @@ function jankDeltaData(delta) {
     };
 }
 
+// Intl.DurationFormat.format() is only recently baseline (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format)
 function jankDeltaFormat(data) {
     let builder = "";
     if (data["months"] > 0) {
@@ -52,39 +53,36 @@ function jankDeltaFormat(data) {
 }
 
 function getWindows10Status() {
-    let delta = W10_EOL_DATE.getTime() - new Date().getTime();//Date.now();
+    const delta = W10_EOL_DATE.getTime() - new Date().getTime();
+    const data = jankDeltaData(delta);
+    return (data["seconds_raw"] > 0) ? `will reach EoL in ${jankDeltaFormat(data)}` : "has reached EoL :(. Long live Windows 11!";
+}
 
-    let data = jankDeltaData(delta);
-
-    let builder = "";
-
-    // no sprintf?
-    if (data["seconds_raw"] > 0) {
-        builder = "will reach EOL in ";
-        builder += jankDeltaFormat(data);
-    } else {
-        builder = "has reached EOL :(";
+function getPrideDelta(isForNextEvent) {
+    const clone = new Date(new Date().getFullYear(), PRIDE_MONTH, 1);
+    const currMonth = new Date().getMonth();
+    if (!isForNextEvent) {
+        // last pride month is previous year
+        if (currMonth < PRIDE_MONTH) {
+            clone.setFullYear(clone.getFullYear() - 1);
+        }
+        return Date.now() - clone.getTime();
     }
 
-    return builder;
+    // next pride month is next year
+    if (currMonth > PRIDE_MONTH) {
+        clone.setFullYear(clone.getFullYear() + 1);
+    }
+    return clone.getTime() - Date.now();
 }
 
 function getPrideStatus() {
-    let builder = "";
-    if (new Date().getMonth() == PRIDE_MONTH) {
-        builder = "Pride month is currently ongoing, ending in NULL";
-    } else {
-        let isUnder = new Date().getMonth() < PRIDE_MONTH; // last is prev year
-        let isOver = new Date().getMonth() > PRIDE_MONTH; // last is now
-
-        // last
-        let dec = (isUnder) ? new Date(new Date().getFullYear() - 1, PRIDE_MONTH, 1) : new Date(new Date().getFullYear(), PRIDE_MONTH, 1);
-        let deltaLast = Date.now() - dec.getTime();
-        let last = jankDeltaFormat(jankDeltaData(deltaLast));
-        builder = `It has been ${last} since Pride Month ended, and NULL until next one?`;
+    const currMonth = new Date().getMonth();
+    if (currMonth == PRIDE_MONTH) {
+        return `Pride month is currently ongoing, ending in ${jankDeltaFormat(jankDeltaData(new Date(new Date().getFullYear(), PRIDE_MONTH + 1).getTime() - Date.now()))}`;
     }
 
-    return builder;
+    return `It has been ${jankDeltaFormat(jankDeltaData(getPrideDelta(false)))} since Pride Month ended, and ${jankDeltaFormat(jankDeltaData(getPrideDelta(true)))} until next one`;
 }
 
 win10EOLEl.innerText = `${getWindows10Status()}`;
