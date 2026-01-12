@@ -60,7 +60,8 @@
     transition: fill var(--icons_trans_duration);
 }
 
-.navbar_content>a>*, #opendyslexic_label {
+.navbar_content>a>*,
+#opendyslexic_label {
     font-family: "LaptureDisplay Bold", sans-serif;
     transition: color var(--icons_trans_duration)
 }
@@ -70,12 +71,15 @@
     display: flex;
 }
 
-.navbar_icon_link:hover > .navbar_icon_svg {
+.navbar_icon_link:hover>.navbar_icon_svg {
     fill: var(--icons_col_hover);
 }
 
 /* #opendyslexic_checkbox:hover raw is for the cursor */
-.navbar_content>a>*:hover, #opendyslexic_label:hover, #opendyslexic_container:has(#opendyslexic_checkbox:hover) #opendyslexic_label, #opendyslexic_checkbox:hover {
+.navbar_content>a>*:hover,
+#opendyslexic_label:hover,
+#opendyslexic_container:has(#opendyslexic_checkbox:hover) #opendyslexic_label,
+#opendyslexic_checkbox:hover {
     color: var(--icons_col_hover);
     cursor: pointer;
 }

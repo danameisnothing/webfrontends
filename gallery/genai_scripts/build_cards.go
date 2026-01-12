@@ -10,9 +10,9 @@ import (
 
 // Define structs to match the JSON structure
 type CardEntry struct {
-	ImgURL         string `json:"img_url"`
-	ImgWidth       string `json:"img_width"`
-	CardTitle      string `json:"card_title"`
+	ImgURL          string `json:"img_url"`
+	ImgWidth        string `json:"img_width"`
+	CardTitle       string `json:"card_title"`
 	CardDescription string `json:"card_description"`
 }
 

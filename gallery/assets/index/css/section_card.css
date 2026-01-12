@@ -82,7 +82,7 @@ a message, via content: maybe? */
     background-repeat: repeat;
 }
 
-#card_section_pre > * {
+#card_section_pre>* {
     font-family: "LaptureDisplay Bold", sans-serif;
 }
 
@@ -387,7 +387,8 @@ are ALWAYS right next to the radio input element, so make sure that is the case!
 }
 
 /* https://stackoverflow.com/questions/13205402/pesky-lil-small-element-not-working-with-text-align-needs-to-be-blocked */
-.card_prop_title, .card_prop_description {
+.card_prop_title,
+.card_prop_description {
     display: block;
     text-align: center;
 }

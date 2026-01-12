@@ -121,6 +121,7 @@ body:has(#opendyslexic_checkbox[type="checkbox"]:checked) label,
 body:has(#opendyslexic_checkbox[type="checkbox"]:checked) i {
     font-family: "OpenDyslexic3 Regular", sans-serif;
 }
+
 body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h1,
 body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h2,
 body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h3,
