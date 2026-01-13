@@ -1,0 +1,404 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+/* TODO: is it necessary to ise @supoorts for this one? */
+:root {
+    /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
+    AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
+    --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/card_bg_2x2.avif");
+    --img_button_grey: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
+    /* This image is almost 4 MiB. We absolutely need the CDN for this one */
+    --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c37_24fps_8s.avif");
+    --button_transition_time: 0.075s;
+    --img_cardback_trinket: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/CardBack_Trinket.avif");
+    --img_cardfront_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/replacement_card.avif");
+    --card_width: 180px;
+    --card_height: 280px;
+    --card_border_radius: 3px;
+    --card_reveal_full_time: 1.25s;
+    --card_reveal_delay: 0.3s;
+    --card_hover_scale: 1.2;
+    --card_hover_time: 0.15s;
+    --card_props_pad: 0px;
+    /* width should be the same, unlike height on mobile, so no need for smallest or largest unit */
+    --cardentry_grid_basesize: 100vw;
+    /* TODO: we re-encode in WebP later! */
+    --img_playlist_bg: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/playlist-bg.avif");
+    --img_button_active: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Red.avif");
+    --const_img_bg_size: 100% 100%;
+    --card_prop_offs: -50%;
+    --card_prop_offs_hovered: -2.5%;
+    /* to make room for expanding cards' transition */
+    --card_section_pad_trans_top: 35px;
+    --card_section_pad_trans_bottom: 35px;
+    --button_card_type_selector_pad: 15px 50px;
+    --card_type_selector_width_desktop: 80%;
+    --card_type_selector_width_mobile: 100%;
+    --trans_card_2_height: 200px;
+    --card_property_bg_size: 100% 100%;
+    --card_property_width: 100vw;
+    --card_property_max_width: 296px;
+    --card_entry_row_gap: 69px;
+    /* to make smooth scrolling work : https://stackoverflow.com/questions/62098093/scroll-behaviour-smooth-not-working-at-all#comment137600798_71685577 */
+    scroll-behavior: smooth;
+}
+
+/* Firefox matches this color almost perfectly, but Chromium-based ones do not. */
+/* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
+/* why chrome? */
+#card_section {
+    background-image: var(--img_2x2);
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* to hide my questionable scaling styles */
+    overflow: hidden;
+    padding-top: var(--card_section_pad_trans_top);
+    padding-bottom: var(--card_section_pad_trans_bottom);
+}
+
+.card_entry {
+    display: none;
+    /* for preparation of display:grid */
+    justify-items: center;
+    transform-origin: center;
+    align-items: center;
+    row-gap: var(--card_entry_row_gap);
+}
+
+/* TODO: maybe make a warning about a certain CSS keyword not being
+supported via @supports? by setting the content of an element to
+a message, via content: maybe? */
+
+#card_type_selector_bg {
+    background-image: var(--img_2x2);
+    background-repeat: repeat;
+}
+
+#card_section_pre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--img_2x2);
+    background-repeat: repeat;
+}
+
+#card_section_pre>* {
+    font-family: "LaptureDisplay Bold", sans-serif;
+}
+
+#card_type_selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+/* We can do this, AS LONG AS the label mapping to the current checked checkbox
+are ALWAYS right next to the radio input element, so make sure that is the case! */
+#card_type_selector>input[type="radio"]:checked+label {
+    background-image: var(--img_button_active);
+    background-size: var(--const_img_bg_size);
+}
+
+/* https://stackoverflow.com/a/20327676, https://stackoverflow.com/a/27505936 */
+/* FIXME: original background-image on previously-selected button will persist for 0.5 seconds before fading out like normal */
+#card_type_selector>label {
+    padding: var(--button_card_type_selector_pad);
+    text-decoration: none;
+    background-image: none;
+    /* TODO: don't just support PNG, we re-encode in WebP and AVIF later! */
+    background-image: var(--img_button_grey);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-size var(--button_transition_time);
+    background-size: 0% 100%;
+    /* prevent ugly newlines not making height even */
+    white-space: nowrap;
+}
+
+#card_type_selector>label>* {
+    font-family: "LaptureDisplay Bold", sans-serif;
+}
+
+#card_type_selector>input[type="radio"] {
+    display: none;
+}
+
+#card_type_selector>label:hover {
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.card_element_only_desktop {
+    display: none;
+}
+
+/* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* 775px is from trial and error */
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (min-width: 775px) {
+    #card_type_selector {
+        flex-direction: row;
+        max-width: var(--card_type_selector_width_desktop);
+    }
+
+    /* https://stackoverflow.com/a/20327676 */
+    #card_type_selector>label {
+        /* FIXME: what the hell was this for? this breaks overflow-y! */
+        /*margin: -15px 0px;*/
+    }
+
+    .card_element_only_desktop {
+        display: flex;
+    }
+
+    .card_entry {
+        /* TODO: move to variables! */
+        /* for preparation of display:grid */
+        grid-template-columns: calc(var(--cardentry_grid_basesize) / 2) calc(var(--cardentry_grid_basesize) / 2);
+    }
+}
+
+/* 100% as smaller because we are already vertical, might as well make the most of it */
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (max-width: 774px) {
+    #card_type_selector {
+        flex-direction: column;
+        max-width: var(--card_type_selector_width_mobile);
+    }
+
+    .card_entry {
+        /* TODO: move to variables! */
+        /* for preparation of display:grid */
+        grid-template-columns: calc(var(--cardentry_grid_basesize));
+    }
+}
+
+#trans_card_2 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--trans_card_2_height);
+    background-image: var(--fiery_gradient);
+    background-repeat: repeat;
+    transform: rotate(180deg);
+}
+
+/* TODO: move to variables??? */
+/* no way to specify animation percentages with variables? */
+@keyframes anim_flip_reveal {
+    35% {
+        pointer-events: none;
+        transform: scale(1.2);
+    }
+
+    52.5% {
+        transform: rotateY(90deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotateY(0deg) scale(1.2);
+    }
+
+    /* if we just put this at 100%, then for some reason transforms on hover wouldn't work, so we do this absolutely-terrifying hack instead */
+    99.999% {
+        transform: scale(1);
+    }
+
+    100% {
+        pointer-events: auto;
+    }
+}
+
+/* this display: none nonsense doesn't work on Firefox, see below */
+@keyframes anim_backface {
+    0% {
+        display: flex;
+        visibility: visible;
+    }
+
+    52.5%,
+    100% {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/* at t=0, this is not visible, then next timestep it is visible? anyway, this works */
+@keyframes anim_frontface {
+
+    0%,
+    52.5% {
+        display: none;
+        visibility: hidden;
+    }
+
+    100% {
+        display: flex;
+        visibility: visible;
+    }
+}
+
+/* why do we still need this 99.999% nonsense? */
+@keyframes anim_activate_pointer {
+
+    0%,
+    99.999% {
+        pointer-events: none;
+    }
+
+    100% {
+        pointer-events: auto;
+
+    }
+}
+
+/* TODO: tweak later! */
+/* FIXME: make this card scale well, with this ratio */
+.card_full {
+    width: var(--card_width);
+    height: var(--card_height);
+    animation-name: anim_flip_reveal;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    /* for card_properties to be below card_full */
+    z-index: 1;
+}
+
+/* apparently, even with .card_full:hover > .card_entry_frontside, with pointer-events still apparently set to none, it still fires when the mouse hovers over it */
+.card_zoomer {
+    /* part of a hack made for Firefox */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--card_hover_time);
+    animation-name: anim_activate_pointer;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    pointer-events: none;
+}
+
+.card_property {
+    background-image: var(--img_playlist_bg);
+    background-repeat: no-repeat;
+    /* to stretch to fit */
+    background-size: var(--card_property_bg_size);
+    margin-left: var(--card_props_pad);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: var(--card_prop_offs);
+    transition: transform var(--card_hover_time), left var(--card_hover_time), margin-left var(--card_hover_time);
+    transform: scaleX(0);
+    width: var(--card_property_width);
+    max-width: var(--card_property_max_width);
+}
+
+.card_zoomer {
+    width: var(--card_width);
+    height: var(--card_height);
+}
+
+/* allow card to stay in hovered state when mousing over card_property, big yikes here */
+.card_zoomer:hover,
+.card_set:has(.card_property:hover) .card_zoomer {
+    transform: scale(var(--card_hover_scale));
+}
+
+.card_set:has(.card_zoomer:hover) .card_property,
+.card_property:hover {
+    transform: scaleX(1);
+    left: var(--card_prop_offs_hovered);
+}
+
+.card_set:has(.card_zoomer:hover) .card_property,
+.card_property:hover {
+    margin-left: calc(var(--card_props_pad) + (var(--card_width) * (var(--card_hover_scale) - 1.0)) / 2);
+}
+
+.card_entry_backside {
+    border-radius: var(--card_border_radius);
+    width: var(--card_width);
+    height: var(--card_height);
+    background-image: var(--img_cardback_trinket);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: anim_backface;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    visibility: visible;
+}
+
+.card_entry_frontside {
+    border-radius: var(--card_border_radius);
+    position: absolute;
+    width: var(--card_width);
+    height: var(--card_height);
+    background-image: var(--img_cardfront_bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: anim_frontface;
+    animation-duration: var(--card_reveal_full_time);
+    animation-fill-mode: forwards;
+    animation-delay: var(--card_reveal_delay);
+    justify-content: center;
+    align-items: center;
+    /* starting styles, so the styles wouldn't look off while the animation was delaying */
+    /* forgot that Firefox can't switch display during animation */
+    display: flex;
+    visibility: hidden;
+}
+
+/* TODO: move to variables! */
+.card_prop_container {
+    width: 88%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_set {
+    display: inline-flex;
+}
+
+.card_prop_title {
+    font-family: "LaptureDisplay Bold", sans-serif;
+}
+
+.card_prop_description {
+    font-family: "FiraSans Italic", sans-serif;
+}
+
+/* https://stackoverflow.com/questions/13205402/pesky-lil-small-element-not-working-with-text-align-needs-to-be-blocked */
+.card_prop_title,
+.card_prop_description {
+    display: block;
+    text-align: center;
+}
+
+/* https://stackoverflow.com/a/41736230 */
+.card_prop_desc_container {
+    /* height: 100%;
+    position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}

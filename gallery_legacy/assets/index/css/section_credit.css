@@ -1,0 +1,98 @@
+:root {
+    --esrb_t_logo: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/svg/t.svg");
+    /* taken from the CotL webpage */
+    --esrb_width: 39px;
+    --esrb_container_height: 58px;
+    --esrb_text_container_color: #FFFFFF;
+    --esrb_text_container_margin: 2.5px;
+    --esrb_text_font: "Arial";
+    --esrb_text_container_border_color: #000000;
+    --esrb_text_color: #000000;
+    --esrb_border_thickness: 2px;
+    /* from the CotL webpage */
+    --esrb_text_size: 10px;
+    --navbar_row_gap: 15px;
+    --navbar_game_icon_height: 75px;
+    --navbar_vertical_gap: 10px;
+}
+
+#credits_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--navbar_vertical_gap);
+}
+
+#credits_section>* {
+    font-family: "LaptureDisplay Bold", sans-serif;
+    margin: 0;
+}
+
+/* adjusted depending on the screen size */
+.credits_section_row_platform {
+    display: flex;
+    align-items: center;
+    gap: var(--navbar_row_gap);
+}
+
+/* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* 775px is from trial and error */
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (min-width: 775px) {
+    .credits_section_row_platform {
+        flex-direction: row;
+    }
+}
+
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (max-width: 774px) {
+    .credits_section_row_platform {
+        flex-direction: column;
+    }
+}
+
+#esrb_container {
+    height: var(--esrb_container_height);
+    display: flex;
+    align-items: center;
+    background-color: var(--esrb_text_container_color);
+    margin-right: calc(-1 * var(--esrb_text_container_margin)/2);
+}
+
+#esrb_t_logo {
+    background-image: var(--esrb_t_logo);
+    width: var(--esrb_width);
+    height: var(--esrb_container_height);
+}
+
+#esrb_text {
+    flex-grow: 1;
+    height: calc(var(--esrb_container_height) - (var(--esrb_text_container_margin)*2));
+    background-color: var(--esrb_text_container_color);
+    margin: var(--esrb_text_container_margin) calc(var(--esrb_text_container_margin)/2) var(--esrb_text_container_margin) 0;
+    /* copied from the CotL webpage */
+    /* https://www.geeksforgeeks.org/css/how-to-add-border-on-only-one-side-in-shorter-way-in-css/ */
+    --border_style: var(--esrb_border_thickness) solid var(--esrb_text_container_border_color);
+    border-top: var(--border_style);
+    border-bottom: var(--border_style);
+    border-right: var(--border_style);
+    position: relative;
+    /* for the border to "attach" to the ESRB logo */
+    left: calc(-1 * var(--esrb_text_container_margin)/2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#esrb_text>* {
+    margin: 0;
+    /* TODO: move to variables! */
+    padding: 0px 5px;
+    font-family: var(--esrb_text_font), sans-serif;
+    color: var(--esrb_text_color);
+    font-size: var(--esrb_text_size);
+}
+
+.navbar_game_icon {
+    height: var(--navbar_game_icon_height);
+}

@@ -1,0 +1,172 @@
+/* TODO: split this into multiple stylesheets! */
+/* good candidate would be the hack at the bottom of this file */
+
+:root {
+    /* set as blank, will be managed in section_navbar.css */
+    --global_font_target_major: "";
+}
+
+/* https://stackoverflow.com/a/3245187 */
+@font-face {
+    font-family: "OpenDyslexic3 Regular";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OpenDyslexic3 Bold";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/OpenDyslexic3/OpenDyslexic3-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "LaptureDisplay Bold";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/LaptureDisplay/LaptureDisplay-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "FiraSans Thin";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans ThinItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-ThinItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans ExtraLight";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans ExtraLightItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-ExtraLightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Light";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans LightItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Regular";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Italic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Medium";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans MediumItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans SemiBold";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans SemiBoldItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Bold";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans BoldItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans ExtraBold";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans ExtraBoldItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-ExtraBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans Black";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "FiraSans BlackItalic";
+    src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-BlackItalic.ttf") format("truetype");
+}
+
+/* wtf */
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) p,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) span,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) a,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) small,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) label,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) i {
+    font-family: "OpenDyslexic3 Regular", sans-serif;
+}
+
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h1,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h2,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h3,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h4,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h5,
+body:has(#opendyslexic_checkbox[type="checkbox"]:checked) h6 {
+    font-family: "OpenDyslexic3 Bold", sans-serif;
+}
+
+/* Absolute default in case we didn't specify any font */
+/*h1, h2, h3, h4, h5, h6 {
+    font-family: "FiraSans Bold", sans-serif;
+}
+p, span, a, small, label, i {
+    font-family: "FiraSans", sans-serif;
+}*/
+
+/* https://forum.freecodecamp.org/t/css-margin-and-padding-problem/421309/10 */
+body {
+    margin: inherit;
+    padding: inherit;
+    box-sizing: inherit;
+}
+
+/* Copied straight from chellenge */
+a,
+a:visited,
+a:hover,
+a:active,
+a:link {
+    color: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+small,
+label,
+i {
+    color: #f1edd9
+}

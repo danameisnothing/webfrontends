@@ -1,0 +1,105 @@
+:root {
+    --navbar_height: 60px;
+    --navbar_gap: 15px;
+    --navbar_content_width: 95%;
+    --navbar_alpha: 0.7;
+    /* because the width will adjust itself, percentage units alone doesn't work, so this is just based off of the CotL webpage */
+    --icons_height: 1.6rem;
+    /* colors straight from the CotL webpage */
+    --icons_col_regular: #F1EDD9;
+    --icons_col_hover: #F40017;
+    --icons_trans_duration: 0.2s;
+    --navbar_logo_width: 90px;
+}
+
+/* https://stackoverflow.com/a/13371219 */
+/* TODO: make this semi-transparent */
+#navigation_bar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    /* causes no space on the very top */
+    height: var(--navbar_height);
+    /* FIXME: */
+    background-color: rgba(0, 0, 0, var(--navbar_alpha));
+    /* anything higher causes the links' color to
+	become black on Firefox Mobile */
+    z-index: 65536;
+}
+
+#navbar_content_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--navbar_content_width);
+    height: 100%;
+}
+
+.navbar_content {
+    display: flex;
+    align-items: center;
+    gap: var(--navbar_gap);
+}
+
+.navbar_content>a {
+    text-decoration: none;
+}
+
+/* this works lmao? */
+.navbar_content>a>* {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar_icon_svg {
+    height: var(--icons_height);
+    fill: var(--icons_col_regular);
+    transition: fill var(--icons_trans_duration);
+}
+
+.navbar_content>a>*,
+#opendyslexic_label {
+    font-family: "LaptureDisplay Bold", sans-serif;
+    transition: color var(--icons_trans_duration)
+}
+
+.navbar_icon_link {
+    /* for some reason, just having display: flex causes the SVG to be center now */
+    display: flex;
+}
+
+.navbar_icon_link:hover>.navbar_icon_svg {
+    fill: var(--icons_col_hover);
+}
+
+/* #opendyslexic_checkbox:hover raw is for the cursor */
+.navbar_content>a>*:hover,
+#opendyslexic_label:hover,
+#opendyslexic_container:has(#opendyslexic_checkbox:hover) #opendyslexic_label,
+#opendyslexic_checkbox:hover {
+    color: var(--icons_col_hover);
+    cursor: pointer;
+}
+
+#navbar_logo {
+    width: var(--navbar_logo_width);
+}
+
+/* https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* 775px is from trial and error */
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (min-width: 775px) {
+    .navbar_only_desktop {
+        display: flex;
+    }
+}
+
+/* we can't use CSS variables on @media queries, see https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries */
+@media screen and (max-width: 774px) {
+    .navbar_only_desktop {
+        display: none;
+    }
+}
