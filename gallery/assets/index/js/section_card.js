@@ -1,8 +1,10 @@
 import { CARD_ENTRIES } from "./consts.js";
 
-export function populateCards() {
+function addCardKind(kind) {
+    let strBuf = "";
     for (let i = 0; i < CARD_ENTRIES.length; i++) {
-        let strBuf = "";
+        if (kind != "all" && CARD_ENTRIES[i].kind != kind) continue;
+
         for (let j = 0; j < CARD_ENTRIES[i].entries.length; j++) {
             const CUR_ENTRY = CARD_ENTRIES[i].entries[j];
             strBuf += `<div class="card_set">
@@ -11,7 +13,7 @@ export function populateCards() {
                 <div class="card_entry_backside"></div>
                 <div class="card_entry_frontside">
                     <img width="${CUR_ENTRY.img_width}" class="card_img"
-                        src="${CUR_ENTRY.img_url}">
+                        src="${CUR_ENTRY.img_url}" alt="${CUR_ENTRY.img_alt}">
                 </div>
             </div>
         </div>
@@ -25,9 +27,28 @@ export function populateCards() {
         </div>
     </div>`;
         }
-        const HTML_TEMPLATE = `<div class="card_entry" id="cardentry_${CARD_ENTRIES[i].kind}">
+    }
+
+    const HTML_TEMPLATE = `<div class="card_entry" id="cardentry_${kind}">
     ${strBuf}
 </div>`;
-        document.querySelector("#card_section").insertAdjacentHTML("afterend", HTML_TEMPLATE);
+    document.querySelector("#card_section").insertAdjacentHTML("beforeend", HTML_TEMPLATE);
+}
+
+function changeCard(el) {
+    const container = document.querySelector("#card_section");
+    // https://stackoverflow.com/a/3955238
+    while (container.lastChild) container.removeChild(container.lastChild);
+    addCardKind(el.dataset.cardType);
+}
+
+export function initCards() {
+    // https://stackoverflow.com/a/8997289
+    const els = document.querySelectorAll(`#card_type_selector > input[name="card_type_selector_radios"]`);
+    for (let i = 0; i < els.length; i++) {
+        els[i].addEventListener("change", () => changeCard(els[i]));
+    
+        // since that event listener only fires on change, we'll check the default value
+        if (els[i].checked) changeCard(els[i]);
     }
 }

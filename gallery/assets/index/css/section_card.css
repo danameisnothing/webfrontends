@@ -57,7 +57,7 @@
 }
 
 .card_entry {
-    display: none;
+    display: grid;
     /* for preparation of display:grid */
     justify-items: center;
     transform-origin: center;

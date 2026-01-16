@@ -6,12 +6,14 @@ export const CARD_ENTRIES = [
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif",
                 "img_width": "140",
+                "img_alt": "An image of the playable character \"The Lamb\" from Cult of the Lamb.",
                 "card_title": "The Lamb",
                 "card_description": "Main protagonist of Cult of the Lamb, is a small sheep, main leader of the Cult, possesses the Red Crown."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif",
                 "img_width": "140",
+                "img_alt": "An image of the playable character \"The Goat\" from Cult of the Lamb.",
                 "card_title": "The Goat",
                 "card_description": "Mirror image of The Lamb, is a goat, possesses a crown similar to the Red Crown, but with a purple eye."
             }
@@ -23,30 +25,35 @@ export const CARD_ENTRIES = [
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif",
                 "img_width": "145",
+                "img_alt": "An image of the boss named Leshy from Cult of the Lamb.",
                 "card_title": "Leshy",
                 "card_description": "Bishop of Chaos, one of the four, and youngest, Bishops of the Old Faith, ruler of Darkwood. First boss encountered in-game."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif",
                 "img_width": "140",
+                "img_alt": "An image of the boss named Heket from Cult of the Lamb.",
                 "card_title": "Heket",
                 "card_description": "Bishop of Famine, one of the four Bishops of the Old Faith, second youngest Bishop, ruler of Anura. Second boss encountered in-game."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif",
                 "img_width": "130",
+                "img_alt": "An image of the boss named Kallamar from Cult of the Lamb.",
                 "card_title": "Kallamar",
                 "card_description": "Bishop of Pestilence, one of the four Bishops of the Old Faith, second eldest Bishop, ruler of Anchordeep. Third boss encountered in-game."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif",
                 "img_width": "130",
+                "img_alt": "An image of the boss named Shamura from Cult of the Lamb.",
                 "card_title": "Shamura",
                 "card_description": "Bishop of Knowledge and War, one of the four Bishops of the Old Faith, eldest sibling, ruler of Anchordeep. Fourth boss encountered in-game."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif",
                 "img_width": "145",
+                "img_alt": "An image of the final boss named The One Who Waits from Cult of the Lamb.",
                 "card_title": "Narinder / The One Who Waits",
                 "card_description": "Bishop of Death, formerly Bishops of the Old Faith, third oldest sibling. Final boss encountered in-game."
             }
@@ -58,84 +65,98 @@ export const CARD_ENTRIES = [
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Amdusias from Cult of the Lamb.",
                 "card_title": "Amdusias",
                 "card_description": "First miniboss encountered in Darkwood."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Valefar from Cult of the Lamb.",
                 "card_title": "Valefar",
                 "card_description": "Second miniboss encountered in Darkwood."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Barbatos from Cult of the Lamb.",
                 "card_title": "Barbatos",
                 "card_description": "Third, and final miniboss encountered in Darkwood."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Gusion from Cult of the Lamb.",
                 "card_title": "Gusion",
                 "card_description": "First miniboss encountered in Anura."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Eligos from Cult of the Lamb.",
                 "card_title": "Eligos",
                 "card_description": "Second miniboss encountered in Anura."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Zepar from Cult of the Lamb.",
                 "card_title": "Zepar",
                 "card_description": "Third, and final miniboss encountered in Anura."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Saleos from Cult of the Lamb.",
                 "card_title": "Saleos",
                 "card_description": "First miniboss encountered in Anchordeep."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Haborym.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Haborym from Cult of the Lamb.",
                 "card_title": "Haborym",
                 "card_description": "Second miniboss encountered in Anchordeep."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Baalzebub from Cult of the Lamb.",
                 "card_title": "Baalzebub",
                 "card_description": "Third, and final miniboss encountered in Anura."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Focalor from Cult of the Lamb.",
                 "card_title": "Focalor",
                 "card_description": "First miniboss encountered in Silk Cradle."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Vephar from Cult of the Lamb.",
                 "card_title": "Vephar",
                 "card_description": "Second miniboss encountered in Silk Cradle."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Hauras from Cult of the Lamb.",
                 "card_title": "Hauras",
                 "card_description": "Third, and final miniboss encountered in Silk Cradle."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Aym from Cult of the Lamb.",
                 "card_title": "Aym",
                 "card_description": "Servant of The One Who Waits, first boss on the final fight."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif",
                 "img_width": "140",
+                "img_alt": "An image of the miniboss named Baal from Cult of the Lamb.",
                 "card_title": "Baal",
                 "card_description": "Servant of The One Who Waits, second boss on the final fight."
             }
@@ -147,395 +168,154 @@ export const CARD_ENTRIES = [
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Ratau from Cult of the Lamb.",
                 "card_title": "Ratau",
                 "card_description": "Former crown bearer, meets The Lamb while escaping from the Lands of the Old Faith, retires to the Lonely Shack."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Flinky from Cult of the Lamb.",
                 "card_title": "Flinky",
                 "card_description": "Knucklebones player located in the Lonely Shack."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Klunko and Bop from Cult of the Lamb.",
                 "card_title": "Klunko and Bop",
                 "card_description": "Knucklebones player located in the Lonely Shack."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Shrumy from Cult of the Lamb.",
                 "card_title": "Shrumy",
                 "card_description": "Knucklebones player located in the Lonely Shack."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Forneus from Cult of the Lamb.",
                 "card_title": "Forneus",
                 "card_description": "Offers a Blueprint, Follower Form, and a Gift for free."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif",
                 "img_width": "140",
+                "img_alt": "An image of the Fisherman character from Cult of the Lamb.",
                 "card_title": "Fisherman",
                 "card_description": "Initially encountered on a fishing pond in Darkwood, can be visited in Pilgrim's Passage."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif",
                 "img_width": "140",
+                "img_alt": "An image of the Lighthouse Follower character from Cult of the Lamb.",
                 "card_title": "Lighthouse Follower",
                 "card_description": "Worships the Lighthouse in Pilgrim's Passage, sells decorations and Tarot Cards."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Mushroomo from Cult of the Lamb.",
                 "card_title": "Mushroomo",
                 "card_description": "Initially encountered on Anura, can be visited in Spore Grotto."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Kudaai from Cult of the Lamb.",
                 "card_title": "Kudaai",
                 "card_description": "Offers Curses and Weapons to the Lamb, encountered randomly in crusades."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Rakshasa from Cult of the Lamb.",
                 "card_title": "Rakshasa",
                 "card_description": "Runs a restaurant in the dungeons."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Plimbo from Cult of the Lamb.",
                 "card_title": "Plimbo",
                 "card_description": "Sells tarot cards and decorations, initially encountered in Anchordeep, can be visited in Smuggler's Sanctuary."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Helob from Cult of the Lamb.",
                 "card_title": "Helob",
                 "card_description": "Sells followers to the Lamb."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Ratoo from Cult of the Lamb.",
                 "card_title": "Ratoo",
                 "card_description": "Brown rat, characteristically mirroring Ratau."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Chemach from Cult of the Lamb.",
                 "card_title": "Chemach",
                 "card_description": "Provides Relics to the Lamb, encountered randomly in crusades."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif",
                 "img_width": "110",
+                "img_alt": "An image of the Mystic Seller character from Cult of the Lamb.",
                 "card_title": "Mystic Seller",
                 "card_description": "Appears as a post-game character, a merchant."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_(Silk_Cradle).avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Berith from Cult of the Lamb.",
                 "card_title": "Berith",
                 "card_description": "Provides robes to the Lamb."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif",
                 "img_width": "140",
+                "img_alt": "An image of the Lighthouse Keeper character from Cult of the Lamb.",
                 "card_title": "Lighthouse Keeper",
                 "card_description": "Axolotl, found inside the Lighthouse in Pilgrim's Passage."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Monch from Cult of the Lamb.",
                 "card_title": "Monch",
                 "card_description": "Gray moth, increases loyalty of a random Follower."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Sozo from Cult of the Lamb.",
                 "card_title": "Sozo",
                 "card_description": "Grants Brainwashing Ritual, and themed decorations. Ant controlled by a fungus."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif",
                 "img_width": "140",
+                "img_alt": "An image of a character named Midas from Cult of the Lamb.",
                 "card_title": "Midas",
                 "card_description": "Offers resources in exchange for gold. Initially encountered in Darkwood, can be visited in Midas's Cave."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif",
                 "img_width": "180",
+                "img_alt": "An image of a character named The Fox from Cult of the Lamb.",
                 "card_title": "The Fox",
                 "card_description": "Encountered at night, on underground areas."
             },
             {
                 "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif",
                 "img_width": "140",
-                "card_title": "Haro",
-                "card_description": "Gives lore to the Lamb."
-            }
-        ]
-    },
-    {
-        "kind": "all",
-        "entries": [
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Lamb.avif",
-                "img_width": "140",
-                "card_title": "The Lamb",
-                "card_description": "Main protagonist of Cult of the Lamb, is a small sheep, main leader of the Cult, possesses the Red Crown."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/main_chars/Goat_IdlePictureStatic.avif",
-                "img_width": "140",
-                "card_title": "The Goat",
-                "card_description": "Mirror image of The Lamb, is a goat, possesses a crown similar to the Red Crown, but with a purple eye."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Leshy.avif",
-                "img_width": "140",
-                "card_title": "Leshy",
-                "card_description": "Bishop of Chaos, one of the four, and youngest, Bishops of the Old Faith, ruler of Darkwood. First boss encountered in-game."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Heket.avif",
-                "img_width": "140",
-                "card_title": "Heket",
-                "card_description": "Bishop of Famine, one of the four Bishops of the Old Faith, second youngest Bishop, ruler of Anura. Second boss encountered in-game."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Kallamar.avif",
-                "img_width": "130",
-                "card_title": "Kallamar",
-                "card_description": "Bishop of Pestilence, one of the four Bishops of the Old Faith, second eldest Bishop, ruler of Anchordeep. Third boss encountered in-game."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/Shamura.avif",
-                "img_width": "130",
-                "card_title": "Shamura",
-                "card_description": "Bishop of Knowledge and War, one of the four Bishops of the Old Faith, eldest sibling, ruler of Anchordeep. Fourth boss encountered in-game."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/bosses/The-One-Who-Waits-Narinder-Chained.avif",
-                "img_width": "145",
-                "card_title": "Narinder / The One Who Waits",
-                "card_description": "Bishop of Death, formerly Bishops of the Old Faith, third oldest sibling. Final boss encountered in-game."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Amdusias.avif",
-                "img_width": "140",
-                "card_title": "Amdusias",
-                "card_description": "First miniboss encountered in Darkwood."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Valefar.avif",
-                "img_width": "140",
-                "card_title": "Valefar",
-                "card_description": "Second miniboss encountered in Darkwood."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Barbatos.avif",
-                "img_width": "140",
-                "card_title": "Barbatos",
-                "card_description": "Third, and final miniboss encountered in Darkwood."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Gusion.avif",
-                "img_width": "140",
-                "card_title": "Gusion",
-                "card_description": "First miniboss encountered in Anura."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Eligos.avif",
-                "img_width": "140",
-                "card_title": "Eligos",
-                "card_description": "Second miniboss encountered in Anura."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Zepar.avif",
-                "img_width": "140",
-                "card_title": "Zepar",
-                "card_description": "Third, and final miniboss encountered in Anura."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Saleos.avif",
-                "img_width": "140",
-                "card_title": "Saleos",
-                "card_description": "First miniboss encountered in Anchordeep."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Haborym.avif",
-                "img_width": "140",
-                "card_title": "Haborym",
-                "card_description": "Second miniboss encountered in Anchordeep."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baalzebub.avif",
-                "img_width": "140",
-                "card_title": "Baalzebub",
-                "card_description": "Third, and final miniboss encountered in Anura."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Focalor.avif",
-                "img_width": "140",
-                "card_title": "Focalor",
-                "card_description": "First miniboss encountered in Silk Cradle."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Vephar.avif",
-                "img_width": "140",
-                "card_title": "Vephar",
-                "card_description": "Second miniboss encountered in Silk Cradle."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Hauras.avif",
-                "img_width": "140",
-                "card_title": "Hauras",
-                "card_description": "Third, and final miniboss encountered in Silk Cradle."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Aym.avif",
-                "img_width": "140",
-                "card_title": "Aym",
-                "card_description": "Servant of The One Who Waits, first boss on the final fight."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/minibosses/Baal.avif",
-                "img_width": "140",
-                "card_title": "Baal",
-                "card_description": "Servant of The One Who Waits, second boss on the final fight."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratau.avif",
-                "img_width": "140",
-                "card_title": "Ratau",
-                "card_description": "Former crown bearer, meets The Lamb while escaping from the Lands of the Old Faith, retires to the Lonely Shack."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Flinky.avif",
-                "img_width": "140",
-                "card_title": "Flinky",
-                "card_description": "Knucklebones player located in the Lonely Shack."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Klunk_and_Bop.avif",
-                "img_width": "140",
-                "card_title": "Klunko and Bop",
-                "card_description": "Knucklebones player located in the Lonely Shack."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Shrumy.avif",
-                "img_width": "140",
-                "card_title": "Shrumy",
-                "card_description": "Knucklebones player located in the Lonely Shack."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Forneus.avif",
-                "img_width": "140",
-                "card_title": "Forneus",
-                "card_description": "Offers a Blueprint, Follower Form, and a Gift for free."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fisherman.avif",
-                "img_width": "140",
-                "card_title": "Fisherman",
-                "card_description": "Initially encountered on a fishing pond in Darkwood, can be visited in Pilgrim's Passage."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Follower.avif",
-                "img_width": "140",
-                "card_title": "Lighthouse Follower",
-                "card_description": "Worships the Lighthouse in Pilgrim's Passage, sells decorations and Tarot Cards."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Mushroom_Follower.avif",
-                "img_width": "140",
-                "card_title": "Mushroomo",
-                "card_description": "Initially encountered on Anura, can be visited in Spore Grotto."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Kudai.avif",
-                "img_width": "140",
-                "card_title": "Kudaai",
-                "card_description": "Offers Curses and Weapons to the Lamb, encountered randomly in crusades."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chef_Shrimp.avif",
-                "img_width": "140",
-                "card_title": "Rakshasa",
-                "card_description": "Runs a restaurant in the dungeons."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Plimbo.avif",
-                "img_width": "140",
-                "card_title": "Plimbo",
-                "card_description": "Sells tarot cards and decorations, initially encountered in Anchordeep, can be visited in Smuggler's Sanctuary."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Helob.avif",
-                "img_width": "140",
-                "card_title": "Helob",
-                "card_description": "Sells followers to the Lamb."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Ratoo.avif",
-                "img_width": "140",
-                "card_title": "Ratoo",
-                "card_description": "Brown rat, characteristically mirroring Ratau."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Chemach.avif",
-                "img_width": "140",
-                "card_title": "Chemach",
-                "card_description": "Provides Relics to the Lamb, encountered randomly in crusades."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/COTL-Mystic-Seller.avif",
-                "img_width": "110",
-                "card_title": "Mystic Seller",
-                "card_description": "Appears as a post-game character, a merchant."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Berith_(Silk_Cradle).avif",
-                "img_width": "140",
-                "card_title": "Berith",
-                "card_description": "Provides robes to the Lamb."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Lighthouse_Keeper.avif",
-                "img_width": "140",
-                "card_title": "Lighthouse Keeper",
-                "card_description": "Axolotl, found inside the Lighthouse in Pilgrim's Passage."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/NPC_Moth.avif",
-                "img_width": "140",
-                "card_title": "Monch",
-                "card_description": "Gray moth, increases loyalty of a random Follower."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Sozo.PNG.avif",
-                "img_width": "140",
-                "card_title": "Sozo",
-                "card_description": "Grants Brainwashing Ritual, and themed decorations. Ant controlled by a fungus."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Midas.avif",
-                "img_width": "140",
-                "card_title": "Midas",
-                "card_description": "Offers resources in exchange for gold. Initially encountered in Darkwood, can be visited in Midas's Cave."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Fox.avif",
-                "img_width": "180",
-                "card_title": "The Fox",
-                "card_description": "Encountered at night, on underground areas."
-            },
-            {
-                "img_url": "https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/gallery/others/Haro.avif",
-                "img_width": "140",
+                "img_alt": "An image of a character named Haro from Cult of the Lamb.",
                 "card_title": "Haro",
                 "card_description": "Gives lore to the Lamb."
             }

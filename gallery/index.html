@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./assets/index/css/section_navbar.css">
     <link rel="stylesheet" href="./assets/index/css/section_pre.css">
     <link rel="stylesheet" href="./assets/index/css/section_card.css">
-    <link rel="stylesheet" href="./assets/index/css/card_picker_hacks.css">
     <link rel="stylesheet" href="./assets/index/css/section_credit.css">
     <script type="module" src="./assets/index/js/main.js" defer></script>
 </head>
@@ -43,9 +42,12 @@
                     <h3>Credits</h3>
                 </a>
             </div>
+            <!-- https://ishadeed.com/article/clickable-area/ -->
             <div class="navbar_content" id="opendyslexic_container">
-                <input type="checkbox" id="opendyslexic_checkbox">
-                <label for="opendyslexic_checkbox" id="opendyslexic_label">Use OpenDyslexic fonts</label>
+                <label for="opendyslexic_checkbox" id="opendyslexic_label">
+                    <input type="checkbox" id="opendyslexic_checkbox">
+                    Use OpenDyslexic fonts
+                </label>
             </div>
             <div class="navbar_content navbar_only_desktop">
                 <!-- these inline SVGs are almost copied straight from the CotL webpage -->
@@ -149,8 +151,8 @@
     <header class="util_centered" id="pre_card_section_full">
         <div id="pre_card">
             <!-- we have a slightly darker background here -->
-            <img id="header_img"
-                src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f0221d8240362623fd4-library_logo_transparent.avif">
+            <img fetchpriority="high" id="header_img"
+                src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f0221d8240362623fd4-library_logo_transparent.avif" alt="The Cult of the Lamb Woolhaven logo">
         </div>
         <!-- TODO: investigate Animated AVIF and WebP for the ability to "repeat" the visuals, despite authored at a size that may be smaller than the user's screen -->
         <div id="trans_card_1"></div>
@@ -170,28 +172,28 @@
                 are ALWAYS right next to the radio input element, so make sure that is the case! -->
                 <!-- we get the ability to set the default value for free :) -->
                 <!-- categories yoinked from https://cult-of-the-lamb.fandom.com/wiki/Characters -->
-                <!-- TODO: wire the missing ones! -->
-                <input type="radio" id="cardradio_all" name="card_type_selector_radios" checked>
+                <!-- TODO: get rid of "id", because we are changing this to use JS instead -->
+                <input type="radio" data-card-type="all" id="cardradio_all" name="card_type_selector_radios" checked>
                 <label for="cardradio_all">
                     <h3>All</h3>
                 </label>
 
-                <input type="radio" id="cardradio_mains" name="card_type_selector_radios">
+                <input type="radio" data-card-type="mains" id="cardradio_mains" name="card_type_selector_radios">
                 <label for="cardradio_mains">
                     <h3>Main Characters</h3>
                 </label>
 
-                <input type="radio" id="cardradio_bosses" name="card_type_selector_radios">
+                <input type="radio" data-card-type="bosses" id="cardradio_bosses" name="card_type_selector_radios">
                 <label for="cardradio_bosses">
                     <h3>Bosses</h3>
                 </label>
 
-                <input type="radio" id="cardradio_minibosses" name="card_type_selector_radios">
+                <input type="radio" data-card-type="minibosses" id="cardradio_minibosses" name="card_type_selector_radios">
                 <label for="cardradio_minibosses">
                     <h3>Minibosses</h3>
                 </label>
 
-                <input type="radio" id="cardradio_others" name="card_type_selector_radios">
+                <input type="radio" data-card-type="others" id="cardradio_others" name="card_type_selector_radios">
                 <label for="cardradio_others">
                     <h3>Other Characters</h3>
                 </label>
@@ -220,9 +222,9 @@
             <!-- TODO: change to <picture> -->
             <div class="credits_section_row_platform">
                 <img class="navbar_game_icon"
-                    src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/COTL_Logo_Red.avif">
+                    src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/COTL_Logo_Red.avif" alt="The red Cult of the Lamb logo">
                 <img class="navbar_game_icon"
-                    src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f1916abbb5ebe7b6a7a-logo_horizontal_background_big.avif">
+                    src="https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/mig-68a49f1916abbb5ebe7b6a7a-logo_horizontal_background_big.avif" alt="The Massive Monster company logo">
                 <svg class="navbar_game_icon" viewBox="0 0 188 85">
                     <g fill="none" fill-rule="evenodd">
                         <path fill="#FFF" fill-rule="nonzero"

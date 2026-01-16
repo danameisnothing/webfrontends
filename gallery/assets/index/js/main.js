@@ -1,3 +1,3 @@
-import { populateCards } from "./section_card.js";
+import { initCards } from "./section_card.js";
 
-populateCards();
+initCards();
