@@ -12,7 +12,7 @@ function addCardKind(kind) {
             <div class="card_zoomer">
                 <div class="card_entry_backside"></div>
                 <div class="card_entry_frontside">
-                    <img width="${CUR_ENTRY.img_width}" class="card_img"
+                    <img loading="lazy" width="${CUR_ENTRY.img_width}" class="card_img"
                         src="${CUR_ENTRY.img_url}" alt="${CUR_ENTRY.img_alt}">
                 </div>
             </div>

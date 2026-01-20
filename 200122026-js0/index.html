@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pp</title>
+</head>
+<body>
+    <h2>where are the page contents?</h2>
+    <h2>if you see this, why no JS man?</h2>
+    <p class="me_class">something something GenAI bad something</p>
+    <h3 id="lel">semantic search</h3>
+    <script>
+        console.log("Goodbwe, Wowld!");
+        document.write("smash that like button, subscribe to get a fursuit in 2-3 business days");
+        // this is blocking
+        // window.prompt("have you came out of the closet yet?", "yes");
+        var varVar = "old style, HTML4-ish, value modifiable after declaration";
+        let letVar = "new style, value modifiable after declaration";
+        const CONSTVAR = "new style, can't modify value after declaration";
+
+        // vars
+        let aVar;
+        aVar = 34;
+
+        /*const gender = window.prompt("what is thy gender?");
+        document.write(`thy gender is ${gender}`);*/
+
+        /*document.getElementById("");
+        document.getElementsByClassName("");
+        document.getElementsByTagName("");
+        document.querySelector("");
+        document.querySelectorAll("");*/
+
+        let amList = document.getElementsByTagName("h2");
+        amList[1].innerHTML = "no xss for days";
+        document.getElementsByClassName("me_class")[0].innerHTML = "no nonsense here";
+        document.querySelector("h2").innerHTML = "your base are belong to us, or something";
+
+        let meClassQS = document.querySelector(".me_class");
+        meClassQS.innerHTML = "reloaded";
+        document.querySelector("#lel").innerHTML = "wow, much energy";
+    </script>
+</body>
+</html>

@@ -1,9 +1,7 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
 /* TODO: is it necessary to ise @supoorts for this one? */
 :root {
-    /* TODO: once we have animated AVIF, create a version of that in here too, stick @supports bg fiery for check, and set the fiery bg
-    AND this AVIF 2x2 image too, don't need to check twice, why would we check twice anyway? */
-    --img_2x2: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/card_bg_2x2.avif");
+    --background_col_major: #fb273a;
     --img_button_grey: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/img/compiled/avif/Button_Grey.avif");
     /* This image is almost 4 MiB. We absolutely need the CDN for this one */
     --fiery_gradient: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/video/avif/fiery_gradient_divider_1920x200_c37_24fps_8s.avif");
@@ -45,7 +43,7 @@
 /* Context : The video renders with different color on Gecko and Chromium. Gecko's output is the most correct one here. */
 /* why chrome? */
 #card_section {
-    background-image: var(--img_2x2);
+    background-color: var(--background_col_major);
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
@@ -70,7 +68,7 @@ supported via @supports? by setting the content of an element to
 a message, via content: maybe? */
 
 #card_type_selector_bg {
-    background-image: var(--img_2x2);
+    background-color: var(--background_col_major);
     background-repeat: repeat;
 }
 
@@ -78,7 +76,7 @@ a message, via content: maybe? */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: var(--img_2x2);
+    background-color: var(--background_col_major);
     background-repeat: repeat;
 }
 

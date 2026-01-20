@@ -22,7 +22,7 @@
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/LaptureDisplay/LaptureDisplay-Bold.woff2") format("woff2");
 }
 
-@font-face {
+/*@font-face {
     font-family: "FiraSans Thin";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Thin.ttf") format("truetype");
 }
@@ -50,7 +50,7 @@
 @font-face {
     font-family: "FiraSans LightItalic";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-LightItalic.ttf") format("truetype");
-}
+}*/
 
 @font-face {
     font-family: "FiraSans Regular";
@@ -62,7 +62,7 @@
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Italic.ttf") format("truetype");
 }
 
-@font-face {
+/*@font-face {
     font-family: "FiraSans Medium";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Medium.ttf") format("truetype");
 }
@@ -80,14 +80,14 @@
 @font-face {
     font-family: "FiraSans SemiBoldItalic";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-SemiBoldItalic.ttf") format("truetype");
-}
+}*/
 
 @font-face {
     font-family: "FiraSans Bold";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-Bold.ttf") format("truetype");
 }
 
-@font-face {
+/*@font-face {
     font-family: "FiraSans BoldItalic";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-BoldItalic.ttf") format("truetype");
 }
@@ -110,7 +110,7 @@
 @font-face {
     font-family: "FiraSans BlackItalic";
     src: url("https://cdn.jsdelivr.net/gh/danameisnothing/webfrontends_assets@latest/gallery/assets/fonts/FiraSans/FiraSans-BlackItalic.ttf") format("truetype");
-}
+}*/
 
 /* wtf */
 body:has(#opendyslexic_checkbox[type="checkbox"]:checked) p,
