@@ -12,7 +12,7 @@
     <!-- TODO: box from the neopronouns page lol -->
     <div>
         <code class="font_jbmono">
-            <span class="shell_user">guest@web</span>:<span class="shell_path">/<span id="path_loc" class="shell_path"></span>$ <span class="shell_command">./counter.sh</span>
+            <span class="shell_user">guest@web</span>:<span class="shell_path">/<span id="path_loc" class="shell_path"></span></span>$ <span class="shell_command">./counter.sh</span>
         </code>
     </div>
     <samp class="font_jbmono">
@@ -39,7 +39,7 @@
         // TODO: separate this into a function
         // FIXME: this has trailing paths
         const PATH_DECORATOR = document.querySelector("#path_loc");
-        PATH_DECORATOR.innerHTML = window.location.pathname;
+        PATH_DECORATOR.innerHTML = window.location.pathname.slice(1, window.location.pathname.length - 1);
     </script>
 </body>
 </html>
