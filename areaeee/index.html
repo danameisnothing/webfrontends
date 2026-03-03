@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wow</title>
+    <link rel="stylesheet" href="/global_assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script type="module" src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="selector_thing" id="categories">
+        <a data-id-target="area">Luas</a>
+        <a data-id-target="volume">Volume</a>
+    </div>
+    <div class="selector_thing" id="subcategories">
+        <div class="selector_thing" data-category-for="area">
+            <a data-shape="persegi">Persegi</a>
+            <a data-shape="persegi-panjang">Persegi Panjang</a>
+            <a data-shape="segitiga">Segitiga (Sembarang)</a>
+            <a data-shape="lingkaran">Lingkaran</a>
+            <a data-shape="trapesium">Trapesium</a>
+        </div>
+        <div class="selector_thing" data-category-for="volume">
+            <a data-shape="kubus">Kubus</a>
+            <a data-shape="prisma">Prisma</a>
+            <a data-shape="tabung">Tabung</a>
+            <!-- TODO: more shapes -->
+        </div>
+    </div>
+    <div id="main_content">
+        <canvas id="visualizer"></canvas>
+        <div id="calc_inp"></div>
+    </div>
+</body>
+</html>
