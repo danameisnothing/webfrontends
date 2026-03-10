@@ -8,26 +8,38 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <script type="module" src="./assets/js/main.js" defer></script>
 </head>
-<body>
-    <div class="selector_thing" id="categories">
-        <a data-id-target="area">Luas</a>
-        <a data-id-target="volume">Volume</a>
+<body class="font_jbmono">
+    <div class="util_centered">
+        <code class="font_jbmono"><h2>
+            <span class="shell_user">guest@web</span>:<span class="shell_path">/areaeee</span>$ <span class="shell_command">start</span>
+        </h2></code>
     </div>
-    <div class="selector_thing" id="subcategories">
+
+    <!-- category selector displayed like a command output -->
+    <div class="selector_thing font_jbmono" id="categories">
+        <span class="shell_command">kategori:</span>
+        <a data-id-target="area"><span class="shell_path">luas</span></a>
+        <a data-id-target="volume"><span class="shell_path">volume</span></a>
+    </div>
+
+    <div class="selector_thing font_jbmono" id="subcategories">
         <div class="selector_thing" data-category-for="area">
-            <a data-shape="persegi">Persegi</a>
-            <a data-shape="persegi-panjang">Persegi Panjang</a>
-            <a data-shape="segitiga">Segitiga (Sembarang)</a>
-            <a data-shape="lingkaran">Lingkaran</a>
-            <a data-shape="trapesium">Trapesium</a>
+            <span class="shell_command">luas bentuk:</span>
+            <a data-shape="persegi"><span class="shell_path">Persegi</span></a>
+            <a data-shape="persegi-panjang"><span class="shell_path">Persegi Panjang</span></a>
+            <a data-shape="segitiga"><span class="shell_path">Segitiga</span></a>
+            <a data-shape="lingkaran"><span class="shell_path">Lingkaran</span></a>
+            <a data-shape="trapesium"><span class="shell_path">Trapesium</span></a>
         </div>
         <!--<div class="selector_thing" data-category-for="volume">
-            <a data-shape="kubus">Kubus</a>
-            <a data-shape="prisma">Prisma</a>
-            <a data-shape="tabung">Tabung</a>
+            <span class="shell_command">volume bentuk:</span>
+            <a data-shape="kubus"><span class="shell_path">Kubus</span></a>
+            <a data-shape="prisma"><span class="shell_path">Prisma</span></a>
+            <a data-shape="tabung"><span class="shell_path">Tabung</span></a>
             TODO: more shapes
         </div>-->
     </div>
+
     <div id="main_content">
     </div>
 </body>
