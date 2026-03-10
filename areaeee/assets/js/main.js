@@ -1,170 +1,84 @@
+// this code was partially speedran through, expect poor-quality code, and little-to-no comments
+
+import { ShapeEntry } from "./types/shape_entry.js";
+
 const categories_sel = document.querySelector("#categories");
 const subcategories_sel = document.querySelector("#subcategories");
-const canvas = document.querySelector("#visualizer");
-const ctx = canvas.getContext("2d");
-const calcInp = document.querySelector("#calc_inp");
+const display_area = document.querySelector("#main_content");
 
-// shape configuration table keyed by the "data-shape" value in the DOM
-const SHAPES = {
-    // *** area shapes ***
-    "persegi": {
-        category: "area",
-        inputs: [
-            { name: "sisi", label: "Sisi (s)" }
-        ],
-        calc: ({ sisi }) => sisi * sisi,
-        draw: (ctx, canvas, vals = { sisi: 100 }) => {
-            const s = vals.sisi;
-            canvas.width = s + 20;
-            canvas.height = s + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.rect(10, 10, s, s);
-            ctx.stroke();
-        }
-    },
-    "persegi-panjang": {
-        category: "area",
-        inputs: [
-            { name: "panjang", label: "Panjang (p)" },
-            { name: "lebar", label: "Lebar (l)" }
-        ],
-        calc: ({ panjang, lebar }) => panjang * lebar,
-        draw: (ctx, canvas, vals = { panjang: 150, lebar: 80 }) => {
-            const p = vals.panjang;
-            const l = vals.lebar;
-            canvas.width = p + 20;
-            canvas.height = l + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.rect(10, 10, p, l);
-            ctx.stroke();
-        }
-    },
-    "segitiga": {
-        category: "area",
-        inputs: [
-            { name: "alas", label: "Alas (a)" },
-            { name: "tinggi", label: "Tinggi (t)" }
-        ],
-        calc: ({ alas, tinggi }) => 0.5 * alas * tinggi,
-        draw: (ctx, canvas, vals = { alas: 150, tinggi: 100 }) => {
-            const a = vals.alas;
-            const t = vals.tinggi;
-            canvas.width = a + 20;
-            canvas.height = t + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.moveTo(10, canvas.height - 10);
-            ctx.lineTo(10 + a, canvas.height - 10);
-            ctx.lineTo(10, canvas.height - 10 - t);
-            ctx.closePath();
-            ctx.stroke();
-        }
-    },
-    "lingkaran": {
-        category: "area",
-        inputs: [
-            { name: "jari", label: "Jari-jari (r)" }
-        ],
-        calc: ({ jari }) => Math.PI * jari * jari,
-        draw: (ctx, canvas, vals = { jari: 50 }) => {
-            const r = vals.jari;
-            canvas.width = r * 2 + 20;
-            canvas.height = r * 2 + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.arc(r + 10, r + 10, r, 0, Math.PI * 2);
-            ctx.stroke();
-        }
-    },
-    "trapesium": {
-        category: "area",
-        inputs: [
-            { name: "a", label: "Sisi atas (a)" },
-            { name: "b", label: "Sisi bawah (b)" },
-            { name: "t", label: "Tinggi (t)" }
-        ],
-        calc: ({ a, b, t }) => 0.5 * (parseFloat(a) + parseFloat(b)) * t,
-        draw: (ctx, canvas, vals = { a: 100, b: 150, t: 80 }) => {
-            const a = vals.a;
-            const b = vals.b;
-            const t = vals.t;
-            const width = Math.max(a, b) + 20;
-            canvas.width = width;
-            canvas.height = t + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.moveTo(10, canvas.height - 10);
-            ctx.lineTo(10 + b, canvas.height - 10);
-            ctx.lineTo(10 + b - (b - a) / 2, canvas.height - 10 - t);
-            ctx.lineTo(10 + (b - a) / 2, canvas.height - 10 - t);
-            ctx.closePath();
-            ctx.stroke();
-        }
-    },
-
-    // *** volume shapes ***
-    "kubus": {
-        category: "volume",
-        inputs: [
-            { name: "sisi", label: "Sisi (s)" }
-        ],
-        calc: ({ sisi }) => Math.pow(sisi, 3),
-        draw: (ctx, canvas, vals = { sisi: 100 }) => {
-            // simple square as top face of cube
-            const s = vals.sisi;
-            canvas.width = s + 20;
-            canvas.height = s + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.rect(10, 10, s, s);
-            ctx.stroke();
-        }
-    },
-    "prisma": {
-        category: "volume",
-        inputs: [
-            { name: "panjang", label: "Panjang (p)" },
-            { name: "lebar", label: "Lebar (l)" },
-            { name: "tinggi", label: "Tinggi (t)" }
-        ],
-        calc: ({ panjang, lebar, tinggi }) => panjang * lebar * tinggi,
-        draw: (ctx, canvas, vals = { panjang: 120, lebar: 80, tinggi: 60 }) => {
-            const p = vals.panjang;
-            const l = vals.lebar;
-            canvas.width = p + 20;
-            canvas.height = l + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.rect(10, 10, p, l);
-            ctx.stroke();
-        }
-    },
-    "tabung": {
-        category: "volume",
-        inputs: [
-            { name: "jari", label: "Jari-jari (r)" },
-            { name: "tinggi", label: "Tinggi (t)" }
-        ],
-        calc: ({ jari, tinggi }) => Math.PI * jari * jari * tinggi,
-        draw: (ctx, canvas, vals = { jari: 40, tinggi: 100 }) => {
-            const r = vals.jari;
-            const t = vals.tinggi;
-            canvas.width = r * 2 + 20;
-            canvas.height = t + r * 2 + 20;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            // top circle
-            ctx.arc(r + 10, r + 10, r, 0, Math.PI * 2);
-            ctx.stroke();
-            // side rectangle
-            ctx.beginPath();
-            ctx.rect(10, r + 10, r * 2, t);
-            ctx.stroke();
-        }
-    }
-};
+// thanks Claude :)
+const SHAPES = [
+    new ShapeEntry({
+        shape: "Persegi",
+        canvas_draw_func: (ctx, canvas) => {
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        },
+        canvas_ctx: "2d",
+        inputs: ["Sisi"],
+        calculate: () => {
+            const sisi = Number(display_area.querySelector("#Sisi").value);
+            return sisi * sisi;
+        },
+        id: "persegi",
+        placeholder_formula: "S^2"
+    }),
+    new ShapeEntry({
+        shape: "Persegi Panjang",
+        canvas_draw_func: (ctx, canvas) => {},
+        canvas_ctx: "2d",
+        inputs: ["Panjang", "Lebar"],
+        calculate: () => {
+            const panjang = Number(display_area.querySelector("#Panjang").value);
+            const lebar = Number(display_area.querySelector("#Lebar").value);
+            return panjang * lebar;
+        },
+        id: "persegi-panjang",
+        placeholder_formula: "PL"
+    }),
+    new ShapeEntry({
+        shape: "Segitiga (Sembarang)",
+        canvas_draw_func: (ctx, canvas) => {},
+        canvas_ctx: "2d",
+        inputs: ["A", "B", "C"],
+        calculate: () => {
+            // use Heron's formula, thanks math
+            const a = Number(display_area.querySelector("#A").value);
+            const b = Number(display_area.querySelector("#B").value);
+            const c = Number(display_area.querySelector("#C").value);
+            const s = (a + b + c) / 2;
+            return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        },
+        id: "segitiga",
+        placeholder_formula: "√(s(s-a)(s-b)(s-c))"
+    }),
+    new ShapeEntry({
+        shape: "Lingkaran",
+        canvas_draw_func: (ctx, canvas) => {},
+        canvas_ctx: "2d",
+        inputs: ["Jari-Jari"],
+        calculate: () => {
+            const r = Number(display_area.querySelector("#Jari-Jari").value);
+            return Math.PI * r * r;
+        },
+        id: "lingkaran",
+        placeholder_formula: "πr^2"
+    }),
+    new ShapeEntry({
+        shape: "Trapesium",
+        canvas_draw_func: (ctx, canvas) => {},
+        canvas_ctx: "2d",
+        inputs: ["Atas", "Bawah", "Tinggi"],
+        calculate: () => {
+            const a = Number(display_area.querySelector("#Atas").value);
+            const b = Number(display_area.querySelector("#Bawah").value);
+            const t = Number(display_area.querySelector("#Tinggi").value);
+            return ((a + b) / 2) * t;
+        },
+        id: "trapesium",
+        placeholder_formula: "((a+b)/2)t"
+    })
+];
 
 function uijank_show_thing(target_id) {
     for (let i = 0; i < subcategories_sel.children.length; i++) {
@@ -173,77 +87,63 @@ function uijank_show_thing(target_id) {
     }
 }
 
-function selectShape(shapeId) {
-    const shape = SHAPES[shapeId];
-    if (!shape) {
-        console.warn("unknown shape", shapeId);
-        return;
-    }
-
-    // clear existing inputs/result
-    calcInp.innerHTML = "";
-    const resultEl = document.getElementById("result");
-    if (resultEl) resultEl.remove();
-
-    // draw with default values
-    if (shape.draw) {
-        shape.draw(ctx, canvas);
-    }
-
-    // create input fields
-    shape.inputs.forEach(inp => {
-        const div = document.createElement("div");
-        const label = document.createElement("label");
-        label.textContent = inp.label + ": ";
-        label.htmlFor = inp.name;
-        const input = document.createElement("input");
-        input.type = "number";
-        input.id = inp.name;
-        input.name = inp.name;
-        input.min = "0";
-        div.appendChild(label);
-        div.appendChild(input);
-        calcInp.appendChild(div);
-    });
-
-    const submit = document.createElement("button");
-    submit.textContent = shape.category === "area" ? "Hitung Luas" : "Hitung Volume";
-    submit.addEventListener("click", () => {
-        const vals = {};
-        shape.inputs.forEach(inp => {
-            vals[inp.name] = parseFloat(document.getElementById(inp.name).value) || 0;
-        });
-        const answer = shape.calc(vals);
-        showResult(answer, shape.category);
-        if (shape.draw) shape.draw(ctx, canvas, vals);
-    });
-    calcInp.appendChild(submit);
+function uijank_reset_display_area(target) {
+    // https://stackoverflow.com/a/3955238
+    while (target.lastChild) target.removeChild(target.lastChild);
 }
 
-function showResult(value, category) {
-    let el = document.getElementById("result");
-    if (!el) {
-        el = document.createElement("div");
-        el.id = "result";
-        calcInp.parentNode.appendChild(el);
+function uijank_init_shape(id) {
+    for (let i = 0; i < SHAPES.length; i++) {
+        const curr = SHAPES[i];
+        if (curr.id === id) {
+            // because CreateElement() and the like seems like too much code
+            display_area.insertAdjacentHTML("beforeend", `<canvas id="visualizer"></canvas>
+<div id="calc_inp"></div>
+<p id="area_res">Luas : ${curr.placeholder_formula}</p>`);
+            const canvas = display_area.querySelector("#visualizer");
+            curr.canvas_draw_func(canvas.getContext(curr.canvas_ctx), canvas);
+
+            const calc_inp = display_area.querySelector("#calc_inp");
+            for (let j = 0; j < curr.inputs.length; j++) {
+                const input = curr.inputs[j];
+                calc_inp.insertAdjacentHTML("beforeend", `<label for="${input}"><span>${input}</span></label>
+<input id="${input}" type="number">
+<br>`); // got a little lazy here
+                document.querySelector(`#${input}`).addEventListener("input", () => {
+                    if (curr.inputs.every((inp) => display_area.querySelector(`#${inp}`).value !== ""))
+                        display_area.querySelector("#area_res").textContent = `Luas : ${curr.calculate()}`;
+                    else
+                        display_area.querySelector("#area_res").textContent = `Luas : ${curr.placeholder_formula}`;
+                });
+            }
+
+            return;
+        }
     }
-    el.textContent = `${category === "area" ? "Luas" : "Volume"}: ${value}`;
+
+    // if we got here, we can't find the id
+    console.error(`Shape id "${id}" not implemented!`);
 }
 
-// event delegation for categories and shapes
-categories_sel.addEventListener("click", e => {
-    if (e.target.matches("a")) {
-        const target_id = e.target.dataset.idTarget;
+for (let i = 0; i < categories_sel.children.length; i++) {
+    const curr = categories_sel.children[i];
+    curr.addEventListener("click", (_) => {
+        const target_id = curr.dataset.idTarget;
         uijank_show_thing(target_id);
-    }
-});
+    });
+}
 
-subcategories_sel.addEventListener("click", e => {
-    if (e.target.matches("a")) {
-        const shapeId = e.target.dataset.shape;
-        selectShape(shapeId);
+for (let i = 0; i < subcategories_sel.children.length; i++) {
+    const subcurr = subcategories_sel.children[i];
+    for (let j = 0; j < subcurr.children.length; j++) {
+        const subcurr_child = subcurr.children[j];
+        subcurr_child.addEventListener("click", (_) => {
+            uijank_reset_display_area(display_area);
+            uijank_init_shape(subcurr_child.dataset.shape);
+        });
     }
-});
+}
 
-// on load hide all subcategories
+// startup jank
 uijank_show_thing(null);
+uijank_reset_display_area(display_area);
