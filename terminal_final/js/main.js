@@ -1,17 +1,25 @@
 "use strict";
 
-const term = new Terminal();
-term.open(document.getElementById("terminal"));
-term.onKey((e) => {
-    switch (e.domEvent.key) {
-        case "Backspace":
-            term.write("\b \b");
-            break;
-        case "Enter":
-            term.write("\r\n");
-            break;
-        default:
-            term.write(e.domEvent.key);
-            break;
-    }
+import { Term } from "./types/term/term.js";
+
+import { sh } from "./commands/sh.js";
+
+// this is just for bootstrapping
+const xterm = new Terminal();
+xterm.open(document.getElementById("terminal"));
+
+const term = new Term({
+    width: 60,
+    height: 20,
+    xterm: xterm
 });
+term.runProcess({
+    name: "sh",
+    func: sh,
+    args: []
+});
+
+// TODO: cantumkan sumber
+// created with the Windsurf IDE
+// XTerm.js is used, MIT licensed
+// custom Terminal parser from an undisclosed personal project lol
