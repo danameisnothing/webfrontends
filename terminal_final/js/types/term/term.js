@@ -1,6 +1,6 @@
 "use strict";
 
-import { VFSNode } from "../vfs/vfs.js";
+import { VFSNode, VFS_PATH_SEPARATOR } from "../vfs/vfs.js";
 import { Process } from "../process/process.js";
 import { Env } from "../env/env.js";
 import { Command } from "../command/command.js";
@@ -100,12 +100,48 @@ export class Term {
     }
 
     /**
+     * Recursively traverses the VFS to find a node. Note that depth starts with one, because the first slice is the root directory, which is empty.
+     * @param {string[]} slices
+     * @param {number} depth
+     * @returns {VFSNode | null}
+     */
+    #recursePath(slices, depth) {
+        for (let i = 0; i < this.vfs.childNodes.length; i++) {
+            if (this.vfs.childNodes[depth].name === slices[depth]) return this.vfs.childNodes[depth];
+
+            return this.#recursePath(slices, depth + 1);
+        }
+
+        return null;
+    }
+
+    /**
      * Finds the corresponding function for a command
-     * @param {string} name 
+     * @param {string} name
      * @returns {Function(string[], Term) | null}
      */
     #resolveCommand(name) {
         const res = this.commands.find((c) => c.name === name);
         return res ? res.func : null;
+    }
+
+    /**
+     * Resolves a path to a VFS node
+     * @param {string} path
+     * @returns {VFSNode}
+     */
+    resolvePath(path) {
+        const slices = path.split(VFS_PATH_SEPARATOR);
+        if (slices.length <= 0) {
+    		throw new Error("invalid path format");
+        }
+        if (slices[0] !== "") {
+            throw new Error("invalid path format");
+        }
+
+        const val = this.#recursePath(slices, 0);
+        if (val === null) throw new Error("path not found");
+
+        return val;
     }
 }

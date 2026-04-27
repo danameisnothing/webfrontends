@@ -1,6 +1,6 @@
 "use strict";
 
-export const PATH_SEPARATOR = "/";
+export const VFS_PATH_SEPARATOR = "/";
 
 export class VFSNode {
     /** @type {String} */
@@ -26,7 +26,7 @@ export class VFSNode {
      */
     constructor({name, createdTime = performance.now(), modifiedTime = performance.now(), permissions = null, childNodes = null}) {
         // why would you anyway?
-        if (name.includes(PATH_SEPARATOR)) throw new Error("invalid char on node name");
+        if (name.includes(VFS_PATH_SEPARATOR)) throw new Error("invalid char on node name");
 
         this.name = name;
         this.createdTime = createdTime;
