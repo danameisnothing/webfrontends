@@ -12,6 +12,8 @@ function readInp(xterm) {
         const lstnr = xterm.onKey((e) => {
             switch (e.domEvent.key) {
                 case "Backspace":
+                    if (inpBuf.length === 0) return;
+                    inpBuf = inpBuf.slice(0, -1);
                     xterm.write("\b \b");
                     break;
                 case "Enter":
@@ -41,6 +43,8 @@ export function sh(args, term) {
         // referencing
         const xterm = term.xterm;
         while (true) {
+            const path = term.resolvePath("/root/");
+            xterm.write(`${path.name} $ `);
             const inp = await readInp(xterm);
             xterm.write(`${inp}${EOL}`);
         }

@@ -103,13 +103,21 @@ export class Term {
      * Recursively traverses the VFS to find a node. Note that depth starts with one, because the first slice is the root directory, which is empty.
      * @param {string[]} slices
      * @param {number} depth
+     * @param {VFSNode} fs
      * @returns {VFSNode | null}
      */
-    #recursePath(slices, depth) {
-        for (let i = 0; i < this.vfs.childNodes.length; i++) {
-            if (this.vfs.childNodes[depth].name === slices[depth]) return this.vfs.childNodes[depth];
+    #recursePath(slices, depth, fs) {
+        // special case, too lazy
+        if (slices.length === 1 && slices[0] === "") {
+            return fs;
+        }
 
-            return this.#recursePath(slices, depth + 1);
+        for (let i = 0; i < fs.childNodes.length; i++) {
+            if (fs.childNodes[i].name === slices[depth]) {
+                if (depth === slices.length - 1) return fs;
+
+                return this.#recursePath(slices, depth + 1, fs.childNodes[i]);
+            }
         }
 
         return null;
@@ -131,7 +139,9 @@ export class Term {
      * @returns {VFSNode}
      */
     resolvePath(path) {
-        const slices = path.split(VFS_PATH_SEPARATOR);
+        const end = (path.endsWith(VFS_PATH_SEPARATOR)) ? path.length - 1 : path.length;
+        const cpy = path.substring(0, end);
+        const slices = cpy.split(VFS_PATH_SEPARATOR);
         if (slices.length <= 0) {
     		throw new Error("invalid path format");
         }
@@ -139,8 +149,8 @@ export class Term {
             throw new Error("invalid path format");
         }
 
-        const val = this.#recursePath(slices, 0);
-        if (val === null) throw new Error("path not found");
+        const val = this.#recursePath(slices, 1, this.vfs);
+        if (val === null) throw new Error(`path "${path}" not found`);
 
         return val;
     }
